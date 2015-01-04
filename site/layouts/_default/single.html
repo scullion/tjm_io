@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="container single-article {{ if isset .Params "menu" }}has-menus{{ end }} {{ .Params.page_class }}">
+	<div class="row">
+		<article>
+			{{ if in .Params.locations "blog" }}
+				{{ $date := .Date.Format .Site.Params.date_format }}
+				<time datetime="{{ $date }}" class="article-time">{{ $date }}</time>
+			{{ end }}
+			{{ if not .Params.hide_title }}
+				<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+			{{ end }}
+			{{ .Content }}
+		</article>
+		{{ partial "article_menu.html" . }}
+	</div>
+
+	{{ if in .Params.locations "blog" }}
+		{{ partial "blog_navigation_footer" . }}
+	{{ end }}
+
+	{{ if .Params.enable_comments }}
+	<div class="row" name="comments" id="comments">
+		{{ partial "disqus" . }}
+	</div>
+	{{ end }}
+</div>
+
+{{ partial "footer.html" . }}

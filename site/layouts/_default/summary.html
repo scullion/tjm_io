@@ -1,0 +1,7 @@
+<article>
+	{{ $date := .Date.Format .Site.Params.date_format }}
+	<time datetime="{{ $date }}" class="article-time">{{ $date }}</time>
+	<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+	<p>{{ .Summary }}</p>
+	<p><a class="read-button" href="{{ .Permalink }}" role="button">Read <i class="fa fa-hand-o-right"></i></a></p>
+</article>

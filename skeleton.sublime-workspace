@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding-base",
+				"padding-base-horizontal"
+			],
+			[
+				"coun",
+				"utf8_count"
+			],
+			[
+				"UTF8_TEST_D",
+				"UTF8_TEST_DATA_LENGTH"
+			],
+			[
+				"UTF",
+				"UTF8_TEST_DATA"
+			],
+			[
+				"like",
+				"likelihood_expr"
+			],
+			[
+				"th",
+				"gradient_wrt_theta_j"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<html>\n	\n	<head><title>LIST</title></head>\n	<body>\n		<h1>THIS IS LIST.HTML</h1>\n	</body>\n</html>\n",
+			"file": "site/layouts/article/list.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 97,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "{{ partial \"header.html\" . }}\n\n<section class=\"articles\">\n	<article>\n		{{ $date := .Date.Format .Site.Params.date_format }}\n		<time datetime=\"{{ $date }}\" class=\"article-time\">{{ $date }}</time>\n		<h1 class=\"article-title\"><a href=\"{{ .Permalink }}\">{{ .Title }}</a></h1>\n		{{ .Content }}\n	</article>\n</section>\n{{ if .Next }}\n<section class=\"read-next\">\n	<a href=\"{{ .Next.Permalink }}\">\n		<h6 class=\"read-next-heading\">Read another...</h6>\n		<time class=\"read-next-time\">{{ .Next.Date.Format .Site.Params.date_format }}</time>\n		<h3 class=\"read-next-title\">{{ .Next.Title }}</h3>\n		<p class=\"read-next-excerpt\">\n			{{ .Next.Summary }}\n			<span class=\"continue-link\">Continue <i class=\"fa fa-hand-o-right\"></i></span>\n		</p>\n	</a>\n</section>\n{{ end }}\n\n{{ partial \"footer.html\" . }}\n",
+			"file": "site/layouts/article/single.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "{{ partial \"header.html\" . }}\n\n<section class=\"articles\">\n	<article>\n		{{ $date := .Date.Format .Site.Params.date_format }}\n		<time datetime=\"{{ $date }}\" class=\"article-time\">{{ $date }}</time>\n		<h1 class=\"article-title\"><a href=\"{{ .Permalink }}\">{{ .Title }}</a></h1>\n		{{ .Content }}\n	</article>\n</section>\n{{ if .Next }}\n<section class=\"read-next\">\n	<a href=\"{{ .Next.Permalink }}\">\n		<h6 class=\"read-next-heading\">Read another...</h6>\n		<time class=\"read-next-time\">{{ .Next.Date.Format .Site.Params.date_format }}</time>\n		<h3 class=\"read-next-title\">{{ .Next.Title }}</h3>\n		<p class=\"read-next-excerpt\">\n			{{ .Next.Summary }}\n			<span class=\"continue-link\">Continue <i class=\"fa fa-hand-o-right\"></i></span>\n		</p>\n	</a>\n</section>\n{{ end }}\n\n{{ partial \"footer.html\" . }}\n",
+			"file": "site/layouts/_default/single.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/layouts/_default/list.html",
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 471.0,
+		"selected_items":
+		[
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"toml",
+				"Set Syntax: TOML"
+			],
+			[
+				"pagka",
+				"Package Control: Install Package"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"syntax yaml",
+				"Set Syntax: YAML"
+			],
+			[
+				"glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"syntax glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set syntax c",
+				"Set Syntax: C"
+			],
+			[
+				"package co",
+				"Package Control: Discover Packages"
+			],
+			[
+				"bits com",
+				"Build: Bits Compile and Run"
+			],
+			[
+				"build bits",
+				"Build: Bits Compile and Run"
+			],
+			[
+				"build",
+				"Build: Bits Compile and Run"
+			],
+			[
+				"package conrol rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syntax python",
+				"Set Syntax: Python"
+			],
+			[
+				"syntax javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syntax C++",
+				"Set Syntax: C++"
+			],
+			[
+				"set syntax C",
+				"Set Syntax: C"
+			],
+			[
+				"set syntax lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"set syntax javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syntax glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"set syntax gls",
+				"Set Syntax: GLSL"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 600.0
+	},
+	"console":
+	{
+		"height": 411.0,
+		"history":
+		[
+			"print(\"hi\")",
+			"print \"hi\""
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Z/proj/blog",
+		"/Z/proj/blog/coffee",
+		"/Z/proj/blog/less/bootstrap",
+		"/Z/proj/blog/less/bootstrap/mixins",
+		"/Z/proj/blog/site",
+		"/Z/proj/blog/site/content",
+		"/Z/proj/blog/site/layouts",
+		"/Z/proj/blog/site/layouts/_default",
+		"/Z/proj/blog/site/layouts/partials",
+		"/Z/proj/blog/site/static/css",
+		"/Z/proj/blog/site/themes/herring-cove/layouts/_default",
+		"/Z/proj/blog/site/themes/hyde/archetypes",
+		"/Z/proj/blog/site/themes/hyde/layouts",
+		"/Z/proj/blog/site/themes/hyde/layouts/_default",
+		"/Z/proj/blog/site/themes/hyde/layouts/partials",
+		"/Z/proj/blog/site/themes/journal",
+		"/Z/proj/blog/site/themes/journal/layouts",
+		"/Z/proj/blog/site/themes/journal/layouts/page",
+		"/Z/proj/blog/site/themes/journal/layouts/partials",
+		"/Z/proj/blog/site/themes/journal/layouts/post"
+	],
+	"file_history":
+	[
+		"/Z/proj/blog/site/layouts/index.html",
+		"/Z/proj/blog/site/layouts/partials/header.html",
+		"/Z/proj/blog/site/content/about.md",
+		"/Z/proj/blog/site/config.toml",
+		"/Z/proj/blog/site/layouts/_default/single.html",
+		"/Z/proj/blog/site/content/posts/second.md",
+		"/Z/proj/blog/site/layouts/partials/top_nav.html",
+		"/Z/proj/blog/site/content/posts/first.md",
+		"/Z/proj/blog/less/skeleton.less",
+		"/Z/proj/blog/site/layouts/article/single.html",
+		"/Z/proj/blog/site/public/posts/index.xml",
+		"/Z/proj/blog/less/colors.less",
+		"/Z/proj/blog/site/themes/herring-cove/layouts/_default/single.html",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/atob-btoa.json",
+		"/Z/proj/blog/less/bootstrap/alerts.less",
+		"/Z/proj/blog/site/themes/stou-dk-theme/layouts/partials/details.html",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-opacity.json",
+		"/Z/proj/blog/site/themes/hugo-uno/static/fonts/Slide-icons.svg",
+		"/C/Users/t/AppData/Local/Temp/Rar$DI11.465/JSON GetBranchPropertyList Call Request.txt",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/tasks/less.js",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/.bin/lessc",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/lib/less/less-error.js",
+		"/Z/proj/blog/node_modules/clean-css/LICENSE",
+		"/Z/proj/blog/less/font_awesome/font-awesome.less",
+		"/Z/proj/blog/less/font_awesome/variables.less",
+		"/Z/proj/blog/less/bootstrap/mixins/grid-framework.less",
+		"/Z/proj/blog/less/bootstrap/navbar.less",
+		"/C/Users/t/Desktop/bootswatch.less",
+		"/C/Users/t/Desktop/variables.less",
+		"/Z/proj/blog/Gruntfile.coffee",
+		"/Z/proj/blog/site/layouts/partials/footer.html",
+		"/Z/proj/blog/site/layouts/_default/list.html",
+		"/Z/proj/blog/coffee/skeleton.coffee",
+		"/Z/proj/blog/package.json",
+		"/Z/proj/blog/site/static/css/skeleton.css",
+		"/Z/proj/blog/site/static/css/bootstrap.css",
+		"/Z/proj/blog/site/static/js/bootstrap.js",
+		"/Z/proj/blog/site/static/js/npm.js",
+		"/Z/proj/blog/site/themes/hugo-incorporated/layouts/index.html",
+		"/Z/proj/blog/site/themes/hugo-incorporated/layouts/post/single.html",
+		"/Z/proj/blog/site/themes/hyde/layouts/index.html",
+		"/Z/proj/blog/site/themes/hyde/archetypes/default.md",
+		"/Z/proj/blog/site/static/js/blog.js",
+		"/Z/proj/blog/skeleton.sublime-workspace",
+		"/Z/proj/blog/skeleton.sublime-project",
+		"/Z/proj/blog/blog.sublime-project",
+		"/Z/proj/blog/config.toml",
+		"/Z/proj/blog/content/posts/first.md",
+		"/Z/proj/blog/less/blog.less",
+		"/E/dropbox/pkg/node/node_modules/npm/npmrc",
+		"/Z/proj/blog/static/css/blog.css",
+		"/Z/proj/blog/coffee/blog.coffee",
+		"/E/dropbox/proj/webgl_2rev_1/package.json",
+		"/Z/proj/blog/content/about.md",
+		"/E/dropbox/proj/webgl_2rev_1/Gruntfile.coffee",
+		"/E/dropbox/proj/blog/themes/hyde/layouts/_default/list.html",
+		"/E/dropbox/proj/blog/themes/hyde/archetypes/default.md",
+		"/E/dropbox/proj/blog/public/css/hyde.css",
+		"/E/dropbox/proj/blog/public/css/poole.css",
+		"/E/dropbox/proj/blog/public/css/syntax.css",
+		"/E/dropbox/proj/blog/public/posts/index.html",
+		"/E/dropbox/proj/blog/themes/hyde/layouts/index.html",
+		"/E/dropbox/proj/blog/themes/hyde/layouts/partials/head.html",
+		"/E/dropbox/proj/blog/themes/hyde/layouts/partials/sidebar.html",
+		"/E/dropbox/proj/blog/public/posts/index.xml",
+		"/Z/proj/blog/content/blog",
+		"/E/dropbox/proj/devenv/env.py",
+		"/C/store/refsrc/unity_built_in_shaders/DefaultResourcesExtra/skybox cubed.shader",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardBRDF.cginc",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityPBSLighting.cginc",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardCore.cginc",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityShaderVariables.cginc",
+		"/E/dropbox/proj/star_sonata_shaders/physical/shared.fx",
+		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Camera-DepthNormalTexture.shader",
+		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Internal-CombineDepthNormals.shader",
+		"/C/store/refsrc/unity_built_in_shaders/DefaultResourcesExtra/Standard.shader",
+		"/C/store/refsrc/unity_built_in_shaders/Editor/StandardShaderGUI.cs",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/Lighting.cginc",
+		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardInput.cginc",
+		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Internal-Clear.shader",
+		"/E/dropbox/proj/unity_shader_playground/playground/Assets/SampleAssets/Vehicles/Car/CarGuidelines.txt",
+		"/Z/proj/table_file/test/syntax.table",
+		"/Z/proj/table_file/src/main.cpp",
+		"/Z/proj/piano_mud_prototype/data/maps/prototype.pmap",
+		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/research/component_test_suite/src/component/component.cpp",
+		"/E/dropbox/proj/component_graph_g0/starsonata_d/ssclient/research/component_test_suite/src/component/component_allocator.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/clientV2/src/unit/component_system.h",
+		"/Z/proj/table_file/test/includes.table",
+		"/Z/proj/table_file/test/errors.table",
+		"/Z/proj/table_file/src/table_file.cpp",
+		"/E/dropbox/proj/component_graph_g0/starsonata_d/ssclient/research/component_test_suite/src/component/component_api.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_system.cpp",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_system.h",
+		"/E/dropbox/proj/component_graph_g0/component_system.h",
+		"/E/dropbox/proj/component_graph_g0/component_system.cpp",
+		"/E/dropbox/proj/component_graph_g0/component_internal.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/clientV2/src/unit/unit_component_types.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/unit_component_types.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/unit_component_types.cpp",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_internal.h",
+		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/research/component_test_suite/src/component/component.cpp",
+		"/E/dropbox/proj/starsonata_e/dev/ssclient/research/component_test_suite/src/component/component.cpp",
+		"/E/dropbox/proj/starsonata_e/dev/ssclient/clientV2/src/particles/spark_component.cpp",
+		"/E/dropbox/proj/star_sonata_component/src/component/component.cpp",
+		"/E/dropbox/proj/star_sonata_research/src/component/component.cpp",
+		"/E/dropbox/proj/shader_compiler/src/shader_compiler/definition.cpp",
+		"/E/dropbox/proj/shader_compiler/src/shader_compiler/table_file.cpp",
+		"/E/dropbox/proj/shader_compiler/src/shader_compiler/table_file.h",
+		"/E/dropbox/proj/packaged_hashes/src/murmur3_64_x86.h",
+		"/Z/proj/table_file/test/large.table",
+		"/E/dropbox/proj/table_file/src/table_file.h",
+		"/Z/proj/piano_mud_prototype/.git/config",
+		"/E/dropbox/proj/table_file/src/table_file.cpp",
+		"/Z/proj/opengl_texture_tiles/.git/config",
+		"/E/dropbox/pkg/git/README.portable",
+		"/Z/proj/opengl_texture_tiles/.git/refs/heads/playground_update",
+		"/Z/proj/opengl_texture_tiles/.git/refs/remotes/playground/master",
+		"/Z/proj/opengl_texture_tiles/.git/logs/refs/remotes/playground/master",
+		"/Z/proj/opengl_texture_tiles/.git/refs/heads/master",
+		"/Z/refsrc/android_native/platform/frameworks/native/libs/gui/Surface.cpp",
+		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/view/SurfaceView.java",
+		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Looper.java",
+		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/MessageQueue.java",
+		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Message.java",
+		"/Z/proj/opengl_texture_tiles/scripts/glad/gl/gles/glad_egl.c",
+		"/Z/proj/opengl_texture_tiles/scripts/glad/glad/loader_gles/include/glad/glad_egl.h",
+		"/Z/proj/opengl_texture_tiles/scripts/glad/glad/loader_gles/include/glad/glad.h",
+		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Handler.java"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"Z:\\proj\\blog\\site\\themes",
+			"Z:\\proj\\blog\\less\\bootstrap",
+			"C:\\store\\refsrc\\unity_built_in_shaders\\",
+			"E:\\dropbox\\proj\\component_graph_g0",
+			"<open folders>",
+			"E:\\store\\lpkg\\android_ndk\\samples\\MoreTeapots\\jni",
+			"<open folders>",
+			"C:\\Users\\t\\Desktop\\android_native_source",
+			"Z:\\proj\\opengl_texture_tiles\\android",
+			"C:\\store\\refsrc\\WebKit-r34604\\WebCore",
+			"<open folders>",
+			"C:\\store\\proj\\marketvisiontv_spider\\venv\\Lib\\site-packages\\pyamf",
+			"Z:\\pkg\\tundra",
+			"Z:\\pkg\\tundra\\scripts",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Params",
+			"dateformat",
+			".Next",
+			"light",
+			"hidden",
+			"article",
+			"			color: @gray;\n			font-weight: bold;\n		}",
+			"Next",
+			"next",
+			"Next",
+			"Prev",
+			"time",
+			"id",
+			"posts",
+			"radius",
+			"@white",
+			"@accent",
+			"@light-grey",
+			"@black",
+			"link",
+			"main",
+			"home",
+			"Site",
+			"col-md-",
+			"col-md-12",
+			".col-md-12",
+			"navbar-right",
+			"Cakeboy",
+			"html5",
+			"onClose",
+			"event",
+			"h",
+			"on",
+			"hugoArgs",
+			"dev",
+			"target",
+			"blog",
+			"8000",
+			"8080",
+			"AuthorName",
+			"probeHDR",
+			"Unity_GlossyEnvironment",
+			"UNITY_DECLARE_TEXCUBE",
+			"Unity_GlossyEnvironment",
+			"cube",
+			"IN_LIGHTDIR_FWDADD",
+			"_NORMALMAP",
+			"_NormalMap",
+			"tex2D",
+			"WorldNormal(",
+			"WorldNormal",
+			"FRAGMENT_SETUP",
+			"tex2D",
+			"1>",
+			"z:\\proj\\piano_mud_prototype\\src\\",
+			"1>z:\\proj\\piano_mud_prototype\\src\\",
+			"z:\\proj\\piano_mud_prototype\\src\\",
+			"DestroyGraph",
+			"exits",
+			"links",
+			"parse_value",
+			"read_identifier",
+			"ident",
+			"tfu_expand",
+			".target",
+			"dispatchMessage",
+			"gladLoadGLES2Loader",
+			"gladLoad",
+			"gladLoadGL",
+			"find_coreGLES2",
+			"JNIEnv",
+			"JEnv",
+			"unlockAndPost",
+			"NATIVE_WINDOW_UNLOCK_AND_POST",
+			"dequeueBuffer",
+			"mSurfaceTexture",
+			"dequeueBuffer(",
+			"dequeueBuffer",
+			"BpInterface",
+			"dequeueBuffer(",
+			"dequeueBuffer",
+			"mEglFence = ",
+			"mEglFence",
+			"bindToTextureTarget",
+			"mCurrentTexture",
+			"updateAndReleaseLocked",
+			"bindTextureImageLocked",
+			"doGLFenceWait",
+			"useWaitSync",
+			"dequeueBuffer",
+			"timestamp",
+			"desired",
+			"getTimestamp",
+			"timestamp",
+			"presentTime",
+			"desiredPresentTime",
+			"DispSync",
+			"eglSwapBuffers",
+			"eglPresentationTime",
+			"eglPresentationTimeANDROID",
+			"pkgpath",
+			"sdk_home",
+			"home",
+			"Application.playground",
+			"playground",
+			"app",
+			"playground",
+			"app",
+			"GL_ES_VERSION",
+			"GL_ES_VERSION_2_0",
+			"GL_VERSION",
+			"gladLoadGL",
+			"PFNGLDEBUGMESSAGECONTROLARBPROC",
+			"GLAD_GL_ARB_debug_output",
+			"gladLoadgl",
+			"find_coreGLES2",
+			"gladLoadGLES2Loader",
+			"load_GL_ES_VERSION_2_0",
+			"gladLoadGLLoader",
+			"load_GL_VERSION_4_5",
+			"glad_glClear",
+			"glClear",
+			"GLDIR",
+			"(= \\d+);",
+			" *public static final int ",
+			"\\s*public static final int ",
+			"/\\*+(.|\\s)+?\\*/\\s*",
+			"/\\*+[.\\s]+?\\*/\\s*"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"white",
+			"@brand-primary",
+			"@gray-light",
+			"@gray-base",
+			"",
+			"Application.app",
+			"\\1,",
+			"",
+			"vec4"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "site/layouts/article/list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 97,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site/layouts/article/single.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "site/layouts/_default/single.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								784,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "site/layouts/_default/list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 216.0
+	},
+	"project": "skeleton.sublime-project",
+	"replace":
+	{
+		"height": 94.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"config",
+				"blog\\site\\config.toml"
+			],
+			[
+				"about.md",
+				"blog\\site\\content\\about.md"
+			],
+			[
+				"colors",
+				"blog\\less\\colors.less"
+			],
+			[
+				"single",
+				"blog\\site\\layouts\\_default\\single.html"
+			],
+			[
+				"messagejava",
+				"platform\\frameworks\\base\\core\\java\\android\\os\\Message.java"
+			],
+			[
+				"messageq",
+				"platform\\frameworks\\base\\core\\java\\android\\os\\MessageQueue.java"
+			],
+			[
+				"message.java",
+				"platform\\frameworks\\base\\core\\java\\android\\os\\Message.java"
+			],
+			[
+				"surfaceview",
+				"platform\\frameworks\\base\\core\\java\\android\\view\\SurfaceView.java"
+			],
+			[
+				"surface.h",
+				"platform\\frameworks\\native\\include\\gui\\Surface.h"
+			],
+			[
+				"surface.cpp",
+				"platform\\frameworks\\native\\libs\\gui\\Surface.cpp"
+			],
+			[
+				"optim",
+				"src\\Optimiser.hpp"
+			],
+			[
+				"train",
+				"src\\Trainer.hpp"
+			],
+			[
+				"trainer",
+				"src\\Trainer.hpp"
+			],
+			[
+				"environment",
+				"scripts\\tundra\\environment.lua"
+			],
+			[
+				"generic-cpp",
+				"scripts\\tundra\\tools\\generic-cpp.lua"
+			],
+			[
+				"envi",
+				"scripts\\tundra\\environment.lua"
+			],
+			[
+				"environment.lua",
+				"scripts\\tundra\\environment.lua"
+			],
+			[
+				"nodegen.lua",
+				"scripts\\tundra\\nodegen.lua"
+			],
+			[
+				"unitgen",
+				"scripts\\tundra\\unitgen.lua"
+			],
+			[
+				"util.lua",
+				"scripts\\tundra\\util.lua"
+			],
+			[
+				"nodegen",
+				"scripts\\tundra\\nodegen.lua"
+			],
+			[
+				"environ",
+				"scripts\\tundra\\environment.lua"
+			],
+			[
+				"boot.lu",
+				"scripts\\tundra\\boot.lua"
+			],
+			[
+				"window",
+				"Z:\\proj\\dynamics_g0\\src\\win32\\window.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"selected_items":
+		[
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 461.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

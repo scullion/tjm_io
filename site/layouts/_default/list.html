@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<section class="container article-summaries">
+	<div class="row">
+		{{ range $i, $item := .Site.Taxonomies.locations.blog.Pages.ByDate.Reverse }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</div>
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,14 @@
+<nav class="top-nav">
+	<div class="container-fluid">
+		<div class="logo">
+			<a href="/about/"><kbd>tjm.io</kbd></a>
+		</div>
+		<ul class="links">
+			{{ range .Site.Menus.top }}
+				<li><a href="{{ .Url }}">{{ .Name }}</a></li>
+			{{ end }}
+			<li><a href="https://twitter.com/earthrimwalker" class="image-link leftmost"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="{{ .Site.Params.rss_url }}" class="image-link"><i class="fa fa-rss-square"></i></a></li>
+		</ul>
+	</div>
+</nav>

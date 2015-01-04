@@ -1,0 +1,11 @@
+<li>
+	<a class="image-link" href="{{ .Permalink }}">
+		<img src="/img/{{ .Params.image }}_64x64.jpg" width="64" height="64" alt="{{ .Title }}">
+	</a> 
+	<div class="media-body">
+		{{ $date := .Date.Format .Site.Params.date_format }}
+		<time datetime="{{ $date }}" class="article-time">{{ $date }}</time>
+		<a href="{{ .Permalink }}"><h4 class="media-heading">{{ .Title }}</h4></a>
+		<p class="summary">{{ or .Description (add (.Summary | first 120) "&hellip;" | safeHtml) }}</p>
+	</div>
+</li>

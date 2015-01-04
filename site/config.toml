@@ -1,0 +1,39 @@
+baseurl = "http://tjm.io"
+languagecode = "en-uk"
+title = "tjm.io"
+canonifyurls = false
+pygmentsstyle = "default"
+
+[Permalinks]
+article = "/:slug"
+
+[Taxonomies]
+location = "locations"
+tag = "tags"
+
+[Params]
+date_format = "Jan 2, 2006"
+rss_url = "/article/index.xml"
+
+# Site menu.
+
+[[menu.top]]
+	identifier = "blog"
+    name = "Blog"
+    url = "/"
+    weight = -104
+[[menu.top]]
+    identifier = "articles"
+    name = "Articles"
+    url = "/articles/"
+    weight = -103
+#[[menu.top]]
+#	identifier = "projects"
+#    name = "Projects"
+#    url = "/projects/"
+#    weight = -102
+[[menu.top]]
+	identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = -101

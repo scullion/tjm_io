@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "skeleton.js",
+  "sourceRoot": "../../../coffee/",
+  "sources": [
+    "skeleton.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA;AAAA"
+}

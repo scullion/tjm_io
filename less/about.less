@@ -1,0 +1,38 @@
+// About Page
+
+.about-page {
+	h1 {
+		margin-top: 0;
+	}
+	.portrait {
+		margin-left: @padding-large-horizontal;
+		margin-top: 0;
+		float: right;
+		img:extend(.img-rounded all) { 
+			border: 1px solid @gray-lighter;
+			padding: 0;
+		}
+	}
+
+	dl.contact {
+		@indent: 6 * @padding-large-horizontal;
+		
+		margin-top: @padding-large-horizontal;
+		dt {
+			width: @indent;
+		}
+		dd {
+			padding-bottom: @padding-base-vertical;
+			margin-left: @indent + 2 * @padding-large-horizontal; 
+			&:before, &:after { 
+				display: none;
+			}
+		}
+	}
+
+	#contact-form {
+		margin-top: 3 * @padding-large-vertical;
+		border-top: 1px solid #DDD;
+		padding-top: 3 * @padding-large-vertical;
+	}
+}

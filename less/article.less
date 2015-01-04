@@ -1,0 +1,91 @@
+.position-article {
+	.make-sm-column(9);
+}
+
+.read-button:extend(.btn all, .btn-sm all, .btn-default all) {
+	margin-top: @padding-large-vertical;
+}
+
+.single-article, .article-summaries {
+	max-width: @container-sm; // Disable the medium and large grids.
+	margin-bottom: @article-vspace;
+
+	.clearfix();
+
+	// Article navigation menu.
+	.menu-column:extend(.hidden-print all, .hidden-xs all) {
+		.clearfix;
+		.make-sm-column(3);
+	}
+
+	#disqus_thread {
+		.position-article();
+	}
+
+	// Content article.
+
+	&.single-article article {
+		min-height: 400px;
+	}
+
+	&.article-summaries article {
+		.article-title {
+			//font-size: 22px;
+			//font-weight: bold;
+		}
+		.article-time {
+			// .small();
+		}
+	}
+
+	article {
+		.position-article(); 
+		margin: @article-vspace 0 0 0;
+		font-size: @article-font-size;
+
+		.article-title {
+			margin-top: 10px;
+		}
+
+		.article-time {
+			color: @gray;
+			font-weight: bold;
+		}
+
+		ul  {
+			.fa-ul;
+			padding-left: @padding-large-horizontal;
+
+			li {
+				padding: 0 0 @padding-base-vertical 0;
+				position: relative;
+				&:before {
+					.fa; .fa-li;
+					content: @fa-var-angle-right;
+					color: @brand-primary;
+				}
+			}
+		}
+
+		blockquote, code, pre {
+			padding-left: @padding-large-horizontal;
+			border-left: @block-quote-edge-width solid @brand-primary;
+			border-radius: @block-quote-edge-radius;
+		}
+
+		blockquote {
+			font-size: 1.375em;
+		}
+
+		code, pre {
+			padding: @padding-base-vertical @padding-base-horizontal;
+			color: @gray-base;
+			background-color: @gray-lighter;
+			font-family: @font-family-monospace;
+		}
+
+		div.highlight {
+			background: none !important; // Override Pygments inline style.
+		}
+	}
+}

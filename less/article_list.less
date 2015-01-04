@@ -1,0 +1,21 @@
+.article-list {
+	.make-sm-column(6);
+	.center-block();
+	float: none !important;
+
+	ul.article-media-list:extend(.media-list all) {
+		.article-time {
+			//display: none;
+			.small();
+			.text-muted();
+		}
+		li:extend(.media all) {
+			padding-top: 0;
+			.image-link:extend(.media-left all) {
+				img {
+					.img-rounded;
+				}
+			}
+		}
+	}
+}

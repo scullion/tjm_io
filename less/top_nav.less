@@ -1,0 +1,50 @@
+// The viewport width at which the top bar should allow the content to show 
+// through. The screen has to be wide enough to accommodate the logo, links bar
+// and a full small-grid container for the article.
+@top-bar-transparent-min: (@container-sm * 9 / 12 + 320px + 100px + 3 * 15px);
+
+// Navigation Bar
+.top-nav:extend(.navbar all, .navbar-default all, .navbar-fixed-top all) {
+	.webkit-jiggle-fix();
+
+	@media (min-width: @top-bar-transparent-min) {
+		pointer-events: none;
+		background: none;
+	}
+
+	.logo:extend(.navbar-header all) {
+		pointer-events: all;
+		a:extend(.navbar-brand all) {
+			&:hover, &:active {
+			}
+		}
+	}
+	.links:extend(.nav all, .navbar-nav all, .navbar-right all) {
+		@base-hpad: extract(@nav-link-padding, 2);
+		margin-right: 0;
+		pointer-events: all;
+		a {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.image-link {
+			padding-left: 0;
+			padding-right: @base-hpad / 2;
+			&.leftmost { 
+				padding-left: 2 * @base-hpad; 
+			}
+		}
+	}
+}
+
+// Make the navbar not stick to the top on mobile and remove the compensatory 
+// body padding.
+@media (max-width: 479px) {
+    .top-nav {
+	    position: relative;
+	    top: auto;
+    }
+    body {
+    	padding-top: 0;
+    }
+}
