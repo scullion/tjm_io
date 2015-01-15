@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
-<section class="container article-summaries">
-	<div class="row">
+<section class="article-container article-summaries">
+	<div class="article-row">
 		{{ range $i, $item := .Site.Taxonomies.locations.blog.Pages.ByDate.Reverse }}
 			{{ .Render "summary" }}
 		{{ end }}

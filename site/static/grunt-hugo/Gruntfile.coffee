@@ -4,12 +4,12 @@ module.exports = (grunt) ->
         less:
             dev:
                 paths: ['less/']
-                src: ['less/tjm_io.less']
-                dest: 'site/static/css/tjm_io.css'
+                src: ['less/mysite.less']
+                dest: 'site/static/css/mysite.css'
             dist:
                 paths: ['less/']
-                src: ['less/tjm_io.less']
-                dest: 'site/static/css/tjm_io.min.css'
+                src: ['less/mysite.less']
+                dest: 'site/static/css/mysite.min.css'
                 options:
                     plugins: [
                         new (require 'less-plugin-autoprefix') browsers: ['> 0.1%']
@@ -17,20 +17,22 @@ module.exports = (grunt) ->
                     ]
         coffee:
             options:
-                join: true
-                sourceMap: true
-                sourceRoot: '/coffee/'
+                join: true             # Concatenate before, not after compilation.
+                sourceMap: true        # Make a source map.
+                sourceRoot: '/coffee/' # URL debugger should use to download .coffee files.
+                inline: true           # Embed coffee source inside the source map.
             build:
-                src: 'coffee/tjm_io.coffee'
-                dest: 'site/static/js/tjm_io.js'
+                src: 'coffee/mysite.coffee'
+                dest: 'site/static/js/mysite.js'
         uglify:
             options:
                 sourceMap: true
-                sourceMapIn: 'site/static/js/tjm_io.js.map'
+                sourceMapIn: 'site/static/js/mysite.js.map'
             dist:
-                src: 'site/static/js/tjm_io.js'
-                dest: 'site/static/js/tjm_io.min.js'
+                src: 'site/static/js/mysite.js'
+                dest: 'site/static/js/mysite.min.js'
         copy:
+            # This task is not required if `inline` source maps are used.
             coffee:
                 src: 'coffee/*'
                 dest: 'site/static/'
@@ -39,12 +41,11 @@ module.exports = (grunt) ->
                 options:
                     engine: 'gm'
                     separator: '_'
-                    newFilesOnly: false
                     sizes: [
-                        { rename: false, width: '100%', height: '100%' }
-                        { name: '64x64', width: 64, height: 64, aspectRatio: false }
-                        { name: '128x128', width: 128, height: 128, aspectRatio: false }
-                        { name: '300', width: 300, aspectRatio: true }
+                        { rename: false, width: '100%', height: '100%' }                # Copy the source.
+                        { name: '64x64', width: 64, height: 64, aspectRatio: false }    # Exact 64x64 via cropping.
+                        { name: '300', width: 300, aspectRatio: true }                  # At most 300px wide.
+                        { name: '400x250', width: 400, height: 250, aspectRatio: true } # At most 400px wide and 250px tall.
                     ]
                 files: [
                     expand: true
@@ -72,7 +73,7 @@ module.exports = (grunt) ->
                 files: ['Gruntfile.coffee']
                 tasks: 'dev'
         connect:
-            tjm_io:
+            mysite:
                 options:
                     hostname: '127.0.0.1'
                     port: 8080

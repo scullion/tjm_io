@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"position-art",
+				"position-article-with-menu"
+			],
+			[
 				"padding-base",
 				"padding-base-horizontal"
 			],
@@ -32,43 +36,74 @@
 	"buffers":
 	[
 		{
-			"contents": "<html>\n	\n	<head><title>LIST</title></head>\n	<body>\n		<h1>THIS IS LIST.HTML</h1>\n	</body>\n</html>\n",
-			"file": "site/layouts/article/list.html",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "Gruntfile.coffee",
 			"settings":
 			{
-				"buffer_size": 97,
+				"buffer_size": 3712,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "{{ partial \"header.html\" . }}\n\n<section class=\"articles\">\n	<article>\n		{{ $date := .Date.Format .Site.Params.date_format }}\n		<time datetime=\"{{ $date }}\" class=\"article-time\">{{ $date }}</time>\n		<h1 class=\"article-title\"><a href=\"{{ .Permalink }}\">{{ .Title }}</a></h1>\n		{{ .Content }}\n	</article>\n</section>\n{{ if .Next }}\n<section class=\"read-next\">\n	<a href=\"{{ .Next.Permalink }}\">\n		<h6 class=\"read-next-heading\">Read another...</h6>\n		<time class=\"read-next-time\">{{ .Next.Date.Format .Site.Params.date_format }}</time>\n		<h3 class=\"read-next-title\">{{ .Next.Title }}</h3>\n		<p class=\"read-next-excerpt\">\n			{{ .Next.Summary }}\n			<span class=\"continue-link\">Continue <i class=\"fa fa-hand-o-right\"></i></span>\n		</p>\n	</a>\n</section>\n{{ end }}\n\n{{ partial \"footer.html\" . }}\n",
-			"file": "site/layouts/article/single.html",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "site/layouts/partials/footer.html",
 			"settings":
 			{
-				"buffer_size": 784,
+				"buffer_size": 355,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "{{ partial \"header.html\" . }}\n\n<section class=\"articles\">\n	<article>\n		{{ $date := .Date.Format .Site.Params.date_format }}\n		<time datetime=\"{{ $date }}\" class=\"article-time\">{{ $date }}</time>\n		<h1 class=\"article-title\"><a href=\"{{ .Permalink }}\">{{ .Title }}</a></h1>\n		{{ .Content }}\n	</article>\n</section>\n{{ if .Next }}\n<section class=\"read-next\">\n	<a href=\"{{ .Next.Permalink }}\">\n		<h6 class=\"read-next-heading\">Read another...</h6>\n		<time class=\"read-next-time\">{{ .Next.Date.Format .Site.Params.date_format }}</time>\n		<h3 class=\"read-next-title\">{{ .Next.Title }}</h3>\n		<p class=\"read-next-excerpt\">\n			{{ .Next.Summary }}\n			<span class=\"continue-link\">Continue <i class=\"fa fa-hand-o-right\"></i></span>\n		</p>\n	</a>\n</section>\n{{ end }}\n\n{{ partial \"footer.html\" . }}\n",
 			"file": "site/layouts/_default/single.html",
-			"file_size": -1,
-			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 784,
+				"buffer_size": 932,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "site/layouts/_default/list.html",
+			"file": "site/content/article/grunt_hugo.md",
 			"settings":
 			{
-				"buffer_size": 389,
+				"buffer_size": 18538,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/static/grunt-hugo-fast-iteration-cookbook/Gruntfile.coffee",
+			"settings":
+			{
+				"buffer_size": 3712,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/article.less",
+			"settings":
+			{
+				"buffer_size": 2295,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/top_nav.less",
+			"settings":
+			{
+				"buffer_size": 1240,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/site.less",
+			"settings":
+			{
+				"buffer_size": 1560,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/article_menu.less",
+			"settings":
+			{
+				"buffer_size": 986,
 				"line_ending": "Windows"
 			}
 		}
@@ -76,16 +111,64 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 471.0,
+		"height": 183.0,
 		"selected_items":
 		[
+			[
+				"set syntax text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set syntax mark",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"package controll",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"wrap ",
+				"Word Wrap: Toggle"
+			],
 			[
 				"tabs",
 				"Indentation: Convert to Tabs"
 			],
 			[
-				"spaces",
-				"Indentation: Convert to Spaces"
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
 			],
 			[
 				"less",
@@ -114,10 +197,6 @@
 			[
 				"package list",
 				"Package Control: List Packages"
-			],
-			[
-				"package",
-				"Package Control: Discover Packages"
 			],
 			[
 				"syntax yaml",
@@ -208,10 +287,6 @@
 				"Set Syntax: GLSL"
 			],
 			[
-				"wrap",
-				"Word Wrap: Toggle"
-			],
-			[
 				"package inst",
 				"Package Control: Install Package"
 			]
@@ -239,156 +314,145 @@
 	"expanded_folders":
 	[
 		"/Z/proj/blog",
-		"/Z/proj/blog/coffee",
-		"/Z/proj/blog/less/bootstrap",
-		"/Z/proj/blog/less/bootstrap/mixins",
 		"/Z/proj/blog/site",
-		"/Z/proj/blog/site/content",
 		"/Z/proj/blog/site/layouts",
 		"/Z/proj/blog/site/layouts/_default",
-		"/Z/proj/blog/site/layouts/partials",
-		"/Z/proj/blog/site/static/css",
-		"/Z/proj/blog/site/themes/herring-cove/layouts/_default",
-		"/Z/proj/blog/site/themes/hyde/archetypes",
-		"/Z/proj/blog/site/themes/hyde/layouts",
-		"/Z/proj/blog/site/themes/hyde/layouts/_default",
-		"/Z/proj/blog/site/themes/hyde/layouts/partials",
-		"/Z/proj/blog/site/themes/journal",
-		"/Z/proj/blog/site/themes/journal/layouts",
-		"/Z/proj/blog/site/themes/journal/layouts/page",
-		"/Z/proj/blog/site/themes/journal/layouts/partials",
-		"/Z/proj/blog/site/themes/journal/layouts/post"
+		"/Z/proj/blog/site/layouts/picture_index",
+		"/Z/proj/blog/site/static",
+		"/Z/proj/blog/site/static/coffee",
+		"/Z/proj/blog/site/static/grunt-hugo-fast-iteration-cookbook",
+		"/Z/proj/blog/site/static/js"
 	],
 	"file_history":
 	[
-		"/Z/proj/blog/site/layouts/index.html",
-		"/Z/proj/blog/site/layouts/partials/header.html",
+		"/E/dropbox/notes/onenote/papyri/thoughts/logs.one",
+		"/Z/proj/blog/less/bootstrap/mixins/table-row.less",
+		"/Z/proj/blog/node_modules/grunt/node_modules/underscore.string/test/strings_standalone.js",
+		"/Z/proj/blog/node_modules/less-plugin-clean-css/node_modules/clean-css/lib/utils/input-source-map-tracker.js",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-no-semi.less",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/input-number.json",
+		"/Z/proj/blog/build/dev/index.html",
+		"/Z/proj/blog/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/count.js",
+		"/Z/proj/blog/build/dev/css/colors.css",
+		"/C/Users/t/Desktop/Gruntfile.coffee",
+		"/Z/proj/blog/site/layouts/partials/article_menu.html",
+		"/Z/proj/blog/build/dist/article/index.html",
+		"/Z/proj/blog/build/dev/article/index.html",
+		"/Z/proj/blog/less/article.less",
 		"/Z/proj/blog/site/content/about.md",
-		"/Z/proj/blog/site/config.toml",
-		"/Z/proj/blog/site/layouts/_default/single.html",
-		"/Z/proj/blog/site/content/posts/second.md",
-		"/Z/proj/blog/site/layouts/partials/top_nav.html",
-		"/Z/proj/blog/site/content/posts/first.md",
-		"/Z/proj/blog/less/skeleton.less",
-		"/Z/proj/blog/site/layouts/article/single.html",
-		"/Z/proj/blog/site/public/posts/index.xml",
-		"/Z/proj/blog/less/colors.less",
-		"/Z/proj/blog/site/themes/herring-cove/layouts/_default/single.html",
-		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/atob-btoa.json",
-		"/Z/proj/blog/less/bootstrap/alerts.less",
-		"/Z/proj/blog/site/themes/stou-dk-theme/layouts/partials/details.html",
-		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-opacity.json",
-		"/Z/proj/blog/site/themes/hugo-uno/static/fonts/Slide-icons.svg",
-		"/C/Users/t/AppData/Local/Temp/Rar$DI11.465/JSON GetBranchPropertyList Call Request.txt",
-		"/Z/proj/blog/node_modules/grunt-contrib-less/tasks/less.js",
-		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/.bin/lessc",
-		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/lib/less/less-error.js",
-		"/Z/proj/blog/node_modules/clean-css/LICENSE",
-		"/Z/proj/blog/less/font_awesome/font-awesome.less",
-		"/Z/proj/blog/less/font_awesome/variables.less",
-		"/Z/proj/blog/less/bootstrap/mixins/grid-framework.less",
-		"/Z/proj/blog/less/bootstrap/navbar.less",
-		"/C/Users/t/Desktop/bootswatch.less",
-		"/C/Users/t/Desktop/variables.less",
-		"/Z/proj/blog/Gruntfile.coffee",
+		"/Z/proj/blog/node_modules/grunt/node_modules/underscore.string/test/test.html",
+		"/Z/proj/blog/site/themes/simple-a/layouts/chrome/menu.html",
+		"/Z/proj/blog/site/themes/persona/layouts/partials/menu.html",
+		"/Z/proj/blog/less/bootstrap/media.less",
+		"/Z/proj/blog/site/static/js/tjm_io.min.js.map",
 		"/Z/proj/blog/site/layouts/partials/footer.html",
-		"/Z/proj/blog/site/layouts/_default/list.html",
-		"/Z/proj/blog/coffee/skeleton.coffee",
 		"/Z/proj/blog/package.json",
-		"/Z/proj/blog/site/static/css/skeleton.css",
-		"/Z/proj/blog/site/static/css/bootstrap.css",
-		"/Z/proj/blog/site/static/js/bootstrap.js",
-		"/Z/proj/blog/site/static/js/npm.js",
-		"/Z/proj/blog/site/themes/hugo-incorporated/layouts/index.html",
-		"/Z/proj/blog/site/themes/hugo-incorporated/layouts/post/single.html",
-		"/Z/proj/blog/site/themes/hyde/layouts/index.html",
-		"/Z/proj/blog/site/themes/hyde/archetypes/default.md",
-		"/Z/proj/blog/site/static/js/blog.js",
-		"/Z/proj/blog/skeleton.sublime-workspace",
+		"/Z/proj/blog/less/bootstrap_colors.less",
+		"/Z/proj/blog/less/tjm_io.less",
+		"/Z/proj/blog/site/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/herring-cove/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/html5/layouts/parts/header.html",
+		"/Z/proj/blog/site/themes/hugo-incorporated/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/hugoscroll/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/journal/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/liquorice/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/persona/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/purehugo/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/redlounge/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/simple-a/layouts/chrome/header.html",
+		"/Z/proj/blog/site/themes/tinyce/layouts/partials/header.html",
+		"/Z/proj/blog/site/themes/persona/layouts/partials/header.includes.html",
+		"/Z/proj/blog/site/themes/redlounge/layouts/partials/sidebarheader.html",
+		"/Z/proj/blog/site/layouts/partials/top_nav.html",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/svg-html.json",
+		"/Z/proj/blog/less/top_nav.less",
+		"/Z/proj/blog/coffee/test.coffee",
+		"/Z/proj/blog/site/static/js/tjm_io.js",
+		"/Z/proj/blog/node_modules/grunt/node_modules/.bin/coffee",
+		"/Z/proj/blog/coffee/tjm_io.coffee",
+		"/Z/proj/blog/site/layouts/_default/single.html",
+		"/Z/proj/blog/less/site.less",
+		"/Z/proj/blog/site/themes/herring-cove/static/css/bootstrap-theme.css",
+		"/Z/proj/blog/site/themes/persona/static/css/bootstrap-theme.css.map",
+		"/Z/proj/blog/less/bootstrap/mixins/border-radius.less",
+		"/Z/proj/blog/build/dev/css/skeleton.css",
+		"/Z/proj/blog/less/skeleton.less",
+		"/Z/proj/blog/site/layouts/_default/summary.html",
+		"/Z/proj/blog/site/content/article/grunt_hugo.md",
+		"/Z/proj/blog/less/bootstrap.less",
+		"/Z/proj/blog/less/pygments.less",
+		"/Z/proj/blog/coffee/skeleton.coffee",
+		"/Z/proj/blog/Gruntfile.coffee",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/png-alpha.json",
+		"/Z/proj/blog/less/bootstrap/jumbotron.less",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/lib/less/visitors/join-selector-visitor.js",
+		"/Z/proj/blog/node_modules/grunt-contrib-connect/node_modules/connect/lib/middleware/json.js",
+		"/Z/proj/blog/site/config.toml",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/high-resolution-time.json",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/background-img-opts.json",
+		"/Z/proj/blog/node_modules/grunt-contrib-connect/node_modules/connect/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js",
+		"/Z/proj/blog/node_modules/grunt-contrib-connect/node_modules/connect/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js",
+		"/Z/proj/blog/node_modules/grunt-contrib-connect/node_modules/connect/node_modules/body-parser/HISTORY.md",
+		"/Z/proj/blog/site/themes/redlounge/layouts/partials/bodyend.html",
+		"/Z/proj/blog/site/themes/herring-cove/LICENSE.md",
+		"/Z/proj/blog/less/read_next.less",
 		"/Z/proj/blog/skeleton.sublime-project",
-		"/Z/proj/blog/blog.sublime-project",
-		"/Z/proj/blog/config.toml",
-		"/Z/proj/blog/content/posts/first.md",
-		"/Z/proj/blog/less/blog.less",
-		"/E/dropbox/pkg/node/node_modules/npm/npmrc",
-		"/Z/proj/blog/static/css/blog.css",
-		"/Z/proj/blog/coffee/blog.coffee",
-		"/E/dropbox/proj/webgl_2rev_1/package.json",
-		"/Z/proj/blog/content/about.md",
-		"/E/dropbox/proj/webgl_2rev_1/Gruntfile.coffee",
-		"/E/dropbox/proj/blog/themes/hyde/layouts/_default/list.html",
-		"/E/dropbox/proj/blog/themes/hyde/archetypes/default.md",
-		"/E/dropbox/proj/blog/public/css/hyde.css",
-		"/E/dropbox/proj/blog/public/css/poole.css",
-		"/E/dropbox/proj/blog/public/css/syntax.css",
-		"/E/dropbox/proj/blog/public/posts/index.html",
-		"/E/dropbox/proj/blog/themes/hyde/layouts/index.html",
-		"/E/dropbox/proj/blog/themes/hyde/layouts/partials/head.html",
-		"/E/dropbox/proj/blog/themes/hyde/layouts/partials/sidebar.html",
-		"/E/dropbox/proj/blog/public/posts/index.xml",
-		"/Z/proj/blog/content/blog",
-		"/E/dropbox/proj/devenv/env.py",
-		"/C/store/refsrc/unity_built_in_shaders/DefaultResourcesExtra/skybox cubed.shader",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardBRDF.cginc",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityPBSLighting.cginc",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardCore.cginc",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityShaderVariables.cginc",
-		"/E/dropbox/proj/star_sonata_shaders/physical/shared.fx",
-		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Camera-DepthNormalTexture.shader",
-		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Internal-CombineDepthNormals.shader",
-		"/C/store/refsrc/unity_built_in_shaders/DefaultResourcesExtra/Standard.shader",
-		"/C/store/refsrc/unity_built_in_shaders/Editor/StandardShaderGUI.cs",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/Lighting.cginc",
-		"/C/store/refsrc/unity_built_in_shaders/CGIncludes/UnityStandardInput.cginc",
-		"/C/store/refsrc/unity_built_in_shaders/DefaultResources/Internal-Clear.shader",
-		"/E/dropbox/proj/unity_shader_playground/playground/Assets/SampleAssets/Vehicles/Car/CarGuidelines.txt",
-		"/Z/proj/table_file/test/syntax.table",
-		"/Z/proj/table_file/src/main.cpp",
-		"/Z/proj/piano_mud_prototype/data/maps/prototype.pmap",
-		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/research/component_test_suite/src/component/component.cpp",
-		"/E/dropbox/proj/component_graph_g0/starsonata_d/ssclient/research/component_test_suite/src/component/component_allocator.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/clientV2/src/unit/component_system.h",
-		"/Z/proj/table_file/test/includes.table",
-		"/Z/proj/table_file/test/errors.table",
-		"/Z/proj/table_file/src/table_file.cpp",
-		"/E/dropbox/proj/component_graph_g0/starsonata_d/ssclient/research/component_test_suite/src/component/component_api.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_system.cpp",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_system.h",
-		"/E/dropbox/proj/component_graph_g0/component_system.h",
-		"/E/dropbox/proj/component_graph_g0/component_system.cpp",
-		"/E/dropbox/proj/component_graph_g0/component_internal.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_c/ssclient/clientV2/src/unit/unit_component_types.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/unit_component_types.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/unit_component_types.cpp",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/clientV2/src/unit/component_internal.h",
-		"/E/dropbox/proj/component_graph_g0/starsonata_b/ssclient/research/component_test_suite/src/component/component.cpp",
-		"/E/dropbox/proj/starsonata_e/dev/ssclient/research/component_test_suite/src/component/component.cpp",
-		"/E/dropbox/proj/starsonata_e/dev/ssclient/clientV2/src/particles/spark_component.cpp",
-		"/E/dropbox/proj/star_sonata_component/src/component/component.cpp",
-		"/E/dropbox/proj/star_sonata_research/src/component/component.cpp",
-		"/E/dropbox/proj/shader_compiler/src/shader_compiler/definition.cpp",
-		"/E/dropbox/proj/shader_compiler/src/shader_compiler/table_file.cpp",
-		"/E/dropbox/proj/shader_compiler/src/shader_compiler/table_file.h",
-		"/E/dropbox/proj/packaged_hashes/src/murmur3_64_x86.h",
-		"/Z/proj/table_file/test/large.table",
-		"/E/dropbox/proj/table_file/src/table_file.h",
-		"/Z/proj/piano_mud_prototype/.git/config",
-		"/E/dropbox/proj/table_file/src/table_file.cpp",
-		"/Z/proj/opengl_texture_tiles/.git/config",
-		"/E/dropbox/pkg/git/README.portable",
-		"/Z/proj/opengl_texture_tiles/.git/refs/heads/playground_update",
-		"/Z/proj/opengl_texture_tiles/.git/refs/remotes/playground/master",
-		"/Z/proj/opengl_texture_tiles/.git/logs/refs/remotes/playground/master",
-		"/Z/proj/opengl_texture_tiles/.git/refs/heads/master",
-		"/Z/refsrc/android_native/platform/frameworks/native/libs/gui/Surface.cpp",
-		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/view/SurfaceView.java",
-		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Looper.java",
-		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/MessageQueue.java",
-		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Message.java",
-		"/Z/proj/opengl_texture_tiles/scripts/glad/gl/gles/glad_egl.c",
-		"/Z/proj/opengl_texture_tiles/scripts/glad/glad/loader_gles/include/glad/glad_egl.h",
-		"/Z/proj/opengl_texture_tiles/scripts/glad/glad/loader_gles/include/glad/glad.h",
-		"/Z/refsrc/android_native/platform/frameworks/base/core/java/android/os/Handler.java"
+		"/Z/proj/blog/less/article_menu.less",
+		"/Z/proj/blog/site/themes/html5/layouts/parts/menu.html",
+		"/Z/proj/blog/site/content/article/first.md",
+		"/Z/proj/blog/less/helpers.less",
+		"/Z/proj/blog/less/article_list.less",
+		"/Z/proj/blog/less/about.less",
+		"/Z/proj/blog/site/content/about_confirm.md",
+		"/Z/proj/blog/site/static/css/skeleton.min.css",
+		"/Z/proj/blog/node_modules/clean-css/LICENSE",
+		"/Z/proj/blog/site/layouts/_default/list_entry.html",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/.bin/lessc",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/tasks/less.js",
+		"/Z/proj/blog/less/bootstrap/tables.less",
+		"/Z/proj/blog/site/themes/liquorice/layouts/partials/author.html",
+		"/Z/proj/blog/node_modules/grunt/node_modules/rimraf/AUTHORS",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/add-mixed-units.less",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/atob-btoa.json",
+		"/Z/proj/blog/site/layouts/_default/single.ace",
+		"/E/dropbox/proj/stacker/data/samples/the_chicken_or_the_egg.stacker",
+		"/Z/proj/blog/build/dev/fonts/glyphicons-halflings-regular.svg",
+		"/Z/proj/blog/site/themes/stou-dk-theme/layouts/shortcodes/youtube.html",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/outline.json",
+		"/Z/proj/blog/less/bootstrap/mixins/opacity.less",
+		"/Z/proj/blog/site/themes/hugo-incorporated/content/about.md",
+		"/Z/proj/blog/site/layouts/_default/list.html",
+		"/Z/proj/blog/.gitignore",
+		"/Z/proj/blog/.gitattributes",
+		"/Z/proj/blog/site/layouts/partials/disqus.html",
+		"/Z/proj/blog/site/layouts/partials/disqus_count_script.html",
+		"/Z/proj/blog/build/dev/article/index.xml",
+		"/Z/proj/blog/site/themes/persona/layouts/partials/disqus_id.html",
+		"/Z/proj/blog/less/bootstrap/dropdowns.less",
+		"/Z/proj/blog/node_modules/clean-css/History.md",
+		"/Z/proj/blog/build/dev/heres-my-first-post/index.html",
+		"/Z/proj/blog/less/bootstrap/forms.less",
+		"/Z/proj/blog/site/content/articles.md",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/postcss/lib/at-rule.js",
+		"/Z/proj/blog/less/bootstrap/alerts.less",
+		"/Z/proj/blog/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/color-func-invalid-color.less",
+		"/Z/proj/blog/site/themes/hugo-uno/static/fonts/Slide-icons.svg",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/css-opacity.json",
+		"/Z/proj/blog/build/dev/articles/index.html",
+		"/Z/proj/blog/build/dev/index.xml",
+		"/Z/proj/blog/less/bootstrap/mixins/text-overflow.less",
+		"/Z/proj/blog/site/themes/hugo-incorporated/scss/_bootstrap.scss",
+		"/Z/proj/blog/site/themes/persona/layouts/partials/profile_bottom.html",
+		"/Z/proj/blog/node_modules/grunt-responsive-images/node_modules/gm/node_modules/stream-to-buffer/package.json",
+		"/Z/proj/blog/site/themes/stou-dk-theme/layouts/partials/nav-bar-right.html",
+		"/Z/proj/blog/site/static/fonts/glyphicons-halflings-regular.svg",
+		"/Z/proj/blog/less/colors.less",
+		"/Z/proj/blog/site/layouts/picture_index/single.html",
+		"/Z/proj/blog/pelican/Include/listobject.h",
+		"/Z/proj/blog/node_modules/less-plugin-autoprefix/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/link-icon-png.json",
+		"/Z/proj/blog/less/bootstrap/badges.less",
+		"/Z/proj/blog/pelican/Lib/site-packages/docutils/parsers/rst/directives/body.py",
+		"/Z/proj/blog/site/content/article/second.md"
 	],
 	"find":
 	{
@@ -399,6 +463,7 @@
 		"height": 96.0,
 		"where_history":
 		[
+			"Z:\\proj\\blog\\less\\bootstrap",
 			"Z:\\proj\\blog\\site\\themes",
 			"Z:\\proj\\blog\\less\\bootstrap",
 			"C:\\store\\refsrc\\unity_built_in_shaders\\",
@@ -421,134 +486,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Params",
-			"dateformat",
-			".Next",
-			"light",
-			"hidden",
 			"article",
-			"			color: @gray;\n			font-weight: bold;\n		}",
-			"Next",
-			"next",
-			"Next",
-			"Prev",
-			"time",
-			"id",
-			"posts",
-			"radius",
-			"@white",
-			"@accent",
-			"@light-grey",
-			"@black",
-			"link",
-			"main",
-			"home",
-			"Site",
-			"col-md-",
-			"col-md-12",
-			".col-md-12",
-			"navbar-right",
-			"Cakeboy",
-			"html5",
-			"onClose",
-			"event",
-			"h",
-			"on",
-			"hugoArgs",
+			"gruntfile",
+			"tjm_io",
+			"!!",
+			"less",
+			"with",
+			"generated",
+			"javascript",
+			"We",
+			"mysite",
+			"Note",
+			"host",
+			"our",
+			"the",
+			"to",
+			"option",
+			" \n",
+			"undocument",
+			"source",
+			"under",
+			"concatenated",
+			"very",
+			"required",
+			"plugin",
+			"autoprefix",
+			"browsers",
+			"Two",
+			"features",
+			"causes",
+			"First",
+			"items",
+			"add",
+			":= ",
+			"safeHtml",
+			"pageId",
+			"UniqueId",
+			"sub",
+			"grunt",
+			"Compiling",
+			"they",
+			"while",
+			"tjm_io",
+			"customized",
+			"can",
+			"less",
+			"a",
+			"are",
+			"all",
+			"hugo",
+			"provides",
+			"  ",
+			"your",
+			"installed",
 			"dev",
-			"target",
-			"blog",
-			"8000",
-			"8080",
-			"AuthorName",
-			"probeHDR",
-			"Unity_GlossyEnvironment",
-			"UNITY_DECLARE_TEXCUBE",
-			"Unity_GlossyEnvironment",
-			"cube",
-			"IN_LIGHTDIR_FWDADD",
-			"_NORMALMAP",
-			"_NormalMap",
-			"tex2D",
-			"WorldNormal(",
-			"WorldNormal",
-			"FRAGMENT_SETUP",
-			"tex2D",
-			"1>",
-			"z:\\proj\\piano_mud_prototype\\src\\",
-			"1>z:\\proj\\piano_mud_prototype\\src\\",
-			"z:\\proj\\piano_mud_prototype\\src\\",
-			"DestroyGraph",
-			"exits",
-			"links",
-			"parse_value",
-			"read_identifier",
-			"ident",
-			"tfu_expand",
-			".target",
-			"dispatchMessage",
-			"gladLoadGLES2Loader",
-			"gladLoad",
-			"gladLoadGL",
-			"find_coreGLES2",
-			"JNIEnv",
-			"JEnv",
-			"unlockAndPost",
-			"NATIVE_WINDOW_UNLOCK_AND_POST",
-			"dequeueBuffer",
-			"mSurfaceTexture",
-			"dequeueBuffer(",
-			"dequeueBuffer",
-			"BpInterface",
-			"dequeueBuffer(",
-			"dequeueBuffer",
-			"mEglFence = ",
-			"mEglFence",
-			"bindToTextureTarget",
-			"mCurrentTexture",
-			"updateAndReleaseLocked",
-			"bindTextureImageLocked",
-			"doGLFenceWait",
-			"useWaitSync",
-			"dequeueBuffer",
-			"timestamp",
-			"desired",
-			"getTimestamp",
-			"timestamp",
-			"presentTime",
-			"desiredPresentTime",
-			"DispSync",
-			"eglSwapBuffers",
-			"eglPresentationTime",
-			"eglPresentationTimeANDROID",
-			"pkgpath",
-			"sdk_home",
-			"home",
-			"Application.playground",
-			"playground",
-			"app",
-			"playground",
-			"app",
-			"GL_ES_VERSION",
-			"GL_ES_VERSION_2_0",
-			"GL_VERSION",
-			"gladLoadGL",
-			"PFNGLDEBUGMESSAGECONTROLARBPROC",
-			"GLAD_GL_ARB_debug_output",
-			"gladLoadgl",
-			"find_coreGLES2",
-			"gladLoadGLES2Loader",
-			"load_GL_ES_VERSION_2_0",
-			"gladLoadGLLoader",
-			"load_GL_VERSION_4_5",
-			"glad_glClear",
-			"glClear",
-			"GLDIR",
-			"(= \\d+);",
-			" *public static final int ",
-			"\\s*public static final int ",
-			"/\\*+(.|\\s)+?\\*/\\s*",
-			"/\\*+[.\\s]+?\\*/\\s*"
+			"main",
+			"build",
+			"dist",
+			"min",
+			"livereload",
+			"pre",
+			"table",
+			"the",
+			"pre-link",
+			"class",
+			"found",
+			"watch",
+			"livereload",
+			"GraphicsMagick",
+			"livereload",
+			"in",
+			"configurations",
+			"switch",
+			"forcibly",
+			"Hugo",
+			"configurations",
+			"in",
+			"be",
+			"either",
+			"under",
+			"site",
+			"following",
+			"defines",
+			"code",
+			"the",
+			"define",
+			"the",
+			"In addition",
+			"correctionsh",
+			"fast",
+			"necessarily",
+			"While",
+			"any",
+			"The",
+			"instead",
+			"using",
+			"Static",
+			"Fast",
+			"watch",
+			"contrib",
+			"grunt-responsive",
+			"based",
+			"dev",
+			"distribution",
+			"skeleton",
+			"hugo",
+			"used",
+			"connect",
+			"piece",
+			"notifications",
+			"here",
+			"published",
+			"respective",
+			"configuration",
+			"us",
+			"performed",
+			"job",
+			"performed",
+			"fundamenal",
+			"basic",
+			"job",
+			"task",
+			"done",
+			"is",
+			"served",
+			"pages",
+			"inserts",
+			" `",
+			"adds"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -556,6 +621,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"mysite",
 			"white",
 			"@brand-primary",
 			"@gray-light",
@@ -580,24 +646,84 @@
 			[
 				{
 					"buffer": 0,
-					"file": "site/layouts/article/list.html",
+					"file": "Gruntfile.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 97,
+						"buffer_size": 3712,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
+								0,
+								3712
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 301.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site/layouts/partials/footer.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								355
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "site/layouts/_default/single.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 932,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -607,55 +733,57 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "site/layouts/article/single.html",
+					"buffer": 3,
+					"file": "site/content/article/grunt_hugo.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 784,
+						"buffer_size": 18538,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								18538,
+								18538
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9909.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "site/layouts/_default/single.html",
+					"buffer": 4,
+					"file": "site/static/grunt-hugo-fast-iteration-cookbook/Gruntfile.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 784,
+						"buffer_size": 3712,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								784,
-								0
+								3712,
+								3712
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -663,33 +791,130 @@
 					},
 					"stack_index": 1,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 3,
-					"file": "site/layouts/_default/list.html",
+					"buffer": 5,
+					"file": "less/article.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 389,
+						"buffer_size": 2295,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
+								963,
+								963
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"history_list_is_closing": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "less/top_nav.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "less/site.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "less/article_menu.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -697,7 +922,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -712,11 +937,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.96869129618,
 			1.0
 		],
 		"rows":
@@ -728,7 +960,7 @@
 	"menu_visible": true,
 	"output.find_results":
 	{
-		"height": 216.0
+		"height": 318.0
 	},
 	"project": "skeleton.sublime-project",
 	"replace":
@@ -742,20 +974,264 @@
 		"selected_items":
 		[
 			[
-				"config",
-				"blog\\site\\config.toml"
+				"menu.html",
+				"site\\layouts\\partials\\article_menu.html"
 			],
 			[
-				"about.md",
-				"blog\\site\\content\\about.md"
+				"footer",
+				"site\\layouts\\partials\\footer.html"
+			],
+			[
+				"footer.html",
+				"site\\layouts\\partials\\footer.html"
+			],
+			[
+				"header.html",
+				"site\\layouts\\partials\\header.html"
+			],
+			[
+				"topnav.html",
+				"site\\layouts\\partials\\top_nav.html"
+			],
+			[
+				"topnav",
+				"less\\top_nav.less"
+			],
+			[
+				"header.h",
+				"site\\layouts\\partials\\header.html"
+			],
+			[
+				"gruntfile.",
+				"Gruntfile.coffee"
+			],
+			[
+				"coffee",
+				"node_modules\\grunt\\node_modules\\.bin\\coffee"
+			],
+			[
+				"tjmio.less",
+				"less\\tjm_io.less"
+			],
+			[
+				"packag",
+				"package.json"
+			],
+			[
+				"site.less",
+				"less\\site.less"
+			],
+			[
+				"bootstrap",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"bootstrap_colors.less",
+				"less\\bootstrap_colors.less"
 			],
 			[
 				"colors",
-				"blog\\less\\colors.less"
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"bootstrap_colorl",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"bootstrap_colors",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"",
+				"less\\article.less"
+			],
+			[
+				"colors.less",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"grunt_",
+				"site\\content\\article\\grunt_hugo.md"
+			],
+			[
+				"top_na",
+				"site\\layouts\\partials\\top_nav.html"
+			],
+			[
+				"top_n",
+				"less\\top_nav.less"
+			],
+			[
+				"skeleton.css",
+				"build\\dev\\css\\skeleton.css"
+			],
+			[
+				"package.json",
+				"package.json"
+			],
+			[
+				"gruntfile",
+				"Gruntfile.coffee"
+			],
+			[
+				"config.toml",
+				"site\\config.toml"
+			],
+			[
+				"gruntfile.coffee",
+				"Gruntfile.coffee"
+			],
+			[
+				"color",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"bootstrap_col",
+				"less\\bootstrap_colors.less"
+			],
+			[
+				"skeleton.cof",
+				"coffee\\skeleton.coffee"
+			],
+			[
+				"about.md",
+				"site\\content\\about.md"
 			],
 			[
 				"single",
+				"site\\layouts\\_default\\single.html"
+			],
+			[
+				"article.less",
+				"less\\article.less"
+			],
+			[
+				"skleton.less",
+				"less\\skeleton.less"
+			],
+			[
+				"article_men",
+				"site\\layouts\\partials\\article_menu.html"
+			],
+			[
+				"article_menu",
+				"site\\layouts\\partials\\article_menu.html"
+			],
+			[
+				"gru",
+				"Gruntfile.coffee"
+			],
+			[
+				"skeleton.less",
+				"less\\skeleton.less"
+			],
+			[
+				"first",
+				"site\\content\\article\\first.md"
+			],
+			[
+				"hear",
+				"site\\layouts\\partials\\header.html"
+			],
+			[
+				"header.",
+				"site\\layouts\\partials\\header.html"
+			],
+			[
+				"top_tav",
+				"site\\layouts\\partials\\top_nav.html"
+			],
+			[
+				"about.",
+				"site\\content\\about.md"
+			],
+			[
+				"author.html",
+				"site\\themes\\liquorice\\layouts\\partials\\author.html"
+			],
+			[
+				"config",
+				"site\\config.toml"
+			],
+			[
+				"author",
+				"site\\content\\author.md"
+			],
+			[
+				"top",
+				"site\\layouts\\partials\\top_nav.html"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.coffee"
+			],
+			[
+				"outhor",
+				"site\\content\\author.md"
+			],
+			[
+				"disqus_count",
+				"site\\layouts\\partials\\disqus_count_script.html"
+			],
+			[
+				"fo",
+				"site\\layouts\\partials\\footer.html"
+			],
+			[
+				"skeleton.coffe",
+				"coffee\\skeleton.coffee"
+			],
+			[
+				"first.md",
+				"site\\content\\article\\first.md"
+			],
+			[
+				"colo",
+				"build\\dev\\css\\colors.css"
+			],
+			[
+				"top_nav",
+				"site\\layouts\\partials\\top_nav.html"
+			],
+			[
+				"grunt",
+				"blog\\Gruntfile.coffee"
+			],
+			[
+				"summar",
+				"blog\\site\\layouts\\_default\\summary.html"
+			],
+			[
+				"list_entry",
+				"blog\\site\\layouts\\_default\\list_entry.html"
+			],
+			[
+				"summary",
+				"blog\\site\\layouts\\_default\\summary.html"
+			],
+			[
+				"list.html",
+				"blog\\site\\layouts\\_default\\list.html"
+			],
+			[
+				"skeleton.coffee",
+				"blog\\coffee\\skeleton.coffee"
+			],
+			[
+				"single.html",
 				"blog\\site\\layouts\\_default\\single.html"
+			],
+			[
+				"liste",
+				"blog\\site\\layouts\\_default\\list_entry.html"
+			],
+			[
+				"header",
+				"blog\\site\\layouts\\partials\\header.html"
+			],
+			[
+				"toml",
+				"blog\\site\\config.toml"
 			],
 			[
 				"messagejava",
@@ -864,7 +1340,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 461.0,
+	"side_bar_width": 367.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

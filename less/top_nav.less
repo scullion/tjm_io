@@ -1,11 +1,28 @@
-// The viewport width at which the top bar should allow the content to show 
-// through. The screen has to be wide enough to accommodate the logo, links bar
-// and a full small-grid container for the article.
-@top-bar-transparent-min: (@container-sm * 9 / 12 + 320px + 100px + 3 * 15px);
+@top-bar-transparent-min: 1000px;
+@top-bar-transparent-max: (@top-bar-transparent-min - 1px);
+
+// When the top bar is opaque, make headings artificially taller (without 
+// changing their in-flow height) so that when we navigate to an anchor, the
+// actual heading is pushed down 50px and avoids the opaque bar.
+@media (max-width: @top-bar-transparent-max) {
+	h1, h2, h3, h4, h5, h6 {
+		&:before {
+			content: "";
+			display: block;
+			position: relative;
+			width: 0;
+			height: @body-padding-vertical;
+			margin-top: -@body-padding-vertical;
+		}
+	}
+}
+
 
 // Navigation Bar
 .top-nav:extend(.navbar all, .navbar-default all, .navbar-fixed-top all) {
 	.webkit-jiggle-fix();
+
+	transition: background-color 0.5s;
 
 	@media (min-width: @top-bar-transparent-min) {
 		pointer-events: none;
@@ -15,23 +32,28 @@
 	.logo:extend(.navbar-header all) {
 		pointer-events: all;
 		a:extend(.navbar-brand all) {
+			font-weight: bold;
+			font-size: 13px;
 			&:hover, &:active {
+				font-size: 13px;
 			}
 		}
 	}
 	.links:extend(.nav all, .navbar-nav all, .navbar-right all) {
-		@base-hpad: extract(@nav-link-padding, 2);
+		@base-hpad: 10px;
 		margin-right: 0;
 		pointer-events: all;
-		a {
+		li > a {
 			font-weight: bold;
 			text-transform: uppercase;
-		}
-		.image-link {
-			padding-left: 0;
-			padding-right: @base-hpad / 2;
-			&.leftmost { 
-				padding-left: 2 * @base-hpad; 
+			padding-left: @base-hpad;
+			padding-right: @base-hpad;
+			&.image-link {
+				padding-left: 0;
+				padding-right: @base-hpad / 2;
+				&.leftmost {
+					padding-left: 2 * @base-hpad; 
+				}
 			}
 		}
 	}

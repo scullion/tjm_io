@@ -1,12 +1,78 @@
 @grid-float-breakpoint: 240px;
 @article-vspace: 40px;
-@divider-color: #DEDEDE;
 @article-font-size: 15px;
 @block-quote-edge-width: 10px;
 @block-quote-edge-radius: 4px;
+@body-padding-vertical: 50px;
+@code-font-size: 12px;
+@compact-code-font-size: 11px;
 
 body { 
-	padding-top: 70px; // Avoid the navigation bar.
+	padding-top: @body-padding-vertical; // Avoid the navigation bar.
 	position: relative;
 	overflow-x: hidden;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 2 * @line-height-computed;
+  margin-bottom: 1 * (@line-height-computed / 2);
+}
+
+h1, .h1 {
+	margin-bottom: 2 * (@line-height-computed / 2);
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 2 * (@line-height-computed / 2);
+  margin-bottom: 1 * (@line-height-computed / 2);
+}
+
+.boring-link() {
+	border: inherit;
+	color: inherit;
+	transition: inherit;
+	&:hover, &:active {
+		color: inherit;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.fancy-link() {
+	@link-underline-height: 2px;
+	@link-underline-color: darken(@gray-lighter, 5%);
+	@link-underline-animation-time: 0.18s;
+	@link-underline-animation-delay: 0.10s;
+
+	transition: color @link-underline-animation-time ease;
+	color: @text-color;
+	position: relative;
+	display: inline-block;
+	border-bottom: @link-underline-height solid @link-underline-color;
+
+	&:hover {
+		color: @brand-primary;
+		transition: color 0s;
+		&:after { 
+			transition: width 0s;
+			width: 100%; 
+		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto -@link-underline-height auto;
+		width: 0;
+		height: @link-underline-height;
+		background-color: @brand-primary;
+		transition: width @link-underline-animation-time ease @link-underline-animation-delay;
+	}
 }

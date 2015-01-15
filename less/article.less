@@ -1,25 +1,60 @@
-.position-article {
-	.make-sm-column(9);
-}
+// On a 768px screen with a scroll bar we might have 736px of usable space. We
+// don't want our content to be flush to the edge so we allow 16px for a little
+// gutter (the size of which we can't really control) on either size. This gives
+// us 720px for actual content, which is where @article-width-narrow comes from.
+@article-width: 620px;
+@article-width-narrow: 520px;
+@article-menu-width: 170px;
+@article-gutter: 30px;
+@article-container-width-narrow: 
+	@article-width-narrow + 
+	@article-gutter + 
+	@article-menu-width;
+@article-container-width: 
+	@article-width + 
+	@article-gutter + 
+	@article-menu-width;
 
-.read-button:extend(.btn all, .btn-sm all, .btn-default all) {
+.read-button:extend(.btn all, .btn-default all) {
 	margin-top: @padding-large-vertical;
+	padding: (1 * @padding-large-vertical) (2 * @padding-large-horizontal);
 }
 
-.single-article, .article-summaries {
-	max-width: @container-sm; // Disable the medium and large grids.
-	margin-bottom: @article-vspace;
-
+.article-container {
+	box-sizing: border-box;
+	margin: @article-vspace auto 0 auto;
+	padding: 0 (@article-gutter / 2);
+	position: relative;
+	width: 100%;
 	.clearfix();
+
+	@media (max-width: @screen-xs-max) {
+		max-width: @article-width + @article-gutter;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		max-width: @article-container-width + @article-gutter;
+	}
+
+	.article-row {
+		box-sizing: border-box;
+		margin: 0 -(@article-gutter / 2) @article-vspace -(@article-gutter / 2);
+		.clearfix();
+
+		@media (min-width: @screen-sm-min) { 
+			padding-right: (@article-gutter + @article-menu-width);
+		}
+	}
 
 	// Article navigation menu.
 	.menu-column:extend(.hidden-print all, .hidden-xs all) {
-		.clearfix;
-		.make-sm-column(3);
+		float: right;
+		width: @article-menu-width;
+		.clearfix();
 	}
 
 	#disqus_thread {
-		.position-article();
+		margin: 0 (@article-gutter / 2);
 	}
 
 	// Content article.
@@ -29,19 +64,15 @@
 	}
 
 	&.article-summaries article {
-		.article-title {
-			//font-size: 22px;
-			//font-weight: bold;
-		}
-		.article-time {
-			// .small();
-		}
+		margin-bottom: 1 * @article-gutter;
 	}
 
 	article {
-		.position-article(); 
-		margin: @article-vspace 0 0 0;
+		float: left;
+		margin: 0 (@article-gutter / 2);
+
 		font-size: @article-font-size;
+		line-height: @line-height-base;
 
 		.article-title {
 			margin-top: 10px;
@@ -51,6 +82,22 @@
 			color: @gray;
 			font-weight: bold;
 		}
+
+		p, table, li {
+			&:not(.undecorated-links) a {
+				.fancy-link();
+			}
+		}
+
+		.identifier {
+			font-family: @font-family-monospace;
+			font-size: @code-font-size;
+			white-space: pre;
+		}
+
+		table:extend(.table all) { }
+
+		kbd { white-space: pre; }
 
 		ul  {
 			.fa-ul;
@@ -64,28 +111,50 @@
 					content: @fa-var-angle-right;
 					color: @brand-primary;
 				}
+
+				blockquote, pre {
+					display: inline-block;
+					border: 1px solid @pre-border-color;
+				}
+
+				p:empty { margin: 0; } // Hack for broken markdown output.
 			}
 		}
 
-		blockquote, code, pre {
+		code {
+			font-family: @font-family-monospace;
+			font-size: @code-font-size;
+			white-space: pre;
+			color: @code-color;
+			background: @code-bg;
+			border: 1px solid @pre-border-color;
+			border-radius: 2px;
+			padding: 1px 3px;
+
+		}
+
+		blockquote, pre {
 			padding-left: @padding-large-horizontal;
 			border-left: @block-quote-edge-width solid @brand-primary;
 			border-radius: @block-quote-edge-radius;
 		}
 
-		blockquote {
-			font-size: 1.375em;
-		}
-
-		code, pre {
+		pre {
 			padding: @padding-base-vertical @padding-base-horizontal;
 			color: @gray-base;
 			background-color: @gray-lighter;
 			font-family: @font-family-monospace;
+			overflow-x: auto;
+			word-wrap: normal; // Scroll, don't wrap.
+		}
+
+		&.compact-code pre {
+			font-size: @compact-code-font-size;
 		}
 
 		div.highlight {
 			background: none !important; // Override Pygments inline style.
+			.clearfix();
 		}
 	}
 }

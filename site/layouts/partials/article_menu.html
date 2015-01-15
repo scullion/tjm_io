@@ -1,14 +1,24 @@
-{{ if isset .Params "menu" }}
+{{ if isset .Params "article_menu" }}
 <div class="menu-column">
 	<nav class="article-menu">
 		<ul class="menu-items nav">
-		{{ range $i, $item := .Params.menu.items }}
+		{{ range $i, $item := .Params.article_menu.items }}
 			<li>
-				<a href="{{ $item.url }}">{{ $item.title }}</a>
+				{{ if $item.no_link }}
+					<span class="title">{{ $item.title }}</span>
+				{{ else }}
+					{{ $id := or ($item.id) ($item.title | urlize | lower) }}
+					<a href="#{{ $id }}">{{ $item.title }}</a>
+				{{ end }}
 				{{ if $item.items }}
 					<ul class="submenu-items nav">
 						{{ range $j, $sub := $item.items }}
-							<li><a href="{{ $sub.url }}">{{ $sub.title }}</a></li>
+							{{ if $sub.no_link }}
+								<span class="title">{{ $sub.title }}</span>
+							{{ else }}
+								{{ $id := or ($sub.id) ($sub.title | urlize | lower) }}
+								<li><a href="#{{ $id }}">{{ $sub.title }}</a></li>			
+							{{ end }}			
 						{{ end }}
 					</ul> 
 				{{ end }}

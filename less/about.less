@@ -1,14 +1,15 @@
 // About Page
 
-.about-page {
+.about-page article {
 	h1 {
 		margin-top: 0;
 	}
-	.portrait {
+	p.portrait {
 		margin-left: @padding-large-horizontal;
 		margin-top: 0;
 		float: right;
-		img:extend(.img-rounded all) { 
+		a { .boring-link(); }
+		img:extend(.img-rounded all) {
 			border: 1px solid @gray-lighter;
 			padding: 0;
 		}

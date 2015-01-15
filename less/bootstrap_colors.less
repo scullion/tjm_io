@@ -29,7 +29,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @gray-base;
+@link-color:            @text-color;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      @brand-primary;
 //** Link hover decoration.
@@ -40,7 +40,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Lato", "Proxima Nova", "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   "Consolas", "Lucida Console", "Inconsolata", Menlo, Monaco, "Courier New", monospace;
@@ -58,12 +58,13 @@
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.5;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Lato', 'Helvetica Neue', Arial, sans-serif;
+//@headings-font-family:    inherit;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -816,15 +817,15 @@
 //
 //##
 
-@code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-color:                  #C22E74;
+@code-bg:                     #F1F1F1;
 
 @kbd-color:                   #fff;
 @kbd-bg:                      #333;
 
-@pre-bg:                      #f5f5f5;
+@pre-bg:                      #F1F1F1;
 @pre-color:                   @gray-dark;
-@pre-border-color:            #ccc;
+@pre-border-color:            #D4D4D4;
 @pre-scrollable-max-height:   340px;
 
 

@@ -9,29 +9,29 @@ description = "This is my first blog post, where I test out some of the layout f
 image = "escher_eye"
 enable_comments = true
 
-[menu]
+[article_menu]
 
-	[[menu.items]]
+	[[article_menu.items]]
 	id = "item_1"
 	title = "Item 1"
 	url = "#item-1"
 
-	[[menu.items]]
+	[[article_menu.items]]
 	id = "item_2"
 	title = "Item 2"
 	url = "#item-2"
 
-		[[menu.items.items]]
+		[[article_menu.items.items]]
 		id = "item_2_sub_1"
 		title = "Subitem 1"
 		url = "#item-2-sub-1"
 
-		[[menu.items.items]]
+		[[article_menu.items.items]]
 		id = "item_2_sub_2"
 		title = "Subitem 2"
 		url = "#item-2-sub-2"
 
-	[[menu.items]]
+	[[article_menu.items]]
 	id = "item_3"
 	title = "Item 3"
 	url = "#item-3"

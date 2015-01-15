@@ -1,50 +1,57 @@
 nav.article-menu {
 	@highlight-border-width: 4px;
-	@padding-vertical: @padding-base-vertical;
+	@space-vertical: @padding-base-vertical;
 	@indent: 20px;
 	@submenu-indent: 10px;
 
-	margin-top: @article-vspace;
-	margin-bottom: @article-vspace;
 	position: fixed;
+	overflow-y: auto;
+
 	.webkit-jiggle-fix();
 
-	font-size: @article-font-size;
-
-	a {
-		padding: @padding-vertical @indent;
+	a, span.title {
+		padding: (@space-vertical / 2) 2rem (@space-vertical / 2) @indent;
 	}
 
 	.menu-items > li {
-		a {
+		a, span.title {
 			font-weight: bold;
 		}	
-		&.active > a {
-			padding-left: @indent - @highlight-border-width;
+		&.active {
+			> a, > span.title {
+				padding-left: @indent - @highlight-border-width;
+			}
 		}
 	}
 	.submenu-items > li {
 		.small();
-		a {
-			font-weight: normal;
+		a, span.title {
 			.text-muted();
-			padding-left: @indent + @submenu-indent;
+			font-weight: normal;
+			padding: (@space-vertical / 4) 2rem (@space-vertical / 4) (@indent + @submenu-indent);
 		}
-		&.active > a {
-			padding-left: @indent + @submenu-indent - @highlight-border-width;
+		a:hover {
+			color: @link-hover-color;
+		}
+		&.active {
+			> a, > span.title {
+				padding-left: @indent + @submenu-indent - @highlight-border-width;
+			}
 		}
 	}
 
-	li.active > a {
-		border-left: @highlight-border-width solid @brand-primary;
-		border-radius: @highlight-border-width;
-		background: @gray-lighter;
+	li.active {
+		> a, span.title {
+			border-left: @highlight-border-width solid @brand-primary;
+			border-radius: @highlight-border-width;
+			background: @gray-lighter;
+		}
 	}
 
 	a.comments-link {
 		.small();
 		.text-muted();
-		margin-top: @padding-vertical;
+		margin-top: @space-vertical;
 		font-weight: normal;
 		i { margin-right: 4px; }
 	}

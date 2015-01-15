@@ -13,11 +13,10 @@ url = "/about"
 
 # Hi, I'm Tom.
 
-In real life, I live in England. This <i class="fa fa-hand-o-right"></i> is me 
+I hope you find this site helpful. This <i class="fa fa-hand-o-right"></i> is me 
 gliding up the Mekong river on a boat made of old furniture.
 
-I hope you find this site helpful. Here are my various contact details if 
-you'd like to get in touch.
+Here are my various contact details if you'd like to get in touch.
 
 <dl class="contact dl-horizontal">
 	<dt><i class="fa fa-envelope"></i></dt>
@@ -30,7 +29,7 @@ you'd like to get in touch.
 	<dd>westernsun</dd>
 </dt>
 
-## Hire Me
+## Need a Good Developer?
 
 I'm a consultant in web and native software developement. You can hire me to
 build your website, write your app or work on your server back end. Here are

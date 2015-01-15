@@ -1,10 +1,9 @@
 .read-next {
-	.position-article();
-	margin: @article-vspace 0 @article-vspace 0;
-	padding: 0 !important;
-
 	.older, .newer {
-		.make-sm-column(6);
+		float: left;
+		box-sizing: border-box;
+		width: 50%;
+		padding: 0 (@article-gutter / 2);
 	}
 
 	.older .post-link i {
@@ -18,10 +17,11 @@
 		color: @gray;
 		text-transform: uppercase;
 		font-weight: bold;
-		.small();
+		margin-top: 0;
 	}
 
 	.read-next-title {
+		margin-top: (@line-height-computed / 2);
 		font-weight: bold;
 	}
 
@@ -33,6 +33,6 @@
 
 	.read-next-excerpt {
 		.text-muted();
-		.small();
+		//.small();
 	}
 }

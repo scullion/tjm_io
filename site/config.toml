@@ -2,7 +2,10 @@ baseurl = "http://tjm.io"
 languagecode = "en-uk"
 title = "tjm.io"
 canonifyurls = false
-pygmentsstyle = "default"
+pygmentsuseclasses = true
+
+[blackfriday]
+    plainIdAnchors = true
 
 [Permalinks]
 article = "/:slug"
