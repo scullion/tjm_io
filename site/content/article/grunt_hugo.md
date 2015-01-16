@@ -1,6 +1,6 @@
 +++
 weight = 1
-date = "2015-01-05T11:02:30Z"
+date = "2015-01-16T00:00:00Z"
 draft = false
 
 locations = ["blog", "articles"]
