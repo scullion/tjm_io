@@ -9,7 +9,7 @@
 				<time datetime="{{ $date }}" class="article-time">{{ $date }}</time>
 			{{ end }}
 			{{ if not .Params.hide_title }}
-				<h1 class="article-title" id="{{ .Title | urlize | lower }}"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+				<h1 class="article-title" id="{{ .Slug }}"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 			{{ end }}
 			{{ .Content }}
 		</article>

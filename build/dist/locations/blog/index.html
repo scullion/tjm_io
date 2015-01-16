@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Blog</title>
+
+    <link href="/css/tjm_io.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<nav class="top-nav">
+	<div class="container-fluid">
+		<div class="logo">
+			<a href="/"><kbd>tjm.io</kbd></a>
+		</div>
+		<ul class="links">
+			
+				<li><a href="http://tjm.io/">Blog</a></li>
+			
+				<li><a href="http://tjm.io/articles/">Articles</a></li>
+			
+				<li><a href="http://tjm.io/about/">About</a></li>
+			
+			<li><a href="https://twitter.com/earthrimwalker" class="image-link leftmost"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="/article/index.xml" class="image-link"><i class="fa fa-rss-square"></i></a></li>
+		</ul>
+	</div>
+</nav>
+
+
+
+<section class="article-container article-summaries">
+	<div class="article-row">
+		
+			<article class="compact-code">
+	
+	<time datetime="Jan 5, 2015" class="article-time">Jan 5, 2015</time>
+	<h1 class="article-title"><a href="http://tjm.io/grunt-hugo">Grunt and Hugo: A Fast Iteration Cookbook</a></h1>
+	<p><p>This is a selection of code snippets that can be used to assemble a nice live
+editing environment for static sites using <a href="http://gruntjs.com">Grunt</a>. The focus is on
+<a href="http://gohugo.io/">Hugo</a>, <a href="http://lesscss.org/">LESS</a> and <a href="http://coffeescript.org/">CoffeeScript</a>, but most of the code could easily be
+repurposed for similar tools. In addition to the markup and script compilation,
+we&rsquo;ll add automatic image resizing using <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a>.</p>
+
+<p>The <a href="Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
+happened to use, but it should be straightforward to transliterate into plain
+JavaScript if required.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>First make sure <a href="http://nodejs.org/">node.js</a> and <a href="https://www.npmjs.com/">npm</a> are installed.
+<code>npm</code> is bundled with the standard node.js binary installer available
+<a href="http://nodejs.org/download/">here</a>.</p>
+
+<p>Initialize a <code>package.json</code> and install the required plugins by running the
+following commands in the project directory. Feel free to omit plugins you
+don&rsquo;t need.</p>
+
+<p><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>mysite
+<span class="nv">$ </span>npm init
+<span class="nv">$ </span>npm install grunt --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-watch --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-connect --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-copy --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-coffee --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-uglify --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-less --save-dev
+<span class="nv">$ </span>npm install grunt-responsive-images --save-dev
+</pre></div>
+</p>
+
+<p>All being well, the project now has a complete <code>package.json</code>, allowing the
+packages above to be installed at any time in the future with the command
+<code>npm install</code>. There&rsquo;s no need to do this now.</p>
+
+<p>If <code>npm</code> complains about the site lacking a <code>README</code> file, add <code>&quot;private&quot;: true</code>
+to <code>package.json</code> to make it stop.</p>
+
+<p>Finally, the <kbd>grunt</kbd> command used to actually run the build system
+comes from the <code>grunt-cli</code> package, which should be installed globally with
+<code>npm install -g grunt-cli</code>.</p>
+
+<h3 id="the-gruntfile">The Gruntfile</h3>
+
+<p>Paste the skeleton code below into a file called <code>Gruntfile.coffee</code> at the top of
+the project. (Alternatively, start from the full
+<a href="Gruntfile.coffee">Gruntfile.coffee</a> and delete the bits you don&rsquo;t want).
+This basic setup code loads plugins and defines the tasks exposed by the
+<code>Gruntfile</code>.</p>
+
+<p><div class="highlight"><pre><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span>
+        <span class="nv">pkg: </span><span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s">&#39;package.json&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># PUT CONFIGURATION SECTIONS HERE</span>
+
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span> <span class="nx">plugin</span> <span class="k">for</span> <span class="nx">plugin</span> <span class="k">in</span> <span class="p">[</span>
+        <span class="s">&#39;grunt-contrib-watch&#39;</span>
+        <span class="s">&#39;grunt-contrib-connect&#39;</span>
+        <span class="s">&#39;grunt-contrib-copy&#39;</span>
+        <span class="s">&#39;grunt-contrib-coffee&#39;</span>
+        <span class="s">&#39;grunt-contrib-uglify&#39;</span>
+        <span class="s">&#39;grunt-contrib-less&#39;</span>
+        <span class="s">&#39;grunt-responsive-images&#39;</span>
+    <span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;dev&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s">&#39;less:dev&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;copy:coffee&#39;</span><span class="p">,</span>
+        <span class="s">&#39;responsive_images&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;hugo:dev&#39;</span><span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s">&#39;less:dist&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;copy:coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;uglify&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;responsive_images&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;hugo:dist&#39;</span><span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;edit&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;connect&#39;</span><span class="p">,</span> <span class="s">&#39;watch&#39;</span><span class="p">]</span>
+</pre></div>
+</p>
+
+<p>Together these tasks form the command line interface for our build system. They
+can be used as follows.</p>
+
+<table>
+    <tr>
+        <td><kbd>grunt</kbd></td>
+        <td>Builds the site for distribution in <code>build/dist</code>.</td>
+    </tr>
+    <tr>
+        <td><kbd>grunt dev</kbd></td>
+        <td>Builds the site for development in <code>build/dev</code>.</td>
+    </tr>
+    <tr>
+        <td><kbd>grunt edit</kbd></td>
+        <td>Starts the local server and watches the filesystem for changes. 
+        The site can be viewed at <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a>.</td>
+    </tr>
+</table>
+
+<p>The sections below provide configurations for various tools that can
+be pasted into this basic <code>Gruntfile.coffee</code> and customized as required.</p>
+</p>
+	<p class="undecorated-links"><a class="read-button" href="http://tjm.io/grunt-hugo" role="button">
+		<strong>Continue Reading</strong>
+		<i class="fa fa-hand-o-right"></i><br>
+		<small>(10 minute read)</small>
+	</a></p>
+</article>
+
+		
+	</div>
+</section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/tjm_io.js"></script>
+    
+  </body>
+</html>
+

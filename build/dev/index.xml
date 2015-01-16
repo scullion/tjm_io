@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tjm.io</title>
+    <link>http://127.0.0.1:8080/</link>
+    <description>Recent content on tjm.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    
+    
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 UTC</lastBuildDate>
+    <atom:link href="http://127.0.0.1:8080/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Thank You</title>
+      <link>http://127.0.0.1:8080/about/confirm</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/about/confirm</guid>
+      <description>
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
+
+&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://127.0.0.1:8080/about</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/about</guid>
+      <description>
+
+&lt;p class=&#34;portrait&#34;&gt;
+    &lt;a href=&#34;http://127.0.0.1:8080/img/tjm.jpg&#34;&gt;
+        &lt;img src=&#34;http://127.0.0.1:8080/img/tjm_128x128.jpg&#34; alt=&#34;Chubby man on boat looking bemused.&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&#34;hi-i-m-tom&#34;&gt;Hi, I&amp;rsquo;m Tom.&lt;/h1&gt;
+
+&lt;p&gt;I hope you find this site helpful. This &lt;i class=&#34;fa fa-hand-o-right&#34;&gt;&lt;/i&gt; is me
+gliding up the Mekong river on a boat made of old furniture.&lt;/p&gt;
+
+&lt;p&gt;Here are my various contact details if you&amp;rsquo;d like to get in touch.&lt;/p&gt;
+
+&lt;p&gt;&lt;dl class=&#34;contact dl-horizontal&#34;&gt;
+    &lt;dt&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
+    &lt;dd&gt;t at this domain&lt;/dd&gt;
+    &lt;dt&gt;&lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&#34;https://twitter.com/earthrimwalker&#34;&gt;@earthrimwalker&lt;/a&gt;&lt;/dd&gt;
+    &lt;dt&gt;&lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&#34;https://github.com/dreamtea&#34;&gt;github.com/dreamtea&lt;/a&gt;&lt;/dd&gt;
+    &lt;dt&gt;&lt;i class=&#34;fa fa-skype&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
+    &lt;dd&gt;westernsun&lt;/dd&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;need-a-good-developer&#34;&gt;Need a Good Developer?&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m a consultant in web and native software developement. You can hire me to
+build your website, write your app or work on your server back end. Here are
+a few of the things I can do.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Responsive front end web development&lt;/li&gt;
+&lt;li&gt;Android apps, Java and NDK&lt;/li&gt;
+&lt;li&gt;Back end web development&lt;/li&gt;
+&lt;li&gt;Native Win32 expert&lt;/li&gt;
+&lt;li&gt;C, C++, Go, Python, Javascript, Lua, PHP, &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Drop me an email or use the form below to talk about how I can help with your
+project. It never hurts to ask!&lt;/p&gt;
+
+&lt;form id=&#34;contact-form&#34; class=&#34;form-horizontal&#34; action=&#34;//formspree.io/thomasjamesmoran@gmail.com&#34; method=&#34;POST&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;_subject&#34; value=&#34;tjm.io Contact Form&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;_next&#34; value=&#34;http://tjm.io/about/confirm&#34;&gt;
+    &lt;input type=&#34;text&#34; name=&#34;_gotcha&#34; style=&#34;display: none&#34;&gt;
+
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label class=&#34;col-sm-2&#34; for=&#34;name-input&#34;&gt;Name&lt;/label&gt;
+        &lt;div class=&#34;col-sm-10&#34;&gt;
+            &lt;input id=&#34;name-input&#34; class=&#34;form-control&#34; type=&#34;text&#34; required name=&#34;name&#34; placeholder=&#34;Your name or company&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label class=&#34;col-sm-2&#34; for=&#34;email-input&#34;&gt;Email&lt;/label&gt;
+        &lt;div class=&#34;col-sm-10&#34;&gt;
+            &lt;input id=&#34;email-input&#34; class=&#34;form-control&#34; type=&#34;email&#34; required name=&#34;_replyto&#34; placeholder=&#34;your@email&#34;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label class=&#34;col-sm-2&#34; for=&#34;question-input&#34;&gt;Query&lt;/label&gt;
+        &lt;div class=&#34;col-sm-10&#34;&gt;
+            &lt;select id=&#34;question-input&#34; class=&#34;form-control&#34; name=&#34;query&#34;&gt;
+                &lt;option&gt;Can you...&lt;/option&gt;
+                &lt;option&gt;How much do you charge?&lt;/option&gt;
+                &lt;option&gt;How does all this work?&lt;/option&gt;
+                &lt;option&gt;General question&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;  
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label class=&#34;col-sm-2&#34; for=&#34;message-input&#34;&gt;Message&lt;/label&gt;
+        &lt;div class=&#34;col-sm-10&#34;&gt;
+            &lt;textarea id=&#34;message-input&#34; class=&#34;form-control small&#34; name=&#34;message&#34; placeholder=&#34;How can I help?&#34; rows=4&gt;&lt;/textarea&gt;
+        &lt;/div&gt; 
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;div class=&#34;col-sm-10 col-sm-offset-2&#34;&gt;
+            &lt;button 
+                type=&#34;submit&#34; id=&#34;send-button&#34; class=&#34;btn btn-default&#34; 
+                data-sending-text=&#34;&lt;i class=&amp;quot;fa fa-circle-o-notch fa-spin&amp;quot;&gt;&lt;/i&gt; Sending...&#34;
+                data-sent-text=&#34;&lt;i class=&amp;quot;fa fa-thumbs-o-up&amp;quot;&gt;&lt;/i&gt; Sent&#34;
+            &gt;&lt;i class=&#34;fa fa-paper-plane-o&#34;&gt;&lt;/i&gt; Send&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;success-alert&#34; class=&#34;alert alert-success col-sm-12&#34; role=&#34;alert&#34; style=&#34;display: none&#34;&gt;
+        &lt;strong&gt;&lt;i class=&#34;fa fa-thumbs-o-up&#34;&gt;&lt;/i&gt; Thanks for your question.&lt;/strong&gt; I&#39;ll respond as soon as I can.
+    &lt;/div&gt;
+&lt;/form&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://127.0.0.1:8080/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/articles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grunt and Hugo: A Fast Iteration Cookbook</title>
+      <link>http://127.0.0.1:8080/grunt-hugo</link>
+      <pubDate>Mon, 05 Jan 2015 11:02:30 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/grunt-hugo</guid>
+      <description>
+
+&lt;p&gt;This is a selection of code snippets that can be used to assemble a nice live
+editing environment for static sites using &lt;a href=&#34;http://gruntjs.com&#34;&gt;Grunt&lt;/a&gt;. The focus is on
+&lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;http://lesscss.org/&#34;&gt;LESS&lt;/a&gt; and &lt;a href=&#34;http://coffeescript.org/&#34;&gt;CoffeeScript&lt;/a&gt;, but most of the code could easily be
+repurposed for similar tools. In addition to the markup and script compilation,
+we&amp;rsquo;ll add automatic image resizing using &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;Gruntfile.coffee&#34;&gt;&lt;code&gt;Gruntfile&lt;/code&gt;&lt;/a&gt; broken down here is in CoffeeScript since that&amp;rsquo;s what I
+happened to use, but it should be straightforward to transliterate into plain
+JavaScript if required.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;First make sure &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; and &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; are installed.
+&lt;code&gt;npm&lt;/code&gt; is bundled with the standard node.js binary installer available
+&lt;a href=&#34;http://nodejs.org/download/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Initialize a &lt;code&gt;package.json&lt;/code&gt; and install the required plugins by running the
+following commands in the project directory. Feel free to omit plugins you
+don&amp;rsquo;t need.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;mysite
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm init
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-watch --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-connect --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-copy --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-coffee --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-uglify --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-less --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-responsive-images --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;All being well, the project now has a complete &lt;code&gt;package.json&lt;/code&gt;, allowing the
+packages above to be installed at any time in the future with the command
+&lt;code&gt;npm install&lt;/code&gt;. There&amp;rsquo;s no need to do this now.&lt;/p&gt;
+
+&lt;p&gt;If &lt;code&gt;npm&lt;/code&gt; complains about the site lacking a &lt;code&gt;README&lt;/code&gt; file, add &lt;code&gt;&amp;quot;private&amp;quot;: true&lt;/code&gt;
+to &lt;code&gt;package.json&lt;/code&gt; to make it stop.&lt;/p&gt;
+
+&lt;p&gt;Finally, the &lt;kbd&gt;grunt&lt;/kbd&gt; command used to actually run the build system
+comes from the &lt;code&gt;grunt-cli&lt;/code&gt; package, which should be installed globally with
+&lt;code&gt;npm install -g grunt-cli&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-gruntfile&#34;&gt;The Gruntfile&lt;/h3&gt;
+
+&lt;p&gt;Paste the skeleton code below into a file called &lt;code&gt;Gruntfile.coffee&lt;/code&gt; at the top of
+the project. (Alternatively, start from the full
+&lt;a href=&#34;Gruntfile.coffee&#34;&gt;Gruntfile.coffee&lt;/a&gt; and delete the bits you don&amp;rsquo;t want).
+This basic setup code loads plugins and defines the tasks exposed by the
+&lt;code&gt;Gruntfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;module.exports = &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;(grunt) -&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;initConfig&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;pkg: &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readJSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;package.json&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        
+        &lt;span class=&#34;c1&#34;&gt;# PUT CONFIGURATION SECTIONS HERE&lt;/span&gt;
+
+    &lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;loadNpmTasks&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;plugin&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;plugin&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-watch&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-connect&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-copy&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-coffee&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-uglify&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-contrib-less&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;grunt-responsive-images&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;registerTask&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;less:dev&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;copy:coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;responsive_images&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;hugo:dev&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;registerTask&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;less:dist&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;copy:coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;uglify&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;responsive_images&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+        &lt;span class=&#34;s&#34;&gt;&amp;#39;hugo:dist&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;registerTask&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;edit&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;connect&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;watch&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Together these tasks form the command line interface for our build system. They
+can be used as follows.&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;kbd&gt;grunt&lt;/kbd&gt;&lt;/td&gt;
+        &lt;td&gt;Builds the site for distribution in &lt;code&gt;build/dist&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;kbd&gt;grunt dev&lt;/kbd&gt;&lt;/td&gt;
+        &lt;td&gt;Builds the site for development in &lt;code&gt;build/dev&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;kbd&gt;grunt edit&lt;/kbd&gt;&lt;/td&gt;
+        &lt;td&gt;Starts the local server and watches the filesystem for changes. 
+        The site can be viewed at &lt;a href=&#34;http://127.0.0.1:8080/&#34;&gt;http://127.0.0.1:8080/&lt;/a&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The sections below provide configurations for various tools that can
+be pasted into this basic &lt;code&gt;Gruntfile.coffee&lt;/code&gt; and customized as required.&lt;/p&gt;
+
+&lt;h3 id=&#34;building-the-site&#34;&gt;Building The Site&lt;/h3&gt;
+
+&lt;p&gt;To keep things tidy, I like to put the Hugo site into a subdirectory called &lt;code&gt;site&lt;/code&gt;
+under the project root. The rest of the article follows that convention, but you
+may of course choose your own directory, or just use the project root.&lt;/p&gt;
+
+&lt;p&gt;The following code registers a task that runs &lt;code&gt;hugo&lt;/code&gt; to compile the &lt;code&gt;site&lt;/code&gt;
+directory, placing the rendered result in either &lt;code&gt;build/dev&lt;/code&gt; or &lt;code&gt;build/dist&lt;/code&gt;
+(for development and deployment builds respectively). The target is
+chosen by referring to the task as &lt;code&gt;hugo:dev&lt;/code&gt; or &lt;code&gt;hugo:dist&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nx&#34;&gt;grunt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;registerTask&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;hugo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;(target) -&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;done = &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;@async&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;args = &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;--source=site&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;--destination=../build/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;--baseUrl=http://127.0.0.1:8080&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;--buildDrafts=true&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;--buildFuture=true&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;hugo = &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;spawn&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;hugo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;stdio: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;inherit&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;exit&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In the &lt;code&gt;dev&lt;/code&gt; configuration, which builds the site for live editing on a local
+server, it&amp;rsquo;s important to supply the &lt;code&gt;--baseUrl&lt;/code&gt; (&lt;code&gt;-b&lt;/code&gt;) option to &lt;code&gt;hugo&lt;/code&gt;. This
+overrides the &lt;code&gt;BaseUrl&lt;/code&gt; specified in the site&amp;rsquo;s &lt;code&gt;config.toml&lt;/code&gt; with the URL of
+our local development server. Without the override Hugo will generate absolute
+URLs referring to the site&amp;rsquo;s public server.&lt;/p&gt;
+
+&lt;h3 id=&#34;development-server&#34;&gt;Development Server&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; comes with a built-in development web server usable
+via &lt;code&gt;hugo server&lt;/code&gt;. While this is a good option for working on content alone,
+it&amp;rsquo;s awkward to make the current version live-reload while working on CSS or
+scripts.&lt;/p&gt;
+
+&lt;p&gt;For that reason we&amp;rsquo;ll use &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-connect&#34;&gt;grunt-contrib-connect&lt;/a&gt; instead. This is a Grunt
+plugin that runs a static file server. The configuration below serves the
+file tree generated by Hugo in &lt;code&gt;build/dev&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;connect:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;mysite:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;hostname: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;port: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8080&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;protocol: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;base: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;build/dev&amp;#39;&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;livereload: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;livereload&lt;/code&gt; option turns on a middleware that injects &lt;a href=&#34;https://github.com/livereload/livereload-js&#34;&gt;livereload.js&lt;/a&gt; into
+HTML responses generated by the server. This script connects back to the server
+on port 35729 and waits to be told that it should refresh the page. For this to
+work we&amp;rsquo;ll need to be running a &lt;a href=&#34;http://livereload.com/&#34;&gt;LiveReload&lt;/a&gt; service on port 35729, which is
+the job of &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt;, as explained below.&lt;/p&gt;
+
+&lt;h3 id=&#34;watching-for-changes&#34;&gt;Watching for Changes&lt;/h3&gt;
+
+&lt;p&gt;With a development server and a task to run &lt;code&gt;hugo&lt;/code&gt; in place, the final component
+of a basic live editing environment is &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt;, which watches
+the filesystem and runs Grunt tasks when something changes.&lt;/p&gt;
+
+&lt;p&gt;The configuration below simply watches for changes in the various directories
+containing source files (&lt;code&gt;site&lt;/code&gt;, &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;coffee&lt;/code&gt; and &lt;code&gt;img&lt;/code&gt;), and runs the
+appropriate tool in response.&lt;/p&gt;
+
+&lt;p&gt;Changes will cascade so that, for example, when the LESS compiler updates a
+stylesheet in &lt;code&gt;site/static/css&lt;/code&gt;, &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt; will notice and run
+&lt;code&gt;hugo&lt;/code&gt; to rebuild the site, resulting in the new file being copied over to
+&lt;code&gt;build/dev&lt;/code&gt;. This is perhaps not the most efficient arrangement, but it&amp;rsquo;s
+straightforward, and Hugo is quick enough that running it on every change
+doesn&amp;rsquo;t add much latency.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;watch:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;atBegin: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;livereload: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;less:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less/*.less&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less:dev&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;coffee:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/*.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;images:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;img/**&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;responsive_images&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;hugo:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/**&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;hugo:dev&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;all:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Gruntfile.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The two options supplied to the &lt;code&gt;watch&lt;/code&gt; task are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;livereload&lt;/code&gt;, which tells &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt; to run a &lt;a href=&#34;http://livereload.com/&#34;&gt;LiveReload&lt;/a&gt; service on
+port 35729. Recall that we&amp;rsquo;re using &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-connect&#34;&gt;grunt-contrib-connect&lt;/a&gt; to inject
+&lt;a href=&#34;https://github.com/livereload/livereload-js&#34;&gt;livereload.js&lt;/a&gt; into our HTML pages. &lt;a href=&#34;https://github.com/livereload/livereload-js&#34;&gt;livereload.js&lt;/a&gt; will connect
+back to this service from the browser and refresh the page when things change.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;atBegin&lt;/code&gt;, which causes all watch tasks to be run at startup, ensuring that
+the site is up to date when we start editing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;less&#34;&gt;LESS&lt;/h3&gt;
+
+&lt;p&gt;To compile LESS to CSS we&amp;rsquo;ll use the &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-less&#34;&gt;grunt-contrib-less&lt;/a&gt; plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-less --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install less-plugin-clean-css --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install less-plugin-autoprefix --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The LESS compiler &lt;code&gt;lessc&lt;/code&gt; supports plugins of its own which provide a very
+convenient way of post-processing CSS. This configuration makes use of the
+following two:&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;a class=&#34;identifier&#34; href=&#34;https://www.npmjs.com/package/less-plugin-clean-css&#34;&gt;less-plugin-clean-css&lt;/a&gt;&lt;/th&gt;
+        &lt;td&gt;Minifies CSS.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;a class=&#34;identifier&#34; href=&#34;https://www.npmjs.com/package/less-plugin-autoprefix&#34;&gt;less-plugin-autoprefix&lt;/a&gt;&lt;/th&gt;
+        &lt;td&gt;Adds vendor prefixed (&lt;code&gt;-webkit-&lt;/code&gt;, &lt;code&gt;-moz-&lt;/code&gt;, etc.) variants of CSS properties to improve browser
+        compatibility.&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the &lt;code&gt;less&lt;/code&gt; configuration that runs &lt;code&gt;lessc&lt;/code&gt; on our site&amp;rsquo;s main
+LESS file, &lt;code&gt;less/mysite.less&lt;/code&gt;. It defines a pair of subtasks, &lt;code&gt;less:dev&lt;/code&gt; and
+&lt;code&gt;less:dist&lt;/code&gt;, the latter generating a prefixed and minified stylesheet for
+deployment.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;less:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;dev:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;paths: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less/mysite.less&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/css/mysite.css&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;dist:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;paths: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less/mysite.less&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/css/mysite.min.css&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+            &lt;span class=&#34;nv&#34;&gt;plugins: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;less-plugin-autoprefix&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;browsers: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;gt; 0.1%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;less-plugin-clean-css&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;browsers&lt;/code&gt; option to &lt;a href=&#34;https://www.npmjs.com/package/less-plugin-autoprefix&#34;&gt;less-plugin-autoprefix&lt;/a&gt; determines the set of CSS
+properties to be prefixed, and should be set according to the level of
+compatibility required. See
+&lt;a href=&#34;https://github.com/postcss/autoprefixer#browsers&#34;&gt;the documentation&lt;/a&gt;
+for details.&lt;/p&gt;
+
+&lt;h3 id=&#34;coffeescript&#34;&gt;CoffeeScript&lt;/h3&gt;
+
+&lt;p&gt;Here we configure &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-coffee&#34;&gt;grunt-contrib-coffee&lt;/a&gt; to compile scripts under the &lt;code&gt;coffee&lt;/code&gt;
+directory and sandwich them into a single &lt;code&gt;.js&lt;/code&gt; file, &lt;code&gt;site/static/js/mysite.js&lt;/code&gt;.
+If using source maps the &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-copy&#34;&gt;grunt-contrib-copy&lt;/a&gt; plugin is also required for
+reasons explained below.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-coffee --save-dev
+&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-contrib-copy --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This is the configuration block.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;coffee:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;join: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;             &lt;span class=&#34;c1&#34;&gt;# Concatenate before, not after compilation.&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;sourceMap: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;# Make a source map.&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;sourceRoot: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;/coffee/&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# URL debugger should use to download .coffee files.&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;inline: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# Embed coffee source inside the source map.&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;build:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/a.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/b.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/* ADD FILES HERE */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/js/mysite.js&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Multiple &lt;code&gt;.coffee&lt;/code&gt; files can be built by simply listing them in the &lt;code&gt;src&lt;/code&gt; array.
+It&amp;rsquo;s inadvisable to use a wildcard (e.g. &lt;code&gt;coffee/*&lt;/code&gt;), because the order in which
+the matched files are concatenated is not defined. Instead, list each file
+individually in the desired order.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;join&lt;/code&gt; option instructs the plugin to concatenate the &lt;code&gt;.coffee&lt;/code&gt; files
+&lt;em&gt;before&lt;/em&gt; passing them to the &lt;code&gt;coffee&lt;/code&gt; compiler, rather than concatenating the
+resulting &lt;code&gt;.js&lt;/code&gt; files after compilation. This is generally what is wanted
+because it allows the scripts to share a global scope.&lt;/p&gt;
+
+&lt;h4 id=&#34;source-maps&#34;&gt;Source Maps&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/&#34;&gt;Source maps&lt;/a&gt;
+are essential for a sane debugging experience. In the configuration above we&amp;rsquo;ve
+turned them on using &lt;code&gt;sourceMap: true&lt;/code&gt;, which causes the &lt;code&gt;coffee&lt;/code&gt; compiler to
+generate &lt;code&gt;mysite.js.map&lt;/code&gt; alongside &lt;code&gt;mysite.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;By default source maps don&amp;rsquo;t contain any actual source code. Instead they
+refer to source files (in our case, the &lt;code&gt;.coffee&lt;/code&gt; files) by relative path, and
+the debugger in the browser must download the source files as required.&lt;/p&gt;
+
+&lt;p&gt;This is an awkward arrangement because, of course, for the debugger to
+download the &lt;code&gt;.coffee&lt;/code&gt; files they have be made available on the server
+somewhere. An easier option is to have the compiler &lt;em&gt;embed&lt;/em&gt; the source directly
+into the map by setting &lt;code&gt;inline: true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t care about debugging minified JavaScript (a dubious proposition at
+the best of times), I recommend setting &lt;code&gt;inline: true&lt;/code&gt; and ignoring the rest of
+this section. Source maps with embedded code are self-contained so there&amp;rsquo;s no
+need to publish the &lt;code&gt;.coffee&lt;/code&gt; files anywhere.&lt;/p&gt;
+
+&lt;h5 id=&#34;publishing-the-coffee-files&#34;&gt;Publishing the &lt;code&gt;.coffee&lt;/code&gt; Files&lt;/h5&gt;
+
+&lt;p&gt;The disadvantage of &lt;code&gt;inline&lt;/code&gt; is that &lt;code&gt;UglifyJS&lt;/code&gt; seems incapable of using
+embedded CoffeeScript source when building a source map for the minified
+JavaScript. However, if the sources are referenced instead of embedded (i.e.
+&lt;code&gt;inline&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;), everything works well.&lt;/p&gt;
+
+&lt;p&gt;If we don&amp;rsquo;t embed the source code in the map, it&amp;rsquo;s necessary to publish the
+&lt;code&gt;.coffee&lt;/code&gt; files on the server somewhere. This can be achieved very simply by
+configuring &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-copy&#34;&gt;grunt-contrib-copy&lt;/a&gt; to copy our &lt;code&gt;.coffee&lt;/code&gt; sources into the public
+site at &lt;code&gt;site/static/coffee&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;copy:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;coffee:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/*&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This makes the &lt;code&gt;coffee&lt;/code&gt; directory accessible on the server at &lt;code&gt;/coffee&lt;/code&gt;. Note
+that we&amp;rsquo;ve also set &lt;code&gt;sourceRoot&lt;/code&gt; to &lt;code&gt;/coffee/&lt;/code&gt;. This path is embedded in the
+source map, and tells the debugger where to download referenced files.&lt;/p&gt;
+
+&lt;h4 id=&#34;minification&#34;&gt;Minification&lt;/h4&gt;
+
+&lt;p&gt;In the &lt;code&gt;dist&lt;/code&gt; configuration we&amp;rsquo;ll use &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-uglify&#34;&gt;grunt-contrib-uglify&lt;/a&gt; to minify &lt;code&gt;mysite.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;uglify:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;sourceMap: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;sourceMapIn: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/js/mysite.js.map&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;dist:&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/js/mysite.js&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/js/mysite.min.js&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;sourceMap&lt;/code&gt; option tells &lt;code&gt;UglifyJS&lt;/code&gt; to generate a source map for the
+minified script, and &lt;code&gt;sourceMapIn&lt;/code&gt; provides it with the original map generated
+by the &lt;code&gt;coffee&lt;/code&gt; compiler.&lt;/p&gt;
+
+&lt;p&gt;The rationale for providing the original map is that it allows the map for the
+compressed script to directly reference the &lt;code&gt;.coffee&lt;/code&gt; source, instead of just
+the JavaScript generated by the &lt;code&gt;coffee&lt;/code&gt; compiler, which makes for a nicer
+debugging experience. However, as described above, this doesn&amp;rsquo;t work properly
+when the CoffeeScript is embedded with &lt;code&gt;inline&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s worth noting that even with a source map available, debugging minified
+JavaScript is difficult because the minifier can fold many source lines into one
+to save space. If at all possible, debug using the unminified script.&lt;/p&gt;
+
+&lt;h3 id=&#34;image-resizing&#34;&gt;Image Resizing&lt;/h3&gt;
+
+&lt;p&gt;A great convenience offered by platforms like Wordpress is automatic
+image resizing and cropping. The handy &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt; plugin can
+provide a similar facility for working with static sites.&lt;/p&gt;
+
+&lt;p&gt;The basic idea is to put source images into a directory called &lt;code&gt;img&lt;/code&gt; at the
+top of the project, and configure the plugin to generate multiple cropped
+and resized variants under &lt;code&gt;site/static/img&lt;/code&gt;. Thanks to &lt;a href=&#34;https://www.npmjs.com/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt;,
+the image processing happens automatically as soon as a new image is copied into
+&lt;code&gt;img&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;First make sure &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt; is installed.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;$ &lt;/span&gt;npm install grunt-responsive-images --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The actual image processing work is done by &lt;a href=&#34;http://www.imagemagick.org/&#34;&gt;ImageMagick&lt;/a&gt; or
+&lt;a href=&#34;http://www.graphicsmagick.org/&#34;&gt;GraphicsMagick&lt;/a&gt;, one of which must be installed and available on
+the system &lt;code&gt;PATH&lt;/code&gt; for image resizing to work. It makes no difference which.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the configuration block. See below for instructions on what to put in the
+&lt;code&gt;sizes&lt;/code&gt; array.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;nv&#34;&gt;responsive_images:&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;process:&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;options:&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;engine: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;gm&amp;#39;&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;separator: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;_&amp;#39;&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;newFilesOnly: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;sizes: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/* PUT IMAGE SPECIFICATIONS HERE */&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;expand: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;cwd: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;src: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;**.{png,jpg,jpeg,gif}&amp;#39;&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;dest: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;site/static/img&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The important options to note are:&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;code&gt;engine&lt;/code&gt;&lt;/th&gt;
+        &lt;td&gt;&lt;code&gt;gm&lt;/code&gt; for GraphicsMagick, &lt;code&gt;im&lt;/code&gt; for ImageMagick&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;code&gt;separator&lt;/code&gt;&lt;/th&gt;
+        &lt;td&gt;Delimiter used between the name stem and the suffix specified in
+        the size definition.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;code&gt;newFilesOnly&lt;/code&gt;&lt;/th&gt;
+        &lt;td&gt;Set to &lt;code&gt;false&lt;/code&gt; to force regeneration.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;code&gt;sizes&lt;/code&gt;&lt;/th&gt;
+        &lt;td&gt;An array of size specifications (see below).&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;All that remains is to add a specification to the &lt;code&gt;sizes&lt;/code&gt; array for each image
+variant required. The following templates cover the most useful operations.
+Copy, paste and customize!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Copy the Source Image&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Copies the source image, unmodified, into the destination directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rename: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;width: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;100%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;100%&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Crop to an Exact Size&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Generates a thumbnail of exactly 64&amp;times;64 pixels. Setting &lt;code&gt;aspectRatio&lt;/code&gt; to
+&lt;code&gt;false&lt;/code&gt; enables cropping.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;64x64&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;width: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;aspectRatio: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Proportional Scale&lt;/strong&gt; &lt;span class=&#34;text-muted&#34;&gt;(Single Axis Constraint)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Generates an image exactly 300px wide, with a height determined by the
+source image&amp;rsquo;s aspect ratio.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;300&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;width: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Proportional Scale&lt;/strong&gt; &lt;span class=&#34;text-muted&#34;&gt;(Both Axes Constrained)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Scales the image down proportionally until it is neither wider than 400px
+nor taller than 250px.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;450x250&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;width: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;400&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height: &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;250&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;aspectRatio: &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Full documentation for &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt; is
+&lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;The full &lt;code&gt;Gruntfile.coffee&lt;/code&gt; is available &lt;a href=&#34;Gruntfile.coffee&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I hope you found this little guide helpful. Corrections, comments and questions
+are always welcome.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Here&#39;s my First Post</title>
+      <link>http://127.0.0.1:8080/heres-my-first-post</link>
+      <pubDate>Tue, 23 Dec 2014 11:02:30 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/heres-my-first-post</guid>
+      <description>&lt;p id=&#34;item-1&#34;&gt;Here&#39;s some Go code. It&#39;s probably a bit stupid, but I&#39;m only trying to figure
+out whether this stupid theme works. So, does it?&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;hi: %s&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;How about a nice blockquote?&lt;/p&gt;
+
+&lt;blockquote&gt;
+Some guy said this and some guy said that, but in the end, who really knows what anyone said? Words are such ephemeral things.
+&lt;/blockquote&gt;
+
+&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
+
+&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
+
+&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
+
+&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
+
+&lt;p id=&#34;item-2&#34;&gt;Let&#39;s try out a list.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&#34;item-2-sub-1&#34; id=&#34;item-2-sub-1&#34;&gt;x&lt;/a&gt; Here&amp;rsquo;s one thing.&lt;/li&gt;
+&lt;li&gt;&lt;a name=&#34;item-2-sub-2&#34; id=&#34;item-2-sub-2&#34;&gt;y&lt;/a&gt; And another.&lt;/li&gt;
+&lt;li&gt;&lt;a name=&#34;item-2-sub-3&#34; id=&#34;item-2-sub-3&#34;&gt;z&lt;/a&gt; And a third for good measure.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
+
+&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
+
+&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
+
+&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
+
+&lt;p&gt;To switch directories, type &lt;kbd id=&#34;item-3&#34;&gt;cd&lt;/kbd&gt; followed by the name of the directory.&lt;br&gt;
+To edit settings, press &lt;kbd&gt;&lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;,&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
+
+&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
+
+&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
+
+&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Here&#39;s my Second Post</title>
+      <link>http://127.0.0.1:8080/heres-my-second-post</link>
+      <pubDate>Mon, 15 Dec 2014 11:02:30 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/heres-my-second-post</guid>
+      <description>&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+
+&lt;p&gt;This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.
+This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Here&#39;s my THIRD Post!</title>
+      <link>http://127.0.0.1:8080/heres-my-third-post</link>
+      <pubDate>Wed, 10 Dec 2014 11:02:30 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/heres-my-third-post</guid>
+      <description>&lt;p&gt;My third and perhaps my most wonderful post.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

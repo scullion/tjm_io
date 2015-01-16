@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Grunt and Hugo: A Fast Iteration Cookbook</title>
+
+    <link href="/css/tjm_io.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<nav class="top-nav">
+	<div class="container-fluid">
+		<div class="logo">
+			<a href="/"><kbd>tjm.io</kbd></a>
+		</div>
+		<ul class="links">
+			
+				<li><a href="http://127.0.0.1:8080/">Blog</a></li>
+			
+				<li><a href="http://127.0.0.1:8080/articles/">Articles</a></li>
+			
+				<li><a href="http://127.0.0.1:8080/about/">About</a></li>
+			
+			<li><a href="https://twitter.com/earthrimwalker" class="image-link leftmost"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="/article/index.xml" class="image-link"><i class="fa fa-rss-square"></i></a></li>
+		</ul>
+	</div>
+</nav>
+
+
+
+<div class="article-container single-article  ">
+	
+<div class="menu-column">
+	<nav class="article-menu">
+		<ul class="menu-items nav">
+		
+			<li>
+				
+					
+					<a href="#grunt-hugo">Introduction</a>
+				
+				
+					<ul class="submenu-items nav">
+						
+							
+								
+								<li><a href="#getting-started">Getting Started</a></li>			
+										
+						
+							
+								
+								<li><a href="#the-gruntfile">The Gruntfile</a></li>			
+										
+						
+					</ul> 
+				
+			</li>
+		
+			<li>
+				
+					
+					<a href="#building-the-site">Basics</a>
+				
+				
+					<ul class="submenu-items nav">
+						
+							
+								
+								<li><a href="#building-the-site">Building the Site</a></li>			
+										
+						
+							
+								
+								<li><a href="#development-server">Development Server</a></li>			
+										
+						
+							
+								
+								<li><a href="#watching-for-changes">Watching for Changes</a></li>			
+										
+						
+					</ul> 
+				
+			</li>
+		
+			<li>
+				
+					
+					<a href="#less">Tools</a>
+				
+				
+					<ul class="submenu-items nav">
+						
+							
+								
+								<li><a href="#less">LESS</a></li>			
+										
+						
+							
+								
+								<li><a href="#coffeescript">CoffeeScript</a></li>			
+										
+						
+							
+								
+								<li><a href="#source-maps">Source Maps</a></li>			
+										
+						
+							
+								
+								<li><a href="#minification">Minification</a></li>			
+										
+						
+							
+								
+								<li><a href="#image-resizing">Image Resizing</a></li>			
+										
+						
+					</ul> 
+				
+			</li>
+		
+			<li>
+				
+					
+					<a href="#download">Download</a>
+				
+				
+			</li>
+		
+
+		
+			<li><a href="#comments" class="comments-link"><i class="fa fa-coffee"></i> <span class="disqus-comment-count" data-disqus-identifier="/grunt-hugo"></span></a></li>
+		
+		</ul>
+	</nav>
+</div>
+
+
+	<div class="article-row">
+		<article class="compact-code">
+			
+				
+				<time datetime="Jan 5, 2015" class="article-time">Jan 5, 2015</time>
+			
+			
+				<h1 class="article-title" id="grunt-hugo"><a href="http://127.0.0.1:8080/grunt-hugo">Grunt and Hugo: A Fast Iteration Cookbook</a></h1>
+			
+			
+
+<p>This is a selection of code snippets that can be used to assemble a nice live
+editing environment for static sites using <a href="http://gruntjs.com">Grunt</a>. The focus is on
+<a href="http://gohugo.io/">Hugo</a>, <a href="http://lesscss.org/">LESS</a> and <a href="http://coffeescript.org/">CoffeeScript</a>, but most of the code could easily be
+repurposed for similar tools. In addition to the markup and script compilation,
+we&rsquo;ll add automatic image resizing using <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a>.</p>
+
+<p>The <a href="Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
+happened to use, but it should be straightforward to transliterate into plain
+JavaScript if required.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>First make sure <a href="http://nodejs.org/">node.js</a> and <a href="https://www.npmjs.com/">npm</a> are installed.
+<code>npm</code> is bundled with the standard node.js binary installer available
+<a href="http://nodejs.org/download/">here</a>.</p>
+
+<p>Initialize a <code>package.json</code> and install the required plugins by running the
+following commands in the project directory. Feel free to omit plugins you
+don&rsquo;t need.</p>
+
+<p><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>mysite
+<span class="nv">$ </span>npm init
+<span class="nv">$ </span>npm install grunt --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-watch --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-connect --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-copy --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-coffee --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-uglify --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-less --save-dev
+<span class="nv">$ </span>npm install grunt-responsive-images --save-dev
+</pre></div>
+</p>
+
+<p>All being well, the project now has a complete <code>package.json</code>, allowing the
+packages above to be installed at any time in the future with the command
+<code>npm install</code>. There&rsquo;s no need to do this now.</p>
+
+<p>If <code>npm</code> complains about the site lacking a <code>README</code> file, add <code>&quot;private&quot;: true</code>
+to <code>package.json</code> to make it stop.</p>
+
+<p>Finally, the <kbd>grunt</kbd> command used to actually run the build system
+comes from the <code>grunt-cli</code> package, which should be installed globally with
+<code>npm install -g grunt-cli</code>.</p>
+
+<h3 id="the-gruntfile">The Gruntfile</h3>
+
+<p>Paste the skeleton code below into a file called <code>Gruntfile.coffee</code> at the top of
+the project. (Alternatively, start from the full
+<a href="Gruntfile.coffee">Gruntfile.coffee</a> and delete the bits you don&rsquo;t want).
+This basic setup code loads plugins and defines the tasks exposed by the
+<code>Gruntfile</code>.</p>
+
+<p><div class="highlight"><pre><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span>
+        <span class="nv">pkg: </span><span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s">&#39;package.json&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># PUT CONFIGURATION SECTIONS HERE</span>
+
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span> <span class="nx">plugin</span> <span class="k">for</span> <span class="nx">plugin</span> <span class="k">in</span> <span class="p">[</span>
+        <span class="s">&#39;grunt-contrib-watch&#39;</span>
+        <span class="s">&#39;grunt-contrib-connect&#39;</span>
+        <span class="s">&#39;grunt-contrib-copy&#39;</span>
+        <span class="s">&#39;grunt-contrib-coffee&#39;</span>
+        <span class="s">&#39;grunt-contrib-uglify&#39;</span>
+        <span class="s">&#39;grunt-contrib-less&#39;</span>
+        <span class="s">&#39;grunt-responsive-images&#39;</span>
+    <span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;dev&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s">&#39;less:dev&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;copy:coffee&#39;</span><span class="p">,</span>
+        <span class="s">&#39;responsive_images&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;hugo:dev&#39;</span><span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s">&#39;less:dist&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;copy:coffee&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;uglify&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;responsive_images&#39;</span><span class="p">,</span> 
+        <span class="s">&#39;hugo:dist&#39;</span><span class="p">]</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;edit&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;connect&#39;</span><span class="p">,</span> <span class="s">&#39;watch&#39;</span><span class="p">]</span>
+</pre></div>
+</p>
+
+<p>Together these tasks form the command line interface for our build system. They
+can be used as follows.</p>
+
+<table>
+    <tr>
+        <td><kbd>grunt</kbd></td>
+        <td>Builds the site for distribution in <code>build/dist</code>.</td>
+    </tr>
+    <tr>
+        <td><kbd>grunt dev</kbd></td>
+        <td>Builds the site for development in <code>build/dev</code>.</td>
+    </tr>
+    <tr>
+        <td><kbd>grunt edit</kbd></td>
+        <td>Starts the local server and watches the filesystem for changes. 
+        The site can be viewed at <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a>.</td>
+    </tr>
+</table>
+
+<p>The sections below provide configurations for various tools that can
+be pasted into this basic <code>Gruntfile.coffee</code> and customized as required.</p>
+
+<h3 id="building-the-site">Building The Site</h3>
+
+<p>To keep things tidy, I like to put the Hugo site into a subdirectory called <code>site</code>
+under the project root. The rest of the article follows that convention, but you
+may of course choose your own directory, or just use the project root.</p>
+
+<p>The following code registers a task that runs <code>hugo</code> to compile the <code>site</code>
+directory, placing the rendered result in either <code>build/dev</code> or <code>build/dist</code>
+(for development and deployment builds respectively). The target is
+chosen by referring to the task as <code>hugo:dev</code> or <code>hugo:dist</code>.</p>
+
+<p><div class="highlight"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;hugo&#39;</span><span class="p">,</span> <span class="nf">(target) -&gt;</span>
+    <span class="nv">done = </span><span class="nx">@async</span><span class="p">()</span>
+    <span class="nv">args = </span><span class="p">[</span><span class="s">&#39;--source=site&#39;</span><span class="p">,</span> <span class="s">&quot;--destination=../build/</span><span class="si">#{</span><span class="nx">target</span><span class="si">}</span><span class="s">&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nx">target</span> <span class="o">==</span> <span class="s">&#39;dev&#39;</span>
+        <span class="nx">args</span><span class="p">.</span><span class="nx">push</span> <span class="s">&#39;--baseUrl=http://127.0.0.1:8080&#39;</span>
+        <span class="nx">args</span><span class="p">.</span><span class="nx">push</span> <span class="s">&#39;--buildDrafts=true&#39;</span>
+        <span class="nx">args</span><span class="p">.</span><span class="nx">push</span> <span class="s">&#39;--buildFuture=true&#39;</span>
+    <span class="nv">hugo = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">spawn</span> <span class="s">&#39;hugo&#39;</span><span class="p">,</span> <span class="nx">args</span><span class="p">,</span> <span class="nv">stdio: </span><span class="s">&#39;inherit&#39;</span>
+    <span class="p">(</span><span class="nx">hugo</span><span class="p">.</span><span class="nx">on</span> <span class="nx">e</span><span class="p">,</span> <span class="nf">-&gt;</span> <span class="nx">done</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span> <span class="k">for</span> <span class="nx">e</span> <span class="k">in</span> <span class="p">[</span><span class="s">&#39;exit&#39;</span><span class="p">,</span> <span class="s">&#39;error&#39;</span><span class="p">]</span>
+</pre></div>
+</p>
+
+<p>In the <code>dev</code> configuration, which builds the site for live editing on a local
+server, it&rsquo;s important to supply the <code>--baseUrl</code> (<code>-b</code>) option to <code>hugo</code>. This
+overrides the <code>BaseUrl</code> specified in the site&rsquo;s <code>config.toml</code> with the URL of
+our local development server. Without the override Hugo will generate absolute
+URLs referring to the site&rsquo;s public server.</p>
+
+<h3 id="development-server">Development Server</h3>
+
+<p><a href="https://gohugo.io">Hugo</a> comes with a built-in development web server usable
+via <code>hugo server</code>. While this is a good option for working on content alone,
+it&rsquo;s awkward to make the current version live-reload while working on CSS or
+scripts.</p>
+
+<p>For that reason we&rsquo;ll use <a href="https://www.npmjs.com/package/grunt-contrib-connect">grunt-contrib-connect</a> instead. This is a Grunt
+plugin that runs a static file server. The configuration below serves the
+file tree generated by Hugo in <code>build/dev</code>.</p>
+
+<p><div class="highlight"><pre><span class="nv">connect:</span>
+    <span class="nv">mysite:</span>
+        <span class="nv">options:</span>
+            <span class="nv">hostname: </span><span class="s">&#39;127.0.0.1&#39;</span>
+            <span class="nv">port: </span><span class="mi">8080</span>
+            <span class="nv">protocol: </span><span class="s">&#39;http&#39;</span>
+            <span class="nv">base: </span><span class="s">&#39;build/dev&#39;</span>
+            <span class="nv">livereload: </span><span class="kc">true</span>
+</pre></div>
+</p>
+
+<p>The <code>livereload</code> option turns on a middleware that injects <a href="https://github.com/livereload/livereload-js">livereload.js</a> into
+HTML responses generated by the server. This script connects back to the server
+on port 35729 and waits to be told that it should refresh the page. For this to
+work we&rsquo;ll need to be running a <a href="http://livereload.com/">LiveReload</a> service on port 35729, which is
+the job of <a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a>, as explained below.</p>
+
+<h3 id="watching-for-changes">Watching for Changes</h3>
+
+<p>With a development server and a task to run <code>hugo</code> in place, the final component
+of a basic live editing environment is <a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a>, which watches
+the filesystem and runs Grunt tasks when something changes.</p>
+
+<p>The configuration below simply watches for changes in the various directories
+containing source files (<code>site</code>, <code>less</code>, <code>coffee</code> and <code>img</code>), and runs the
+appropriate tool in response.</p>
+
+<p>Changes will cascade so that, for example, when the LESS compiler updates a
+stylesheet in <code>site/static/css</code>, <a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a> will notice and run
+<code>hugo</code> to rebuild the site, resulting in the new file being copied over to
+<code>build/dev</code>. This is perhaps not the most efficient arrangement, but it&rsquo;s
+straightforward, and Hugo is quick enough that running it on every change
+doesn&rsquo;t add much latency.</p>
+
+<p><div class="highlight"><pre><span class="nv">watch:</span>
+    <span class="nv">options:</span>
+        <span class="nv">atBegin: </span><span class="kc">true</span>
+        <span class="nv">livereload: </span><span class="kc">true</span>
+    <span class="nv">less:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;less/*.less&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="s">&#39;less:dev&#39;</span>
+    <span class="nv">coffee:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;coffee/*.coffee&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="s">&#39;coffee&#39;</span>
+    <span class="nv">images:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;img/**&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="s">&#39;responsive_images&#39;</span>
+    <span class="nv">hugo:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;site/**&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="s">&#39;hugo:dev&#39;</span>
+    <span class="nv">all:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;Gruntfile.coffee&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="s">&#39;dev&#39;</span>
+</pre></div>
+</p>
+
+<p>The two options supplied to the <code>watch</code> task are:</p>
+
+<ul>
+<li><code>livereload</code>, which tells <a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a> to run a <a href="http://livereload.com/">LiveReload</a> service on
+port 35729. Recall that we&rsquo;re using <a href="https://www.npmjs.com/package/grunt-contrib-connect">grunt-contrib-connect</a> to inject
+<a href="https://github.com/livereload/livereload-js">livereload.js</a> into our HTML pages. <a href="https://github.com/livereload/livereload-js">livereload.js</a> will connect
+back to this service from the browser and refresh the page when things change.</li>
+<li><code>atBegin</code>, which causes all watch tasks to be run at startup, ensuring that
+the site is up to date when we start editing.</li>
+</ul>
+
+<h3 id="less">LESS</h3>
+
+<p>To compile LESS to CSS we&rsquo;ll use the <a href="https://www.npmjs.com/package/grunt-contrib-less">grunt-contrib-less</a> plugin.</p>
+
+<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-contrib-less --save-dev
+<span class="nv">$ </span>npm install less-plugin-clean-css --save-dev
+<span class="nv">$ </span>npm install less-plugin-autoprefix --save-dev
+</pre></div>
+</p>
+
+<p>The LESS compiler <code>lessc</code> supports plugins of its own which provide a very
+convenient way of post-processing CSS. This configuration makes use of the
+following two:</p>
+
+<table>
+    <tr>
+        <th><a class="identifier" href="https://www.npmjs.com/package/less-plugin-clean-css">less-plugin-clean-css</a></th>
+        <td>Minifies CSS.</td>
+    </tr>
+    <tr>
+        <th><a class="identifier" href="https://www.npmjs.com/package/less-plugin-autoprefix">less-plugin-autoprefix</a></th>
+        <td>Adds vendor prefixed (<code>-webkit-</code>, <code>-moz-</code>, etc.) variants of CSS properties to improve browser
+        compatibility.</td>
+    </tr>
+</table>
+
+<p>Here&rsquo;s the <code>less</code> configuration that runs <code>lessc</code> on our site&rsquo;s main
+LESS file, <code>less/mysite.less</code>. It defines a pair of subtasks, <code>less:dev</code> and
+<code>less:dist</code>, the latter generating a prefixed and minified stylesheet for
+deployment.</p>
+
+<p><div class="highlight"><pre><span class="nv">less:</span>
+    <span class="nv">dev:</span>
+        <span class="nv">paths: </span><span class="p">[</span><span class="s">&#39;less/&#39;</span><span class="p">]</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;less/mysite.less&#39;</span><span class="p">]</span>
+        <span class="nv">dest: </span><span class="s">&#39;site/static/css/mysite.css&#39;</span>
+    <span class="nv">dist:</span>
+        <span class="nv">paths: </span><span class="p">[</span><span class="s">&#39;less/&#39;</span><span class="p">]</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;less/mysite.less&#39;</span><span class="p">]</span>
+        <span class="nv">dest: </span><span class="s">&#39;site/static/css/mysite.min.css&#39;</span>
+        <span class="nv">options:</span>
+            <span class="nv">plugins: </span><span class="p">[</span>
+                <span class="k">new</span> <span class="p">(</span><span class="nx">require</span> <span class="s">&#39;less-plugin-autoprefix&#39;</span><span class="p">)</span> <span class="nv">browsers: </span><span class="p">[</span><span class="s">&#39;&gt; 0.1%&#39;</span><span class="p">]</span>
+                <span class="k">new</span> <span class="p">(</span><span class="nx">require</span> <span class="s">&#39;less-plugin-clean-css&#39;</span><span class="p">)</span> <span class="p">{}</span>
+            <span class="p">]</span>
+</pre></div>
+</p>
+
+<p>The <code>browsers</code> option to <a href="https://www.npmjs.com/package/less-plugin-autoprefix">less-plugin-autoprefix</a> determines the set of CSS
+properties to be prefixed, and should be set according to the level of
+compatibility required. See
+<a href="https://github.com/postcss/autoprefixer#browsers">the documentation</a>
+for details.</p>
+
+<h3 id="coffeescript">CoffeeScript</h3>
+
+<p>Here we configure <a href="https://www.npmjs.com/package/grunt-contrib-coffee">grunt-contrib-coffee</a> to compile scripts under the <code>coffee</code>
+directory and sandwich them into a single <code>.js</code> file, <code>site/static/js/mysite.js</code>.
+If using source maps the <a href="https://www.npmjs.com/package/grunt-contrib-copy">grunt-contrib-copy</a> plugin is also required for
+reasons explained below.</p>
+
+<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-contrib-coffee --save-dev
+<span class="nv">$ </span>npm install grunt-contrib-copy --save-dev
+</pre></div>
+</p>
+
+<p>This is the configuration block.</p>
+
+<p><div class="highlight"><pre><span class="nv">coffee:</span>
+    <span class="nv">options:</span>
+        <span class="nv">join: </span><span class="kc">true</span>             <span class="c1"># Concatenate before, not after compilation.</span>
+        <span class="nv">sourceMap: </span><span class="kc">true</span>        <span class="c1"># Make a source map.</span>
+        <span class="nv">sourceRoot: </span><span class="s">&#39;/coffee/&#39;</span> <span class="c1"># URL debugger should use to download .coffee files.</span>
+        <span class="nv">inline: </span><span class="kc">true</span>           <span class="c1"># Embed coffee source inside the source map.</span>
+    <span class="nv">build:</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;coffee/a.coffee&#39;</span><span class="p">,</span> <span class="s">&#39;coffee/b.coffee&#39;</span><span class="p">,</span> <span class="sr">/* ADD FILES HERE */</span><span class="p">]</span>
+        <span class="nv">dest: </span><span class="s">&#39;site/static/js/mysite.js&#39;</span>
+</pre></div>
+</p>
+
+<p>Multiple <code>.coffee</code> files can be built by simply listing them in the <code>src</code> array.
+It&rsquo;s inadvisable to use a wildcard (e.g. <code>coffee/*</code>), because the order in which
+the matched files are concatenated is not defined. Instead, list each file
+individually in the desired order.</p>
+
+<p>The <code>join</code> option instructs the plugin to concatenate the <code>.coffee</code> files
+<em>before</em> passing them to the <code>coffee</code> compiler, rather than concatenating the
+resulting <code>.js</code> files after compilation. This is generally what is wanted
+because it allows the scripts to share a global scope.</p>
+
+<h4 id="source-maps">Source Maps</h4>
+
+<p><a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Source maps</a>
+are essential for a sane debugging experience. In the configuration above we&rsquo;ve
+turned them on using <code>sourceMap: true</code>, which causes the <code>coffee</code> compiler to
+generate <code>mysite.js.map</code> alongside <code>mysite.js</code>.</p>
+
+<p>By default source maps don&rsquo;t contain any actual source code. Instead they
+refer to source files (in our case, the <code>.coffee</code> files) by relative path, and
+the debugger in the browser must download the source files as required.</p>
+
+<p>This is an awkward arrangement because, of course, for the debugger to
+download the <code>.coffee</code> files they have be made available on the server
+somewhere. An easier option is to have the compiler <em>embed</em> the source directly
+into the map by setting <code>inline: true</code>.</p>
+
+<p>If you don&rsquo;t care about debugging minified JavaScript (a dubious proposition at
+the best of times), I recommend setting <code>inline: true</code> and ignoring the rest of
+this section. Source maps with embedded code are self-contained so there&rsquo;s no
+need to publish the <code>.coffee</code> files anywhere.</p>
+
+<h5 id="publishing-the-coffee-files">Publishing the <code>.coffee</code> Files</h5>
+
+<p>The disadvantage of <code>inline</code> is that <code>UglifyJS</code> seems incapable of using
+embedded CoffeeScript source when building a source map for the minified
+JavaScript. However, if the sources are referenced instead of embedded (i.e.
+<code>inline</code> is <code>false</code>), everything works well.</p>
+
+<p>If we don&rsquo;t embed the source code in the map, it&rsquo;s necessary to publish the
+<code>.coffee</code> files on the server somewhere. This can be achieved very simply by
+configuring <a href="https://www.npmjs.com/package/grunt-contrib-copy">grunt-contrib-copy</a> to copy our <code>.coffee</code> sources into the public
+site at <code>site/static/coffee</code>.</p>
+
+<p><div class="highlight"><pre><span class="nv">copy:</span>
+    <span class="nv">coffee:</span>
+        <span class="nv">src: </span><span class="s">&#39;coffee/*&#39;</span>
+        <span class="nv">dest: </span><span class="s">&#39;site/static/&#39;</span>
+</pre></div>
+</p>
+
+<p>This makes the <code>coffee</code> directory accessible on the server at <code>/coffee</code>. Note
+that we&rsquo;ve also set <code>sourceRoot</code> to <code>/coffee/</code>. This path is embedded in the
+source map, and tells the debugger where to download referenced files.</p>
+
+<h4 id="minification">Minification</h4>
+
+<p>In the <code>dist</code> configuration we&rsquo;ll use <a href="https://www.npmjs.com/package/grunt-contrib-uglify">grunt-contrib-uglify</a> to minify <code>mysite.js</code>.</p>
+
+<p><div class="highlight"><pre><span class="nv">uglify:</span>
+    <span class="nv">options:</span>
+        <span class="nv">sourceMap: </span><span class="kc">true</span>
+        <span class="nv">sourceMapIn: </span><span class="s">&#39;site/static/js/mysite.js.map&#39;</span>
+    <span class="nv">dist:</span>
+        <span class="nv">src: </span><span class="s">&#39;site/static/js/mysite.js&#39;</span>
+        <span class="nv">dest: </span><span class="s">&#39;site/static/js/mysite.min.js&#39;</span>
+</pre></div>
+</p>
+
+<p>The <code>sourceMap</code> option tells <code>UglifyJS</code> to generate a source map for the
+minified script, and <code>sourceMapIn</code> provides it with the original map generated
+by the <code>coffee</code> compiler.</p>
+
+<p>The rationale for providing the original map is that it allows the map for the
+compressed script to directly reference the <code>.coffee</code> source, instead of just
+the JavaScript generated by the <code>coffee</code> compiler, which makes for a nicer
+debugging experience. However, as described above, this doesn&rsquo;t work properly
+when the CoffeeScript is embedded with <code>inline</code>.</p>
+
+<p>It&rsquo;s worth noting that even with a source map available, debugging minified
+JavaScript is difficult because the minifier can fold many source lines into one
+to save space. If at all possible, debug using the unminified script.</p>
+
+<h3 id="image-resizing">Image Resizing</h3>
+
+<p>A great convenience offered by platforms like Wordpress is automatic
+image resizing and cropping. The handy <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a> plugin can
+provide a similar facility for working with static sites.</p>
+
+<p>The basic idea is to put source images into a directory called <code>img</code> at the
+top of the project, and configure the plugin to generate multiple cropped
+and resized variants under <code>site/static/img</code>. Thanks to <a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a>,
+the image processing happens automatically as soon as a new image is copied into
+<code>img</code>.</p>
+
+<p>First make sure <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a> is installed.</p>
+
+<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-responsive-images --save-dev
+</pre></div>
+</p>
+
+<p>The actual image processing work is done by <a href="http://www.imagemagick.org/">ImageMagick</a> or
+<a href="http://www.graphicsmagick.org/">GraphicsMagick</a>, one of which must be installed and available on
+the system <code>PATH</code> for image resizing to work. It makes no difference which.</p>
+
+<p>Here&rsquo;s the configuration block. See below for instructions on what to put in the
+<code>sizes</code> array.</p>
+
+<p><div class="highlight"><pre><span class="nv">responsive_images:</span>
+  <span class="nv">process:</span>
+    <span class="nv">options:</span>
+      <span class="nv">engine: </span><span class="s">&#39;gm&#39;</span>
+      <span class="nv">separator: </span><span class="s">&#39;_&#39;</span>
+      <span class="nv">newFilesOnly: </span><span class="kc">true</span>
+      <span class="nv">sizes: </span><span class="p">[</span> <span class="sr">/* PUT IMAGE SPECIFICATIONS HERE */</span> <span class="p">]</span>
+    <span class="nv">files: </span><span class="p">[</span>
+      <span class="nv">expand: </span><span class="kc">true</span>
+      <span class="nv">cwd: </span><span class="s">&#39;img&#39;</span>
+      <span class="nv">src: </span><span class="s">&#39;**.{png,jpg,jpeg,gif}&#39;</span>
+      <span class="nv">dest: </span><span class="s">&#39;site/static/img&#39;</span>
+    <span class="p">]</span>
+</pre></div>
+</p>
+
+<p>The important options to note are:</p>
+
+<table>
+    <tr>
+        <th><code>engine</code></th>
+        <td><code>gm</code> for GraphicsMagick, <code>im</code> for ImageMagick</td>
+    </tr>
+    <tr>
+        <th><code>separator</code></th>
+        <td>Delimiter used between the name stem and the suffix specified in
+        the size definition.</td>
+    </tr>
+    <tr>
+        <th><code>newFilesOnly</code></th>
+        <td>Set to <code>false</code> to force regeneration.</td>
+    </tr>
+    <tr>
+        <th><code>sizes</code></th>
+        <td>An array of size specifications (see below).</td>
+    </tr>
+</table>
+
+<p>All that remains is to add a specification to the <code>sizes</code> array for each image
+variant required. The following templates cover the most useful operations.
+Copy, paste and customize!</p>
+
+<ul>
+<li><p><strong>Copy the Source Image</strong></p>
+
+<p>Copies the source image, unmodified, into the destination directory.</p>
+
+<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">rename: </span><span class="kc">false</span><span class="p">,</span> <span class="nv">width: </span><span class="s">&#39;100%&#39;</span><span class="p">,</span> <span class="nv">height: </span><span class="s">&#39;100%&#39;</span> <span class="p">}</span>
+</pre></div>
+</p></li>
+
+<li><p><strong>Crop to an Exact Size</strong></p>
+
+<p>Generates a thumbnail of exactly 64&times;64 pixels. Setting <code>aspectRatio</code> to
+<code>false</code> enables cropping.</p>
+
+<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;64x64&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">false</span> <span class="p">}</span>
+</pre></div>
+</p></li>
+
+<li><p><strong>Proportional Scale</strong> <span class="text-muted">(Single Axis Constraint)</span></p>
+
+<p>Generates an image exactly 300px wide, with a height determined by the
+source image&rsquo;s aspect ratio.</p>
+
+<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;300&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">300</span> <span class="p">}</span>
+</pre></div>
+</p></li>
+
+<li><p><strong>Proportional Scale</strong> <span class="text-muted">(Both Axes Constrained)</span></p>
+
+<p>Scales the image down proportionally until it is neither wider than 400px
+nor taller than 250px.</p>
+
+<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;450x250&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">400</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">250</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">true</span> <span class="p">}</span>
+</pre></div>
+</p></li>
+</ul>
+
+<p>Full documentation for <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a> is
+<a href="http://www.andismith.com/grunt-responsive-images/">here</a>.</p>
+
+<h3 id="download">Download</h3>
+
+<p>The full <code>Gruntfile.coffee</code> is available <a href="Gruntfile.coffee">here</a>.</p>
+
+<p>I hope you found this little guide helpful. Corrections, comments and questions
+are always welcome.</p>
+
+		</article>
+	</div>
+
+	
+		<div class="article-row">
+	<footer class="read-next">
+		
+			
+		
+		
+			
+				
+					<div class="older">
+						<h5 class="read-next-heading">Older</h5>
+						<a href="http://127.0.0.1:8080/heres-my-first-post" class="post-link"><h4 class="read-next-title">Here&#39;s my First Post<i class="fa fa-hand-o-right"></i></h4></a>
+						<time class="read-next-time">Dec 23, 2014</time>				
+						<p class="read-next-excerpt">This is my first blog post, where I test out some of the layout features of the blog.</p>
+					</div>
+				
+			
+		
+	</footer>
+</div>
+
+	
+
+	
+	<div class="article-row" name="comments" id="comments">
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tjmio'; 
+    var disqus_identifier = '\/grunt-hugo';
+    var disqus_title = 'Grunt and Hugo: A Fast Iteration Cookbook';
+    var disqus_url = 'http:\/\/127.0.0.1:8080\/grunt-hugo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	</div>
+	
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/tjm_io.js"></script>
+    
+    	<script type="text/javascript">
+	var disqus_shortname = 'tjmio';
+	(function () {
+		var s = document.createElement('script'); s.async = true;
+		s.type = 'text/javascript';
+		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+</script>
+
+
+<a href="#disqus-thread" style="display: none;"></a>
+
+    
+  </body>
+</html>
+

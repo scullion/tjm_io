@@ -83,18 +83,18 @@ editing environment for static sites using [Grunt][]. The focus is on
 repurposed for similar tools. In addition to the markup and script compilation, 
 we'll add automatic image resizing using [grunt-responsive-images][].
 
-The `Gruntfile` broken down here is in [CoffeeScript][] since that's what I 
+The [`Gruntfile`](Gruntfile.coffee) broken down here is in CoffeeScript since that's what I 
 happened to use, but it should be straightforward to transliterate into plain 
-JavaScript if required. It can be downloaded [here](Gruntfile.coffee).
+JavaScript if required.
 
 ### Getting Started
 
 First make sure [node.js](http://nodejs.org/) and [npm][] are installed. 
-`npm` is bundled with the standard node.js binary installers available 
+`npm` is bundled with the standard node.js binary installer available 
 [here](http://nodejs.org/download/). 
 
 Initialize a `package.json` and install the required plugins by running the 
-following commands in your project directory. Feel free to omit plugins you 
+following commands in the project directory. Feel free to omit plugins you 
 don't need.
 
 {{< highlight "bash" >}}
@@ -110,23 +110,23 @@ $ npm install grunt-contrib-less --save-dev
 $ npm install grunt-responsive-images --save-dev
 {{< /highlight >}}
 
-The <kbd>grunt</kbd> command comes from the `grunt-cli` package, so run 
-`npm install -g grunt-cli` to install it globally if you haven't already.
-
-All being well you'll now have a complete `package.json` than can be used to 
-install the required packages at any time in the future via `npm install`. The 
-commands above installed the packages as well as adding them to `package.json` 
-so there's no need to do this now.
+All being well, the project now has a complete `package.json`, allowing the
+packages above to be installed at any time in the future with the command 
+`npm install`. There's no need to do this now.
 
 If `npm` complains about the site lacking a `README` file, add `"private": true` 
 to `package.json` to make it stop. 
 
+Finally, the <kbd>grunt</kbd> command used to actually run the build system 
+comes from the `grunt-cli` package, which should be installed globally with 
+`npm install -g grunt-cli`.
+
 ### The Gruntfile
 
-Paste the following skeleton into a file called `Gruntfile.coffee` at the top of
+Paste the skeleton code below into a file called `Gruntfile.coffee` at the top of
 the project. (Alternatively, start from the full 
-[Gruntfile.coffee](Gruntfile.coffee) and delete the bits you don't need). This 
-basic setup code loads the plugins and defines the main tasks exposed by the 
+[Gruntfile.coffee](Gruntfile.coffee) and delete the bits you don't want). 
+This basic setup code loads plugins and defines the tasks exposed by the 
 `Gruntfile`.
 
 {{< highlight "coffeescript" >}}
@@ -161,8 +161,8 @@ module.exports = (grunt) ->
     grunt.registerTask 'edit', ['connect', 'watch']
 {{< /highlight >}}
 
-Together these tasks form the command line interface for our system. They can
-be used as follows.
+Together these tasks form the command line interface for our build system. They 
+can be used as follows.
 
 <table>
     <tr>
@@ -187,11 +187,14 @@ be pasted into this basic `Gruntfile.coffee` and customized as required.
 
 ### Building The Site
 
-To keep things tidy, I've put the Hugo site into a subdirectory called `site` 
-under the project root. The following code registers a task that runs `hugo` to 
-compile this `site` directory, placing the rendered result in either `build/dev` or 
-`build/dist` (for development and deployment builds respectively). The target is 
-selected by referring to the task as `hugo:dev` or `hugo:dist`.
+To keep things tidy, I like to put the Hugo site into a subdirectory called `site` 
+under the project root. The rest of the article follows that convention, but you
+may of course choose your own directory, or just use the project root. 
+
+The following code registers a task that runs `hugo` to compile the `site` 
+directory, placing the rendered result in either `build/dev` or `build/dist` 
+(for development and deployment builds respectively). The target is 
+chosen by referring to the task as `hugo:dev` or `hugo:dist`.
 
 {{< highlight "coffeescript" >}}
 grunt.registerTask 'hugo', (target) ->
@@ -208,8 +211,8 @@ grunt.registerTask 'hugo', (target) ->
 In the `dev` configuration, which builds the site for live editing on a local 
 server, it's important to supply the `--baseUrl` (`-b`) option to `hugo`. This
 overrides the `BaseUrl` specified in the site's `config.toml` with the URL of
-our local development server. Without such an override, Hugo will generate 
-absolute URLs referring to the site's public server.
+our local development server. Without the override Hugo will generate absolute 
+URLs referring to the site's public server.
 
 ### Development Server
 
@@ -220,8 +223,7 @@ scripts.
 
 For that reason we'll use [grunt-contrib-connect][] instead. This is a Grunt 
 plugin that runs a static file server. The configuration below serves the 
-file tree generated by Hugo in `build/dev`, and should be mostly 
-self-explanatory.
+file tree generated by Hugo in `build/dev`.
 
 {{< highlight "coffeescript" >}}
 connect:
@@ -238,7 +240,7 @@ The `livereload` option turns on a middleware that injects [livereload.js][] int
 HTML responses generated by the server. This script connects back to the server
 on port 35729 and waits to be told that it should refresh the page. For this to 
 work we'll need to be running a [LiveReload][] service on port 35729, which is 
-the job of [grunt-contrib-watch][] as explained below.
+the job of [grunt-contrib-watch][], as explained below.
 
 ### Watching for Changes
 
@@ -283,8 +285,8 @@ The two options supplied to the `watch` task are:
 
 - `livereload`, which tells [grunt-contrib-watch][] to run a [LiveReload][] service on 
     port 35729. Recall that we're using [grunt-contrib-connect][] to inject 
-    [livereload.js][] into our HTML pages, and [livereload.js][] will connect 
-    back to this service from the browser and refresh the page when stuff changes.
+    [livereload.js][] into our HTML pages. [livereload.js][] will connect 
+    back to this service from the browser and refresh the page when things change.
 - `atBegin`, which causes all watch tasks to be run at startup, ensuring that 
     the site is up to date when we start editing.
 
@@ -298,7 +300,7 @@ $ npm install less-plugin-clean-css --save-dev
 $ npm install less-plugin-autoprefix --save-dev
 {{< /highlight >}}
 
-The LESS compiler `lessc` supports plugins of its own, which provide a very 
+The LESS compiler `lessc` supports plugins of its own which provide a very 
 convenient way of post-processing CSS. This configuration makes use of the
 following two:
 
@@ -346,7 +348,7 @@ for details.
 
 Here we configure [grunt-contrib-coffee][] to compile scripts under the `coffee` 
 directory and sandwich them into a single `.js` file, `site/static/js/mysite.js`. 
-If using source maps the [grunt-contrib-copy][] plugin is also required, for 
+If using source maps the [grunt-contrib-copy][] plugin is also required for 
 reasons explained below.
 
 {{< highlight "shell" >}}
@@ -370,9 +372,8 @@ coffee:
 
 Multiple `.coffee` files can be built by simply listing them in the `src` array.
 It's inadvisable to use a wildcard (e.g. `coffee/*`), because the order in which
-the files are yielded by the resulting glob, and thus the order in which they 
-are concatenated, is undefined. Instead, list each file individually in the 
-desired order.
+the matched files are concatenated is not defined. Instead, list each file 
+individually in the desired order.
 
 The `join` option instructs the plugin to concatenate the `.coffee` files 
 *before* passing them to the `coffee` compiler, rather than concatenating the 
@@ -403,9 +404,9 @@ need to publish the `.coffee` files anywhere.
 ##### Publishing the `.coffee` Files
 
 The disadvantage of `inline` is that `UglifyJS` seems incapable of using 
-embedded CoffeeScript source when building a source map for its minified
-JavaScript. If the sources are referenced externally (i.e. `inline` is set to
-`false`), it works fine. 
+embedded CoffeeScript source when building a source map for the minified
+JavaScript. However, if the sources are referenced instead of embedded (i.e. 
+`inline` is `false`), everything works well.
 
 If we don't embed the source code in the map, it's necessary to publish the 
 `.coffee` files on the server somewhere. This can be achieved very simply by 
@@ -425,7 +426,7 @@ source map, and tells the debugger where to download referenced files.
 
 #### Minification
 
-In the `dist` build we'll use [grunt-contrib-uglify][] to minify `mysite.js`.
+In the `dist` configuration we'll use [grunt-contrib-uglify][] to minify `mysite.js`.
 
 {{< highlight "coffeescript" >}}
 uglify:
@@ -455,7 +456,7 @@ to save space. If at all possible, debug using the unminified script.
 
 A great convenience offered by platforms like Wordpress is automatic 
 image resizing and cropping. The handy [grunt-responsive-images][] plugin can 
-provide similar facilities in a static site workflow. 
+provide a similar facility for working with static sites. 
 
 The basic idea is to put source images into a directory called `img` at the
 top of the project, and configure the plugin to generate multiple cropped 
@@ -470,7 +471,7 @@ $ npm install grunt-responsive-images --save-dev
 {{< /highlight >}}
 
 The actual image processing work is done by [ImageMagick][] or 
-[GraphicsMagick][], so one of those must also be installed and available on
+[GraphicsMagick][], one of which must be installed and available on
 the system `PATH` for image resizing to work. It makes no difference which.
 
 Here's the configuration block. See below for instructions on what to put in the
@@ -492,7 +493,7 @@ responsive_images:
     ]
 {{< /highlight >}}
 
-The important options to understand are:
+The important options to note are:
 
 <table>
     <tr>
@@ -510,13 +511,13 @@ The important options to understand are:
     </tr>
     <tr>
         <th><code>sizes</code></th>
-        <td>Array of size specifications (see below).</td>
+        <td>An array of size specifications (see below).</td>
     </tr>
 </table>
 
 All that remains is to add a specification to the `sizes` array for each image
 variant required. The following templates cover the most useful operations. 
-Copy, paste and customize.
+Copy, paste and customize!
 
 * **Copy the Source Image**
 
@@ -543,7 +544,7 @@ Copy, paste and customize.
     Scales the image down proportionally until it is neither wider than 400px 
     nor taller than 250px.
 
-    {{< highlight "coffeescript" >}}{ name: '300', width: 400, height: 250, aspectRatio: true }{{< /highlight >}}
+    {{< highlight "coffeescript" >}}{ name: '450x250', width: 400, height: 250, aspectRatio: true }{{< /highlight >}}
 
 Full documentation for [grunt-responsive-images][] is 
 [here](http://www.andismith.com/grunt-responsive-images/).
