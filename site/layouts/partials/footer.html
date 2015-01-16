@@ -1,9 +1,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- <script src="/js/bootstrap.min.js"></script> -->
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/tjm_io.js"></script>
+    {{ if .Site.BuildDrafts }}
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/tjm_io.js"></script>
+    {{ else }}
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/tjm_io.min.js"></script>
+    {{ end }}
     {{ if .Params.enable_comments }}
-    	{{ partial "disqus_count_script" . }}
+        {{ partial "disqus_count_script" . }}
     {{ end }}
   </body>
 </html>

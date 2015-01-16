@@ -1,3 +1,4 @@
+{{ if or .Prev .Next }}
 <div class="article-row">
 	<footer class="read-next">
 		{{ if .Prev }}
@@ -26,3 +27,4 @@
 		{{ end }}
 	</footer>
 </div>
+{{ end }}

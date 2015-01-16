@@ -62,7 +62,7 @@ module.exports = (grunt) ->
                 tasks: 'less:dev'
             coffee:
                 files: ['coffee/*.coffee']
-                tasks: 'coffee'
+                tasks: ['coffee', 'copy:coffee']
             images:
                 files: ['img/**']
                 tasks: 'responsive_images'

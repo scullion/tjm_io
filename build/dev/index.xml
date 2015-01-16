@@ -12,6 +12,31 @@
     <atom:link href="http://127.0.0.1:8080/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title></title>
+      <link>http://127.0.0.1:8080/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/articles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thank You</title>
+      <link>http://127.0.0.1:8080/about/confirm</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/about/confirm</guid>
+      <description>
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
+
+&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
       <link>http://127.0.0.1:8080/about</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -110,34 +135,9 @@ project.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Thank You</title>
-      <link>http://127.0.0.1:8080/about/confirm</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/about/confirm</guid>
-      <description>
-
-&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
-
-&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://127.0.0.1:8080/articles/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/articles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Grunt and Hugo: A Fast Iteration Cookbook</title>
       <link>http://127.0.0.1:8080/grunt-hugo</link>
-      <pubDate>Mon, 05 Jan 2015 11:02:30 UTC</pubDate>
+      <pubDate>Fri, 16 Jan 2015 00:00:00 UTC</pubDate>
       
       <guid>http://127.0.0.1:8080/grunt-hugo</guid>
       <description>
@@ -148,7 +148,7 @@ editing environment for static sites using &lt;a href=&#34;http://gruntjs.com&#3
 repurposed for similar tools. In addition to the markup and script compilation,
 we&amp;rsquo;ll add automatic image resizing using &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;Gruntfile.coffee&#34;&gt;&lt;code&gt;Gruntfile&lt;/code&gt;&lt;/a&gt; broken down here is in CoffeeScript since that&amp;rsquo;s what I
+&lt;p&gt;The &lt;a href=&#34;http://127.0.0.1:8080/grunt-hugo/Gruntfile.coffee&#34;&gt;&lt;code&gt;Gruntfile&lt;/code&gt;&lt;/a&gt; broken down here is in CoffeeScript since that&amp;rsquo;s what I
 happened to use, but it should be straightforward to transliterate into plain
 JavaScript if required.&lt;/p&gt;
 
@@ -190,7 +190,7 @@ comes from the &lt;code&gt;grunt-cli&lt;/code&gt; package, which should be insta
 
 &lt;p&gt;Paste the skeleton code below into a file called &lt;code&gt;Gruntfile.coffee&lt;/code&gt; at the top of
 the project. (Alternatively, start from the full
-&lt;a href=&#34;Gruntfile.coffee&#34;&gt;Gruntfile.coffee&lt;/a&gt; and delete the bits you don&amp;rsquo;t want).
+&lt;a href=&#34;http://127.0.0.1:8080/grunt-hugo/Gruntfile.coffee&#34;&gt;Gruntfile.coffee&lt;/a&gt; and delete the bits you don&amp;rsquo;t want).
 This basic setup code loads plugins and defines the tasks exposed by the
 &lt;code&gt;Gruntfile&lt;/code&gt;.&lt;/p&gt;
 
@@ -331,7 +331,7 @@ doesn&amp;rsquo;t add much latency.&lt;/p&gt;
         &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less:dev&amp;#39;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;coffee:&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/*.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;copy:coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;images:&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;img/**&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;responsive_images&amp;#39;&lt;/span&gt;
@@ -626,133 +626,10 @@ nor taller than 250px.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
 
-&lt;p&gt;The full &lt;code&gt;Gruntfile.coffee&lt;/code&gt; is available &lt;a href=&#34;Gruntfile.coffee&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full &lt;code&gt;Gruntfile.coffee&lt;/code&gt; is available &lt;a href=&#34;http://127.0.0.1:8080/grunt-hugo/Gruntfile.coffee&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I hope you found this little guide helpful. Corrections, comments and questions
 are always welcome.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Here&#39;s my First Post</title>
-      <link>http://127.0.0.1:8080/heres-my-first-post</link>
-      <pubDate>Tue, 23 Dec 2014 11:02:30 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/heres-my-first-post</guid>
-      <description>&lt;p id=&#34;item-1&#34;&gt;Here&#39;s some Go code. It&#39;s probably a bit stupid, but I&#39;m only trying to figure
-out whether this stupid theme works. So, does it?&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;hi: %s&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;How about a nice blockquote?&lt;/p&gt;
-
-&lt;blockquote&gt;
-Some guy said this and some guy said that, but in the end, who really knows what anyone said? Words are such ephemeral things.
-&lt;/blockquote&gt;
-
-&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
-
-&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
-
-&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
-
-&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
-
-&lt;p id=&#34;item-2&#34;&gt;Let&#39;s try out a list.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a name=&#34;item-2-sub-1&#34; id=&#34;item-2-sub-1&#34;&gt;x&lt;/a&gt; Here&amp;rsquo;s one thing.&lt;/li&gt;
-&lt;li&gt;&lt;a name=&#34;item-2-sub-2&#34; id=&#34;item-2-sub-2&#34;&gt;y&lt;/a&gt; And another.&lt;/li&gt;
-&lt;li&gt;&lt;a name=&#34;item-2-sub-3&#34; id=&#34;item-2-sub-3&#34;&gt;z&lt;/a&gt; And a third for good measure.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
-
-&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
-
-&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
-
-&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
-
-&lt;p&gt;To switch directories, type &lt;kbd id=&#34;item-3&#34;&gt;cd&lt;/kbd&gt; followed by the name of the directory.&lt;br&gt;
-To edit settings, press &lt;kbd&gt;&lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;,&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;Food truck dreamcatcher Williamsburg, Neutra semiotics gastropub heirloom scenester taxidermy four dollar toast cardigan Shoreditch viral freegan. Schlitz authentic jean shorts Godard pug put a bird on it. Cliche viral chillwave cold-pressed street art, Williamsburg 3 wolf moon fashion axe wolf blog wayfarers. Tousled flexitarian iPhone, before they sold out tote bag you probably haven&amp;rsquo;t heard of them pork belly gastropub meditation. Tofu Neutra lo-fi, artisan Carles deep v lumbersexual lomo. Asymmetrical vinyl cold-pressed, bitters direct trade Echo Park XOXO health goth hella lo-fi jean shorts pour-over raw denim. Sartorial hella Vice meggings Truffaut Marfa.&lt;/p&gt;
-
-&lt;p&gt;Paleo narwhal kale chips, direct trade typewriter tattooed lumbersexual McSweeney&amp;rsquo;s flannel listicle. +1 ennui four dollar toast, Kickstarter Brooklyn chia literally leggings Tumblr. Viral Austin gastropub, scenester selfies American Apparel street art asymmetrical. Street art Vice scenester church-key, Echo Park butcher organic tote bag hoodie Helvetica locavore gluten-free irony. Irony wolf shabby chic, beard street art seitan Odd Future small batch. Hashtag food truck aesthetic, taxidermy single-origin coffee flannel forage butcher drinking vinegar mlkshk Godard Kickstarter farm-to-table Marfa health goth. Wayfarers gastropub seitan salvia Marfa High Life.&lt;/p&gt;
-
-&lt;p&gt;Artisan Intelligentsia paleo authentic. Keffiyeh four loko artisan fingerstache, Blue Bottle locavore tilde forage ugh try-hard gastropub. Pug Marfa photo booth umami. Trust fund craft beer cray leggings, dreamcatcher High Life beard Helvetica chambray meh hella yr Marfa skateboard. Quinoa stumptown American Apparel, Intelligentsia narwhal Portland meh squid trust fund scenester. Vice Helvetica heirloom Shoreditch, Echo Park sriracha +1 butcher yr semiotics tote bag Brooklyn farm-to-table single-origin coffee. Odd Future Tumblr polaroid before they sold out authentic disrupt.&lt;/p&gt;
-
-&lt;p&gt;Tote bag letterpress single-origin coffee, leggings cold-pressed hella Austin jean shorts locavore lomo American Apparel. Wayfarers church-key Brooklyn, drinking vinegar Schlitz cardigan four loko. Tofu before they sold out gentrify meditation shabby chic sustainable, aesthetic mustache post-ironic health goth fanny pack cliche flannel bespoke cornhole. Keffiyeh meggings Kickstarter, sriracha street art wayfarers vegan irony. Cliche High Life fingerstache Portland occupy, umami VHS salvia you probably haven&amp;rsquo;t heard of them. Quinoa umami brunch Etsy Wes Anderson crucifix, Blue Bottle pour-over pickled bespoke. Wes Anderson meditation Schlitz, Brooklyn Tumblr Pinterest brunch next level fixie lomo.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Here&#39;s my Second Post</title>
-      <link>http://127.0.0.1:8080/heres-my-second-post</link>
-      <pubDate>Mon, 15 Dec 2014 11:02:30 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/heres-my-second-post</guid>
-      <description>&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-
-&lt;p&gt;This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.
-This is my second post. It contains many things and is of  much interest.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Here&#39;s my THIRD Post!</title>
-      <link>http://127.0.0.1:8080/heres-my-third-post</link>
-      <pubDate>Wed, 10 Dec 2014 11:02:30 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/heres-my-third-post</guid>
-      <description>&lt;p&gt;My third and perhaps my most wonderful post.&lt;/p&gt;
 </description>
     </item>
     

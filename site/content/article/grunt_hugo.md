@@ -58,6 +58,7 @@ title = "Download"
 
 +++
 
+[Gruntfile.coffee]: /grunt-hugo/Gruntfile.coffee
 [Hugo]: http://gohugo.io/
 [LESS]: http://lesscss.org/
 [CoffeeScript]: http://coffeescript.org/
@@ -83,7 +84,7 @@ editing environment for static sites using [Grunt][]. The focus is on
 repurposed for similar tools. In addition to the markup and script compilation, 
 we'll add automatic image resizing using [grunt-responsive-images][].
 
-The [`Gruntfile`](Gruntfile.coffee) broken down here is in CoffeeScript since that's what I 
+The [`Gruntfile`][Gruntfile.coffee] broken down here is in CoffeeScript since that's what I 
 happened to use, but it should be straightforward to transliterate into plain 
 JavaScript if required.
 
@@ -127,7 +128,7 @@ comes from the `grunt-cli` package, which should be installed globally with
 
 Paste the skeleton code below into a file called `Gruntfile.coffee` at the top of
 the project. (Alternatively, start from the full 
-[Gruntfile.coffee](Gruntfile.coffee) and delete the bits you don't want). 
+[Gruntfile.coffee][Gruntfile.coffee] and delete the bits you don't want). 
 This basic setup code loads plugins and defines the tasks exposed by the 
 `Gruntfile`.
 
@@ -269,7 +270,7 @@ watch:
         tasks: 'less:dev'
     coffee:
         files: ['coffee/*.coffee']
-        tasks: 'coffee'
+        tasks: ['coffee', 'copy:coffee']
     images:
         files: ['img/**']
         tasks: 'responsive_images'
@@ -551,7 +552,7 @@ Full documentation for [grunt-responsive-images][] is
 
 ### Download
 
-The full `Gruntfile.coffee` is available [here](Gruntfile.coffee). 
+The full `Gruntfile.coffee` is available [here][Gruntfile.coffee]. 
 
 I hope you found this little guide helpful. Corrections, comments and questions 
 are always welcome.

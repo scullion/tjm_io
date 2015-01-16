@@ -147,7 +147,7 @@
 		<article class="compact-code">
 			
 				
-				<time datetime="Jan 5, 2015" class="article-time">Jan 5, 2015</time>
+				<time datetime="Jan 16, 2015" class="article-time">Jan 16, 2015</time>
 			
 			
 				<h1 class="article-title" id="grunt-hugo"><a href="http://127.0.0.1:8080/grunt-hugo">Grunt and Hugo: A Fast Iteration Cookbook</a></h1>
@@ -160,7 +160,7 @@ editing environment for static sites using <a href="http://gruntjs.com">Grunt</a
 repurposed for similar tools. In addition to the markup and script compilation,
 we&rsquo;ll add automatic image resizing using <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a>.</p>
 
-<p>The <a href="Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
+<p>The <a href="/grunt-hugo/Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
 happened to use, but it should be straightforward to transliterate into plain
 JavaScript if required.</p>
 
@@ -202,7 +202,7 @@ comes from the <code>grunt-cli</code> package, which should be installed globall
 
 <p>Paste the skeleton code below into a file called <code>Gruntfile.coffee</code> at the top of
 the project. (Alternatively, start from the full
-<a href="Gruntfile.coffee">Gruntfile.coffee</a> and delete the bits you don&rsquo;t want).
+<a href="/grunt-hugo/Gruntfile.coffee">Gruntfile.coffee</a> and delete the bits you don&rsquo;t want).
 This basic setup code loads plugins and defines the tasks exposed by the
 <code>Gruntfile</code>.</p>
 
@@ -343,7 +343,7 @@ doesn&rsquo;t add much latency.</p>
         <span class="nv">tasks: </span><span class="s">&#39;less:dev&#39;</span>
     <span class="nv">coffee:</span>
         <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;coffee/*.coffee&#39;</span><span class="p">]</span>
-        <span class="nv">tasks: </span><span class="s">&#39;coffee&#39;</span>
+        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;coffee&#39;</span><span class="p">,</span> <span class="s">&#39;copy:coffee&#39;</span><span class="p">]</span>
     <span class="nv">images:</span>
         <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;img/**&#39;</span><span class="p">]</span>
         <span class="nv">tasks: </span><span class="s">&#39;responsive_images&#39;</span>
@@ -638,7 +638,7 @@ nor taller than 250px.</p>
 
 <h3 id="download">Download</h3>
 
-<p>The full <code>Gruntfile.coffee</code> is available <a href="Gruntfile.coffee">here</a>.</p>
+<p>The full <code>Gruntfile.coffee</code> is available <a href="/grunt-hugo/Gruntfile.coffee">here</a>.</p>
 
 <p>I hope you found this little guide helpful. Corrections, comments and questions
 are always welcome.</p>
@@ -647,25 +647,16 @@ are always welcome.</p>
 	</div>
 
 	
-		<div class="article-row">
+		
+<div class="article-row">
 	<footer class="read-next">
 		
 			
 		
 		
-			
-				
-					<div class="older">
-						<h5 class="read-next-heading">Older</h5>
-						<a href="http://127.0.0.1:8080/heres-my-first-post" class="post-link"><h4 class="read-next-title">Here&#39;s my First Post<i class="fa fa-hand-o-right"></i></h4></a>
-						<time class="read-next-time">Dec 23, 2014</time>				
-						<p class="read-next-excerpt">This is my first blog post, where I test out some of the layout features of the blog.</p>
-					</div>
-				
-			
-		
 	</footer>
 </div>
+
 
 	
 
@@ -691,10 +682,11 @@ are always welcome.</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/tjm_io.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/tjm_io.js"></script>
     
-    	<script type="text/javascript">
+    
+        <script type="text/javascript">
 	var disqus_shortname = 'tjmio';
 	(function () {
 		var s = document.createElement('script'); s.async = true;

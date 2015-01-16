@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>tjm.io</title>
 
-    <link href="/css/tjm_io.css" rel="stylesheet">
+    <link href="/css/tjm_io.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -47,7 +47,7 @@ editing environment for static sites using <a href="http://gruntjs.com">Grunt</a
 repurposed for similar tools. In addition to the markup and script compilation,
 we&rsquo;ll add automatic image resizing using <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a>.</p>
 
-<p>The <a href="Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
+<p>The <a href="/grunt-hugo/Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
 happened to use, but it should be straightforward to transliterate into plain
 JavaScript if required.</p>
 </p>
@@ -63,8 +63,9 @@ JavaScript if required.</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/tjm_io.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/tjm_io.min.js"></script>
+    
     
   </body>
 </html>

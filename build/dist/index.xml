@@ -12,19 +12,12 @@
     <atom:link href="http://tjm.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Thank You</title>
-      <link>http://tjm.io/about/confirm</link>
+      <title></title>
+      <link>http://tjm.io/articles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
-      <guid>http://tjm.io/about/confirm</guid>
-      <description>
-
-&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
-
-&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tjm.io/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>http://tjm.io/articles/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -126,12 +119,19 @@ project.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>http://tjm.io/articles/</link>
+      <title>Thank You</title>
+      <link>http://tjm.io/about/confirm</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
-      <guid>http://tjm.io/articles/</guid>
-      <description></description>
+      <guid>http://tjm.io/about/confirm</guid>
+      <description>
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
+
+&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tjm.io/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@ editing environment for static sites using &lt;a href=&#34;http://gruntjs.com&#3
 repurposed for similar tools. In addition to the markup and script compilation,
 we&amp;rsquo;ll add automatic image resizing using &lt;a href=&#34;http://www.andismith.com/grunt-responsive-images/&#34;&gt;grunt-responsive-images&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;Gruntfile.coffee&#34;&gt;&lt;code&gt;Gruntfile&lt;/code&gt;&lt;/a&gt; broken down here is in CoffeeScript since that&amp;rsquo;s what I
+&lt;p&gt;The &lt;a href=&#34;http://tjm.io/grunt-hugo/Gruntfile.coffee&#34;&gt;&lt;code&gt;Gruntfile&lt;/code&gt;&lt;/a&gt; broken down here is in CoffeeScript since that&amp;rsquo;s what I
 happened to use, but it should be straightforward to transliterate into plain
 JavaScript if required.&lt;/p&gt;
 
@@ -190,7 +190,7 @@ comes from the &lt;code&gt;grunt-cli&lt;/code&gt; package, which should be insta
 
 &lt;p&gt;Paste the skeleton code below into a file called &lt;code&gt;Gruntfile.coffee&lt;/code&gt; at the top of
 the project. (Alternatively, start from the full
-&lt;a href=&#34;Gruntfile.coffee&#34;&gt;Gruntfile.coffee&lt;/a&gt; and delete the bits you don&amp;rsquo;t want).
+&lt;a href=&#34;http://tjm.io/grunt-hugo/Gruntfile.coffee&#34;&gt;Gruntfile.coffee&lt;/a&gt; and delete the bits you don&amp;rsquo;t want).
 This basic setup code loads plugins and defines the tasks exposed by the
 &lt;code&gt;Gruntfile&lt;/code&gt;.&lt;/p&gt;
 
@@ -331,7 +331,7 @@ doesn&amp;rsquo;t add much latency.&lt;/p&gt;
         &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;less:dev&amp;#39;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;coffee:&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee/*.coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;copy:coffee&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;images:&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;files: &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;img/**&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
         &lt;span class=&#34;nv&#34;&gt;tasks: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;responsive_images&amp;#39;&lt;/span&gt;
@@ -626,7 +626,7 @@ nor taller than 250px.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
 
-&lt;p&gt;The full &lt;code&gt;Gruntfile.coffee&lt;/code&gt; is available &lt;a href=&#34;Gruntfile.coffee&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full &lt;code&gt;Gruntfile.coffee&lt;/code&gt; is available &lt;a href=&#34;http://tjm.io/grunt-hugo/Gruntfile.coffee&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I hope you found this little guide helpful. Corrections, comments and questions
 are always welcome.&lt;/p&gt;

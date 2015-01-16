@@ -1,11 +1,13 @@
 (function() {
-  var BAR_HEIGHT, BAR_OPACITY_THRESHOLD, OBFUSCATED_EMAIL, SCROLL_OFFSET_FUDGE, obfuscate, setUpContactForm, setUpScrollspy, setup;
+  var BAR_HEIGHT, BAR_OPACITY_THRESHOLD, MENU_CLICK_INTERNAL_MSEC, OBFUSCATED_EMAIL, SCROLL_OFFSET_FUDGE, obfuscate, setUpContactForm, setUpScrollspy, setup;
 
   BAR_OPACITY_THRESHOLD = 1000;
 
   BAR_HEIGHT = 50;
 
-  SCROLL_OFFSET_FUDGE = 10;
+  MENU_CLICK_INTERNAL_MSEC = 150;
+
+  SCROLL_OFFSET_FUDGE = 1;
 
   OBFUSCATED_EMAIL = 'k_kur1vp';
 
@@ -23,18 +25,30 @@
   };
 
   setUpScrollspy = function($w) {
-    var computeScrollOffset;
+    var $menu, activate, clickTime, clickedLink, computeScrollOffset, deactivateParents;
     $w = $(window);
+    $menu = $('.article-menu');
+    clickTime = 0;
+    clickedLink = null;
     computeScrollOffset = function() {
       return SCROLL_OFFSET_FUDGE + ($w.width() < BAR_OPACITY_THRESHOLD ? BAR_HEIGHT : 0);
     };
-    $w.scrollspy({
-      target: '.article-menu',
-      offset: computeScrollOffset()
-    });
+    deactivateParents = function(e) {
+      return e.parents('li').removeClass('active');
+    };
+    activate = function(link) {
+      $menu.find('li.active').removeClass('active');
+      return deactivateParents(link.closest('li').addClass('active'));
+    };
     $w.on({
       'activate.bs.scrollspy': function(e) {
-        return $(e.target).parents('li').removeClass('active');
+        var elapsed;
+        elapsed = (new Date).getTime() - clickTime;
+        if (elapsed <= MENU_CLICK_INTERNAL_MSEC) {
+          return activate(clickedLink);
+        } else {
+          return deactivateParents($(e.target));
+        }
       },
       'resize orientationChanged': function() {
         var spy;
@@ -42,6 +56,15 @@
         spy.options.offset = computeScrollOffset();
         return spy.process();
       }
+    });
+    $menu.on('click', 'a', function(e) {
+      clickedLink = $(e.target);
+      clickTime = (new Date).getTime();
+      return activate(clickedLink);
+    });
+    $w.scrollspy({
+      target: '.article-menu',
+      offset: computeScrollOffset()
     });
     return $('.article-menu .active').trigger('activate.bs.scrollspy');
   };
