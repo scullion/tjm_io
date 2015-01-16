@@ -15,9 +15,19 @@
 	@article-gutter + 
 	@article-menu-width;
 
-.read-button:extend(.btn all, .btn-default all) {
-	margin-top: @padding-large-vertical;
-	padding: (1 * @padding-large-vertical) (2 * @padding-large-horizontal);
+.read-button:extend(.btn all, .btn-default all, .btn-block all) {
+	margin-top: 1 * @line-height-computed;
+	border-color: #E7E7E7;
+	.title { 
+		display: block;
+		font-weight: normal; 
+	}
+	.reading-time { 
+		display: block; 
+		.text-muted();
+		font-size: 0.875rem;
+	}
+	//padding: (1 * @padding-large-vertical) (2 * @padding-large-horizontal);
 }
 
 .article-container {

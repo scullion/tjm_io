@@ -1,11 +1,26 @@
 (function() {
-  var BAR_HEIGHT, BAR_OPACITY_THRESHOLD, SCROLL_OFFSET_FUDGE, setUpContactForm, setUpScrollspy, setup;
+  var BAR_HEIGHT, BAR_OPACITY_THRESHOLD, OBFUSCATED_EMAIL, SCROLL_OFFSET_FUDGE, obfuscate, setUpContactForm, setUpScrollspy, setup;
 
   BAR_OPACITY_THRESHOLD = 1000;
 
   BAR_HEIGHT = 50;
 
   SCROLL_OFFSET_FUDGE = 10;
+
+  OBFUSCATED_EMAIL = 'k_kur1vp';
+
+  obfuscate = function(s) {
+    var ch;
+    return String.fromCharCode.apply(String, (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = s.length; _i < _len; _i++) {
+        ch = s[_i];
+        _results.push(31 ^ ch.charCodeAt());
+      }
+      return _results;
+    })());
+  };
 
   setUpScrollspy = function($w) {
     var computeScrollOffset;
@@ -33,13 +48,15 @@
 
   setUpContactForm = function($w) {
     return $('#contact-form').submit(function(e) {
-      var button, data, form;
+      var button, data, form, url;
       form = $(e.target);
+      url = "//formspree.io/" + (obfuscate(OBFUSCATED_EMAIL));
+      form.attr('action', url);
       data = form.serialize();
       button = $('#send-button').attr('disabled', 'disabled').button('sending');
       $.ajax({
         type: 'POST',
-        url: "//formspree.io/thomasjamesmoran@gmail.com",
+        url: url,
         data: form.serialize(),
         dataType: 'json'
       }).done(function() {

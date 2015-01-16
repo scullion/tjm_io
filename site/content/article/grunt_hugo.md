@@ -87,6 +87,8 @@ The [`Gruntfile`](Gruntfile.coffee) broken down here is in CoffeeScript since th
 happened to use, but it should be straightforward to transliterate into plain 
 JavaScript if required.
 
+<!--more-->
+
 ### Getting Started
 
 First make sure [node.js](http://nodejs.org/) and [npm][] are installed. 
@@ -182,8 +184,6 @@ can be used as follows.
 
 The sections below provide configurations for various tools that can 
 be pasted into this basic `Gruntfile.coffee` and customized as required.
-
-<!--more-->
 
 ### Building The Site
 

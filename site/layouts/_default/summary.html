@@ -4,8 +4,7 @@
 	<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 	<p>{{ .Summary }}</p>
 	<p class="undecorated-links"><a class="read-button" href="{{ .Permalink }}" role="button">
-		<strong>Continue Reading</strong>
-		<i class="fa fa-hand-o-right"></i><br>
-		<small>({{ .ReadingTime }} minute read)</small>
+		<strong class="title">Full Article <i class="fa fa-hand-o-right"></i></strong>
+		<small class="reading-time">({{ .ReadingTime }} minute read)</small>
 	</a></p>
 </article>

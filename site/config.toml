@@ -25,11 +25,11 @@ rss_url = "/article/index.xml"
     name = "Blog"
     url = "/"
     weight = -104
-[[menu.top]]
-    identifier = "articles"
-    name = "Articles"
-    url = "/articles/"
-    weight = -103
+#[[menu.top]]
+#    identifier = "articles"
+#    name = "Articles"
+#    url = "/articles/"
+#    weight = -103
 #[[menu.top]]
 #	identifier = "projects"
 #    name = "Projects"

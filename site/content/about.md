@@ -7,14 +7,14 @@ url = "/about"
 
 <p class="portrait">
 	<a href="/img/tjm.jpg">
-		<img src="/img/tjm_128x128.jpg" alt="Chubby man on boat looking bemused.">
+		<img src="/img/tjm_128x128.jpg" alt="Selfie of chubby white man sitting on wooden boat, staring at sky with serene, somewhat self-satisfied smile.">
 	</a>
 </p>
 
 # Hi, I'm Tom.
 
 I hope you find this site helpful. This <i class="fa fa-hand-o-right"></i> is me 
-gliding up the Mekong river on a boat made of old furniture.
+cruising up the Mekong river on a boat made of old furniture. 
 
 Here are my various contact details if you'd like to get in touch.
 
@@ -24,27 +24,27 @@ Here are my various contact details if you'd like to get in touch.
 	<dt><i class="fa fa-twitter"></i></dt>
 	<dd>[@earthrimwalker](https://twitter.com/earthrimwalker)</dd>
 	<dt><i class="fa fa-github"></i></dt>
-	<dd>[github.com/dreamtea](https://github.com/dreamtea)</dd>
+	<dd>[github.com/scullion](https://github.com/scullion)</dd>
 	<dt><i class="fa fa-skype"></i></dt>
 	<dd>westernsun</dd>
 </dt>
 
 ## Need a Good Developer?
 
-I'm a consultant in web and native software developement. You can hire me to
-build your website, write your app or work on your server back end. Here are
-a few of the things I can do.
+I'm a consultant in web and native developement. You can hire me to build your 
+website, write your app or work on your server back end. My areas of expertise 
+are:
 
 - Responsive front end web development
 - Android apps, Java and NDK
 - Back end web development
-- Native Win32 expert
+- Native Win32 API
 - C, C++, Go, Python, Javascript, Lua, PHP, ...
 
 Drop me an email or use the form below to talk about how I can help with your 
-project. It never hurts to ask!
+project.
 
-<form id="contact-form" class="form-horizontal" action="//formspree.io/thomasjamesmoran@gmail.com" method="POST">
+<form id="contact-form" class="form-horizontal" action="" method="POST">
 	<input type="hidden" name="_subject" value="tjm.io Contact Form">
 	<input type="hidden" name="_next" value="http://tjm.io/about/confirm">
 	<input type="text" name="_gotcha" style="display: none">
@@ -65,9 +65,8 @@ project. It never hurts to ask!
     	<label class="col-sm-2" for="question-input">Query</label>
     	<div class="col-sm-10">
 	    	<select id="question-input" class="form-control" name="query">
-				<option>Can you...</option>
-				<option>How much do you charge?</option>
-	    		<option>How does all this work?</option>
+				<option>Do you do...?</option>
+				<option>How much will it cost?</option>
 				<option>General question</option>
 			</select>
 		</div>

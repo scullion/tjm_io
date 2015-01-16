@@ -1,6 +1,9 @@
 BAR_OPACITY_THRESHOLD = 1000
 BAR_HEIGHT = 50
 SCROLL_OFFSET_FUDGE = 10
+OBFUSCATED_EMAIL = 'k_kur1vp'
+
+obfuscate = (s) -> String.fromCharCode (31 ^ ch.charCodeAt() for ch in s)...
 
 setUpScrollspy = ($w) ->
 	$w = $(window)
@@ -17,11 +20,13 @@ setUpScrollspy = ($w) ->
 setUpContactForm = ($w) ->
 	$('#contact-form').submit (e) ->
 		form = $(e.target)
+		url = "//formspree.io/#{obfuscate(OBFUSCATED_EMAIL)}"
+		form.attr 'action', url
 		data = form.serialize()
 		button = $('#send-button').attr('disabled', 'disabled').button('sending')
 		$.ajax(
 			type: 'POST'
-			url: "//formspree.io/thomasjamesmoran@gmail.com"
+			url: url
 			data: form.serialize() 
 			dataType: 'json'
 		).done(

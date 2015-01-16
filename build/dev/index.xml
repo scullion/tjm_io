@@ -12,22 +12,6 @@
     <atom:link href="http://127.0.0.1:8080/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Thank You</title>
-      <link>http://127.0.0.1:8080/about/confirm</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>http://127.0.0.1:8080/about/confirm</guid>
-      <description>
-
-&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
-
-&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>http://127.0.0.1:8080/about</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -37,14 +21,14 @@
 
 &lt;p class=&#34;portrait&#34;&gt;
     &lt;a href=&#34;http://127.0.0.1:8080/img/tjm.jpg&#34;&gt;
-        &lt;img src=&#34;http://127.0.0.1:8080/img/tjm_128x128.jpg&#34; alt=&#34;Chubby man on boat looking bemused.&#34;&gt;
+        &lt;img src=&#34;http://127.0.0.1:8080/img/tjm_128x128.jpg&#34; alt=&#34;Selfie of chubby white man sitting on wooden boat, staring at sky with serene, somewhat self-satisfied smile.&#34;&gt;
     &lt;/a&gt;
 &lt;/p&gt;
 
 &lt;h1 id=&#34;hi-i-m-tom&#34;&gt;Hi, I&amp;rsquo;m Tom.&lt;/h1&gt;
 
 &lt;p&gt;I hope you find this site helpful. This &lt;i class=&#34;fa fa-hand-o-right&#34;&gt;&lt;/i&gt; is me
-gliding up the Mekong river on a boat made of old furniture.&lt;/p&gt;
+cruising up the Mekong river on a boat made of old furniture.&lt;/p&gt;
 
 &lt;p&gt;Here are my various contact details if you&amp;rsquo;d like to get in touch.&lt;/p&gt;
 
@@ -54,29 +38,29 @@ gliding up the Mekong river on a boat made of old furniture.&lt;/p&gt;
     &lt;dt&gt;&lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
     &lt;dd&gt;&lt;a href=&#34;https://twitter.com/earthrimwalker&#34;&gt;@earthrimwalker&lt;/a&gt;&lt;/dd&gt;
     &lt;dt&gt;&lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
-    &lt;dd&gt;&lt;a href=&#34;https://github.com/dreamtea&#34;&gt;github.com/dreamtea&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href=&#34;https://github.com/scullion&#34;&gt;github.com/scullion&lt;/a&gt;&lt;/dd&gt;
     &lt;dt&gt;&lt;i class=&#34;fa fa-skype&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
     &lt;dd&gt;westernsun&lt;/dd&gt;
 &lt;/dt&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;need-a-good-developer&#34;&gt;Need a Good Developer?&lt;/h2&gt;
 
-&lt;p&gt;I&amp;rsquo;m a consultant in web and native software developement. You can hire me to
-build your website, write your app or work on your server back end. Here are
-a few of the things I can do.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a consultant in web and native developement. You can hire me to build your
+website, write your app or work on your server back end. My areas of expertise
+are:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Responsive front end web development&lt;/li&gt;
 &lt;li&gt;Android apps, Java and NDK&lt;/li&gt;
 &lt;li&gt;Back end web development&lt;/li&gt;
-&lt;li&gt;Native Win32 expert&lt;/li&gt;
+&lt;li&gt;Native Win32 API&lt;/li&gt;
 &lt;li&gt;C, C++, Go, Python, Javascript, Lua, PHP, &amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Drop me an email or use the form below to talk about how I can help with your
-project. It never hurts to ask!&lt;/p&gt;
+project.&lt;/p&gt;
 
-&lt;form id=&#34;contact-form&#34; class=&#34;form-horizontal&#34; action=&#34;//formspree.io/thomasjamesmoran@gmail.com&#34; method=&#34;POST&#34;&gt;
+&lt;form id=&#34;contact-form&#34; class=&#34;form-horizontal&#34; action=&#34;&#34; method=&#34;POST&#34;&gt;
     &lt;input type=&#34;hidden&#34; name=&#34;_subject&#34; value=&#34;tjm.io Contact Form&#34;&gt;
     &lt;input type=&#34;hidden&#34; name=&#34;_next&#34; value=&#34;http://tjm.io/about/confirm&#34;&gt;
     &lt;input type=&#34;text&#34; name=&#34;_gotcha&#34; style=&#34;display: none&#34;&gt;
@@ -97,9 +81,8 @@ project. It never hurts to ask!&lt;/p&gt;
         &lt;label class=&#34;col-sm-2&#34; for=&#34;question-input&#34;&gt;Query&lt;/label&gt;
         &lt;div class=&#34;col-sm-10&#34;&gt;
             &lt;select id=&#34;question-input&#34; class=&#34;form-control&#34; name=&#34;query&#34;&gt;
-                &lt;option&gt;Can you...&lt;/option&gt;
-                &lt;option&gt;How much do you charge?&lt;/option&gt;
-                &lt;option&gt;How does all this work?&lt;/option&gt;
+                &lt;option&gt;Do you do...?&lt;/option&gt;
+                &lt;option&gt;How much will it cost?&lt;/option&gt;
                 &lt;option&gt;General question&lt;/option&gt;
             &lt;/select&gt;
         &lt;/div&gt;
@@ -123,6 +106,22 @@ project. It never hurts to ask!&lt;/p&gt;
         &lt;strong&gt;&lt;i class=&#34;fa fa-thumbs-o-up&#34;&gt;&lt;/i&gt; Thanks for your question.&lt;/strong&gt; I&#39;ll respond as soon as I can.
     &lt;/div&gt;
 &lt;/form&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thank You</title>
+      <link>http://127.0.0.1:8080/about/confirm</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://127.0.0.1:8080/about/confirm</guid>
+      <description>
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
+
+&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:8080/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
