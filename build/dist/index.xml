@@ -21,6 +21,22 @@
     </item>
     
     <item>
+      <title>Thank You</title>
+      <link>http://tjm.io/about/confirm</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>http://tjm.io/about/confirm</guid>
+      <description>
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
+
+&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tjm.io/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
       <link>http://tjm.io/about</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -115,22 +131,6 @@ project.&lt;/p&gt;
         &lt;strong&gt;&lt;i class=&#34;fa fa-thumbs-o-up&#34;&gt;&lt;/i&gt; Thanks for your question.&lt;/strong&gt; I&#39;ll respond as soon as I can.
     &lt;/div&gt;
 &lt;/form&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Thank You</title>
-      <link>http://tjm.io/about/confirm</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>http://tjm.io/about/confirm</guid>
-      <description>
-
-&lt;h1 id=&#34;thank-you&#34;&gt;Thank You&lt;/h1&gt;
-
-&lt;p&gt;Thanks for getting in touch, I&amp;rsquo;ll respond as soon as I can.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tjm.io/about/&#34; class=&#34;btn btn-default&#34;&gt;&lt;i class=&#34;fa fa-hand-o-left&#34;&gt;&lt;/i&gt; Back&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

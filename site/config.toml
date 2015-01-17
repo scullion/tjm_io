@@ -17,6 +17,7 @@ tag = "tags"
 [Params]
 date_format = "Jan 2, 2006"
 rss_url = "/article/index.xml"
+google_analytics_id = "UA-58654476-1"
 
 # Site menu.
 
