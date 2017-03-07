@@ -8,7 +8,7 @@
 						<h5 class="read-next-heading">Newer</h5>
 						<a href="{{ .Permalink }}" class="post-link"><h4 class="read-next-title"><i class="fa fa-hand-o-left"></i>{{ .Title }}</h4></a>
 						<time class="read-next-time">{{ .Date.Format .Site.Params.date_format }}</time>
-						<p class="read-next-excerpt">{{ or .Description (add (.Summary | first 120) "&hellip;" | safeHtml) }}</p>
+						<p class="read-next-excerpt">{{ or .Description (add (.Summary | first 120) "&hellip;" | safeHTML) }}</p>
 					</div>
 				{{ end }}
 			{{ end }}
@@ -20,7 +20,7 @@
 						<h5 class="read-next-heading">Older</h5>
 						<a href="{{ .Permalink }}" class="post-link"><h4 class="read-next-title">{{ .Title }}<i class="fa fa-hand-o-right"></i></h4></a>
 						<time class="read-next-time">{{ .Date.Format .Site.Params.date_format }}</time>				
-						<p class="read-next-excerpt">{{ or .Description (add (.Summary | first 120) "&hellip;" | safeHtml) }}</p>
+						<p class="read-next-excerpt">{{ or .Description (add (.Summary | first 120) "&hellip;" | safeHTML) }}</p>
 					</div>
 				{{ end }}
 			{{ end }}
