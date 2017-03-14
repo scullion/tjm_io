@@ -37,9 +37,9 @@
 		</div>
 		<ul class="links">
 			
-				<li><a href="http://127.0.0.1:8080/">Blog</a></li>
+				<li><a href="/">Blog</a></li>
 			
-				<li><a href="http://127.0.0.1:8080/about/">About</a></li>
+				<li><a href="/about/">About</a></li>
 			
 			<li><a href="https://twitter.com/earthrimwalker" class="image-link leftmost"><i class="fa fa-twitter-square"></i></a></li>
 			<li><a href="/article/index.xml" class="image-link"><i class="fa fa-rss-square"></i></a></li>
@@ -165,11 +165,9 @@
 				<time datetime="Jan 16, 2015" class="article-time">Jan 16, 2015</time>
 			
 			
-				<h1 class="article-title" id="grunt-hugo"><a href="http://127.0.0.1:8080/grunt-hugo">Grunt and Hugo: A Fast Iteration Cookbook</a></h1>
+				<h1 class="article-title" id="grunt-hugo"><a href="http://localhost/grunt-hugo">Grunt and Hugo: A Fast Iteration Cookbook</a></h1>
 			
-			
-
-<p>This is a selection of code snippets that can be used to assemble a nice live
+			<p>This is a selection of code snippets that can be used to assemble a nice live
 editing environment for static sites using <a href="http://gruntjs.com">Grunt</a>. The focus is on
 <a href="http://gohugo.io/">Hugo</a>, <a href="http://lesscss.org/">LESS</a> and <a href="http://coffeescript.org/">CoffeeScript</a>, but most of the code could easily be
 repurposed for similar tools. In addition to the markup and script compilation,
@@ -178,6 +176,8 @@ we&rsquo;ll add automatic image resizing using <a href="http://www.andismith.com
 <p>The <a href="/grunt-hugo/Gruntfile.coffee"><code>Gruntfile</code></a> broken down here is in CoffeeScript since that&rsquo;s what I
 happened to use, but it should be straightforward to transliterate into plain
 JavaScript if required.</p>
+
+<p></p>
 
 <h3 id="getting-started">Getting Started</h3>
 
@@ -189,7 +189,7 @@ JavaScript if required.</p>
 following commands in the project directory. Feel free to omit plugins you
 don&rsquo;t need.</p>
 
-<p><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>mysite
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>mysite
 <span class="nv">$ </span>npm init
 <span class="nv">$ </span>npm install grunt --save-dev
 <span class="nv">$ </span>npm install grunt-contrib-watch --save-dev
@@ -199,8 +199,8 @@ don&rsquo;t need.</p>
 <span class="nv">$ </span>npm install grunt-contrib-uglify --save-dev
 <span class="nv">$ </span>npm install grunt-contrib-less --save-dev
 <span class="nv">$ </span>npm install grunt-responsive-images --save-dev
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>All being well, the project now has a complete <code>package.json</code>, allowing the
 packages above to be installed at any time in the future with the command
@@ -221,7 +221,7 @@ the project. (Alternatively, start from the full
 This basic setup code loads plugins and defines the tasks exposed by the
 <code>Gruntfile</code>.</p>
 
-<p><div class="highlight"><pre><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
     <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span>
         <span class="nv">pkg: </span><span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s">&#39;package.json&#39;</span><span class="p">)</span>
         
@@ -250,8 +250,8 @@ This basic setup code loads plugins and defines the tasks exposed by the
         <span class="s">&#39;responsive_images&#39;</span><span class="p">,</span> 
         <span class="s">&#39;hugo:dist&#39;</span><span class="p">]</span>
     <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;edit&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;connect&#39;</span><span class="p">,</span> <span class="s">&#39;watch&#39;</span><span class="p">]</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>Together these tasks form the command line interface for our build system. They
 can be used as follows.</p>
@@ -286,7 +286,7 @@ directory, placing the rendered result in either <code>build/dev</code> or <code
 (for development and deployment builds respectively). The target is
 chosen by referring to the task as <code>hugo:dev</code> or <code>hugo:dist</code>.</p>
 
-<p><div class="highlight"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;hugo&#39;</span><span class="p">,</span> <span class="nf">(target) -&gt;</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;hugo&#39;</span><span class="p">,</span> <span class="nf">(target) -&gt;</span>
     <span class="nv">done = </span><span class="nx">@async</span><span class="p">()</span>
     <span class="nv">args = </span><span class="p">[</span><span class="s">&#39;--source=site&#39;</span><span class="p">,</span> <span class="s">&quot;--destination=../build/</span><span class="si">#{</span><span class="nx">target</span><span class="si">}</span><span class="s">&quot;</span><span class="p">]</span>
     <span class="k">if</span> <span class="nx">target</span> <span class="o">==</span> <span class="s">&#39;dev&#39;</span>
@@ -295,8 +295,8 @@ chosen by referring to the task as <code>hugo:dev</code> or <code>hugo:dist</cod
         <span class="nx">args</span><span class="p">.</span><span class="nx">push</span> <span class="s">&#39;--buildFuture=true&#39;</span>
     <span class="nv">hugo = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">spawn</span> <span class="s">&#39;hugo&#39;</span><span class="p">,</span> <span class="nx">args</span><span class="p">,</span> <span class="nv">stdio: </span><span class="s">&#39;inherit&#39;</span>
     <span class="p">(</span><span class="nx">hugo</span><span class="p">.</span><span class="nx">on</span> <span class="nx">e</span><span class="p">,</span> <span class="nf">-&gt;</span> <span class="nx">done</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span> <span class="k">for</span> <span class="nx">e</span> <span class="k">in</span> <span class="p">[</span><span class="s">&#39;exit&#39;</span><span class="p">,</span> <span class="s">&#39;error&#39;</span><span class="p">]</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>In the <code>dev</code> configuration, which builds the site for live editing on a local
 server, it&rsquo;s important to supply the <code>--baseUrl</code> (<code>-b</code>) option to <code>hugo</code>. This
@@ -315,7 +315,7 @@ scripts.</p>
 plugin that runs a static file server. The configuration below serves the
 file tree generated by Hugo in <code>build/dev</code>.</p>
 
-<p><div class="highlight"><pre><span class="nv">connect:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">connect:</span>
     <span class="nv">mysite:</span>
         <span class="nv">options:</span>
             <span class="nv">hostname: </span><span class="s">&#39;127.0.0.1&#39;</span>
@@ -323,8 +323,8 @@ file tree generated by Hugo in <code>build/dev</code>.</p>
             <span class="nv">protocol: </span><span class="s">&#39;http&#39;</span>
             <span class="nv">base: </span><span class="s">&#39;build/dev&#39;</span>
             <span class="nv">livereload: </span><span class="kc">true</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The <code>livereload</code> option turns on a middleware that injects <a href="https://github.com/livereload/livereload-js">livereload.js</a> into
 HTML responses generated by the server. This script connects back to the server
@@ -349,7 +349,7 @@ stylesheet in <code>site/static/css</code>, <a href="https://www.npmjs.com/packa
 straightforward, and Hugo is quick enough that running it on every change
 doesn&rsquo;t add much latency.</p>
 
-<p><div class="highlight"><pre><span class="nv">watch:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">watch:</span>
     <span class="nv">options:</span>
         <span class="nv">atBegin: </span><span class="kc">true</span>
         <span class="nv">livereload: </span><span class="kc">true</span>
@@ -368,8 +368,8 @@ doesn&rsquo;t add much latency.</p>
     <span class="nv">all:</span>
         <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;Gruntfile.coffee&#39;</span><span class="p">]</span>
         <span class="nv">tasks: </span><span class="s">&#39;dev&#39;</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The two options supplied to the <code>watch</code> task are:</p>
 
@@ -386,11 +386,11 @@ the site is up to date when we start editing.</li>
 
 <p>To compile LESS to CSS we&rsquo;ll use the <a href="https://www.npmjs.com/package/grunt-contrib-less">grunt-contrib-less</a> plugin.</p>
 
-<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-contrib-less --save-dev
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>npm install grunt-contrib-less --save-dev
 <span class="nv">$ </span>npm install less-plugin-clean-css --save-dev
 <span class="nv">$ </span>npm install less-plugin-autoprefix --save-dev
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The LESS compiler <code>lessc</code> supports plugins of its own which provide a very
 convenient way of post-processing CSS. This configuration makes use of the
@@ -413,7 +413,7 @@ LESS file, <code>less/mysite.less</code>. It defines a pair of subtasks, <code>l
 <code>less:dist</code>, the latter generating a prefixed and minified stylesheet for
 deployment.</p>
 
-<p><div class="highlight"><pre><span class="nv">less:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">less:</span>
     <span class="nv">dev:</span>
         <span class="nv">paths: </span><span class="p">[</span><span class="s">&#39;less/&#39;</span><span class="p">]</span>
         <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;less/mysite.less&#39;</span><span class="p">]</span>
@@ -427,8 +427,8 @@ deployment.</p>
                 <span class="k">new</span> <span class="p">(</span><span class="nx">require</span> <span class="s">&#39;less-plugin-autoprefix&#39;</span><span class="p">)</span> <span class="nv">browsers: </span><span class="p">[</span><span class="s">&#39;&gt; 0.1%&#39;</span><span class="p">]</span>
                 <span class="k">new</span> <span class="p">(</span><span class="nx">require</span> <span class="s">&#39;less-plugin-clean-css&#39;</span><span class="p">)</span> <span class="p">{}</span>
             <span class="p">]</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The <code>browsers</code> option to <a href="https://www.npmjs.com/package/less-plugin-autoprefix">less-plugin-autoprefix</a> determines the set of CSS
 properties to be prefixed, and should be set according to the level of
@@ -443,14 +443,14 @@ directory and sandwich them into a single <code>.js</code> file, <code>site/stat
 If using source maps the <a href="https://www.npmjs.com/package/grunt-contrib-copy">grunt-contrib-copy</a> plugin is also required for
 reasons explained below.</p>
 
-<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-contrib-coffee --save-dev
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>npm install grunt-contrib-coffee --save-dev
 <span class="nv">$ </span>npm install grunt-contrib-copy --save-dev
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>This is the configuration block.</p>
 
-<p><div class="highlight"><pre><span class="nv">coffee:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">coffee:</span>
     <span class="nv">options:</span>
         <span class="nv">join: </span><span class="kc">true</span>             <span class="c1"># Concatenate before, not after compilation.</span>
         <span class="nv">sourceMap: </span><span class="kc">true</span>        <span class="c1"># Make a source map.</span>
@@ -459,8 +459,8 @@ reasons explained below.</p>
     <span class="nv">build:</span>
         <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;coffee/a.coffee&#39;</span><span class="p">,</span> <span class="s">&#39;coffee/b.coffee&#39;</span><span class="p">,</span> <span class="sr">/* ADD FILES HERE */</span><span class="p">]</span>
         <span class="nv">dest: </span><span class="s">&#39;site/static/js/mysite.js&#39;</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>Multiple <code>.coffee</code> files can be built by simply listing them in the <code>src</code> array.
 It&rsquo;s inadvisable to use a wildcard (e.g. <code>coffee/*</code>), because the order in which
@@ -505,12 +505,12 @@ JavaScript. However, if the sources are referenced instead of embedded (i.e.
 configuring <a href="https://www.npmjs.com/package/grunt-contrib-copy">grunt-contrib-copy</a> to copy our <code>.coffee</code> sources into the public
 site at <code>site/static/coffee</code>.</p>
 
-<p><div class="highlight"><pre><span class="nv">copy:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">copy:</span>
     <span class="nv">coffee:</span>
         <span class="nv">src: </span><span class="s">&#39;coffee/*&#39;</span>
         <span class="nv">dest: </span><span class="s">&#39;site/static/&#39;</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>This makes the <code>coffee</code> directory accessible on the server at <code>/coffee</code>. Note
 that we&rsquo;ve also set <code>sourceRoot</code> to <code>/coffee/</code>. This path is embedded in the
@@ -520,15 +520,15 @@ source map, and tells the debugger where to download referenced files.</p>
 
 <p>In the <code>dist</code> configuration we&rsquo;ll use <a href="https://www.npmjs.com/package/grunt-contrib-uglify">grunt-contrib-uglify</a> to minify <code>mysite.js</code>.</p>
 
-<p><div class="highlight"><pre><span class="nv">uglify:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">uglify:</span>
     <span class="nv">options:</span>
         <span class="nv">sourceMap: </span><span class="kc">true</span>
         <span class="nv">sourceMapIn: </span><span class="s">&#39;site/static/js/mysite.js.map&#39;</span>
     <span class="nv">dist:</span>
         <span class="nv">src: </span><span class="s">&#39;site/static/js/mysite.js&#39;</span>
         <span class="nv">dest: </span><span class="s">&#39;site/static/js/mysite.min.js&#39;</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The <code>sourceMap</code> option tells <code>UglifyJS</code> to generate a source map for the
 minified script, and <code>sourceMapIn</code> provides it with the original map generated
@@ -558,9 +558,9 @@ the image processing happens automatically as soon as a new image is copied into
 
 <p>First make sure <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a> is installed.</p>
 
-<p><div class="highlight"><pre><span class="nv">$ </span>npm install grunt-responsive-images --save-dev
-</pre></div>
-</p>
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>npm install grunt-responsive-images --save-dev
+</code></pre></div>
+
 
 <p>The actual image processing work is done by <a href="http://www.imagemagick.org/">ImageMagick</a> or
 <a href="http://www.graphicsmagick.org/">GraphicsMagick</a>, one of which must be installed and available on
@@ -569,7 +569,7 @@ the system <code>PATH</code> for image resizing to work. It makes no difference 
 <p>Here&rsquo;s the configuration block. See below for instructions on what to put in the
 <code>sizes</code> array.</p>
 
-<p><div class="highlight"><pre><span class="nv">responsive_images:</span>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">responsive_images:</span>
   <span class="nv">process:</span>
     <span class="nv">options:</span>
       <span class="nv">engine: </span><span class="s">&#39;gm&#39;</span>
@@ -582,8 +582,8 @@ the system <code>PATH</code> for image resizing to work. It makes no difference 
       <span class="nv">src: </span><span class="s">&#39;**.{png,jpg,jpeg,gif}&#39;</span>
       <span class="nv">dest: </span><span class="s">&#39;site/static/img&#39;</span>
     <span class="p">]</span>
-</pre></div>
-</p>
+</code></pre></div>
+
 
 <p>The important options to note are:</p>
 
@@ -616,36 +616,36 @@ Copy, paste and customize!</p>
 
 <p>Copies the source image, unmodified, into the destination directory.</p>
 
-<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">rename: </span><span class="kc">false</span><span class="p">,</span> <span class="nv">width: </span><span class="s">&#39;100%&#39;</span><span class="p">,</span> <span class="nv">height: </span><span class="s">&#39;100%&#39;</span> <span class="p">}</span>
-</pre></div>
-</p></li>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="p">{</span> <span class="nv">rename: </span><span class="kc">false</span><span class="p">,</span> <span class="nv">width: </span><span class="s">&#39;100%&#39;</span><span class="p">,</span> <span class="nv">height: </span><span class="s">&#39;100%&#39;</span> <span class="p">}</span>
+</code></pre></div>
+</li>
 
 <li><p><strong>Crop to an Exact Size</strong></p>
 
 <p>Generates a thumbnail of exactly 64&times;64 pixels. Setting <code>aspectRatio</code> to
 <code>false</code> enables cropping.</p>
 
-<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;64x64&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">false</span> <span class="p">}</span>
-</pre></div>
-</p></li>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;64x64&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">64</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">false</span> <span class="p">}</span>
+</code></pre></div>
+</li>
 
 <li><p><strong>Proportional Scale</strong> <span class="text-muted">(Single Axis Constraint)</span></p>
 
 <p>Generates an image exactly 300px wide, with a height determined by the
 source image&rsquo;s aspect ratio.</p>
 
-<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;300&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">300</span> <span class="p">}</span>
-</pre></div>
-</p></li>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;300&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">300</span> <span class="p">}</span>
+</code></pre></div>
+</li>
 
 <li><p><strong>Proportional Scale</strong> <span class="text-muted">(Both Axes Constrained)</span></p>
 
 <p>Scales the image down proportionally until it is neither wider than 400px
 nor taller than 250px.</p>
 
-<p><div class="highlight"><pre><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;450x250&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">400</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">250</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">true</span> <span class="p">}</span>
-</pre></div>
-</p></li>
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="p">{</span> <span class="nv">name: </span><span class="s">&#39;450x250&#39;</span><span class="p">,</span> <span class="nv">width: </span><span class="mi">400</span><span class="p">,</span> <span class="nv">height: </span><span class="mi">250</span><span class="p">,</span> <span class="nv">aspectRatio: </span><span class="kc">true</span> <span class="p">}</span>
+</code></pre></div>
+</li>
 </ul>
 
 <p>Full documentation for <a href="http://www.andismith.com/grunt-responsive-images/">grunt-responsive-images</a> is
@@ -657,7 +657,6 @@ nor taller than 250px.</p>
 
 <p>I hope you found this little guide helpful. Corrections, comments and questions
 are always welcome.</p>
-
 		</article>
 	</div>
 
@@ -666,8 +665,8 @@ are always welcome.</p>
 <div class="article-row">
 	<footer class="read-next">
 		
-			
 		
+			
 		
 	</footer>
 </div>
@@ -682,7 +681,7 @@ are always welcome.</p>
     var disqus_shortname = 'tjmio'; 
     var disqus_identifier = '\/grunt-hugo';
     var disqus_title = 'Grunt and Hugo: A Fast Iteration Cookbook';
-    var disqus_url = 'http:\/\/127.0.0.1:8080\/grunt-hugo';
+    var disqus_url = 'http:\/\/localhost\/grunt-hugo';
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

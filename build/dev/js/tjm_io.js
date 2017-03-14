@@ -14,13 +14,13 @@
   obfuscate = function(s) {
     var ch;
     return String.fromCharCode.apply(String, (function() {
-      var _i, _len, _results;
-      _results = [];
-      for (_i = 0, _len = s.length; _i < _len; _i++) {
-        ch = s[_i];
-        _results.push(31 ^ ch.charCodeAt());
+      var i, len, results;
+      results = [];
+      for (i = 0, len = s.length; i < len; i++) {
+        ch = s[i];
+        results.push(31 ^ ch.charCodeAt());
       }
-      return _results;
+      return results;
     })());
   };
 
@@ -103,5 +103,3 @@
   $(document).ready(setup);
 
 }).call(this);
-
-//# sourceMappingURL=tjm_io.js.map

@@ -2,29 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://127.0.0.1:8080/</loc>
-    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost/grunt-hugo</loc>
+    <lastmod>2015-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost/articles/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/about</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/locations/articles/</loc>
+    <lastmod>2015-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://127.0.0.1:8080/articles/</loc>
-    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://127.0.0.1:8080/about/confirm</loc>
-    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://127.0.0.1:8080/about</loc>
-    <lastmod>0001-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://127.0.0.1:8080/grunt-hugo</loc>
+    <loc>http://localhost/article/</loc>
     <lastmod>2015-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost/locations/blog/</loc>
+    <lastmod>2015-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost/locations/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost/about/confirm</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/</loc>
+    <lastmod>2015-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

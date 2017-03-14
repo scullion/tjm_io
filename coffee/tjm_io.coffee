@@ -80,5 +80,5 @@ setup = (e) ->
 	$w = $(window)
 	setUpScrollspy $w
 	setUpContactForm $w
-
+	
 $(document).ready(setup)
